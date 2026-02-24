@@ -7,12 +7,12 @@ import {RootSidebar} from "@/layouts/RootSidebar";
 const MainLayout = () =>{
   return(
       <div className="w-full">
-        <div className="titlebar h-[32px] w-full bg-[#1a1c20] flex justify-center items-center">
+        <div className="titlebar h-[32px] w-full flex justify-center items-center">
           <div><Label>SEP1 Project</Label></div>
         </div>
         <div className="flex">
           <div>
-            <SidebarProvider className="min-h-10 h-[calc(100vh-32px)]">
+            <SidebarProvider className="min-h-10">
               <RootSidebar />
             </SidebarProvider>
           </div>

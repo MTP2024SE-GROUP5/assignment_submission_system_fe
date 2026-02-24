@@ -13,11 +13,11 @@ const createWindow = () => {
     width: 1280,
     height: 800,
     titleBarStyle: 'hidden',
-    titleBarOverlay: {
-      color: '#1a1c20',
-      symbolColor: '#EEEEEE',
-      height: 32
-    },
+    ...(process.platform !== 'darwin' ? { titleBarOverlay: {
+        color: '#ffffff',
+        symbolColor: '#171717',
+        height: 32
+      } } : {}),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },

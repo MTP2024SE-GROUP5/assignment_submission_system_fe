@@ -9,15 +9,15 @@ import React from "react"
 
 export function RootSidebar() {
   return(
-      <Sidebar className="min-h-10 h-[calc(100vh-32px)] mt-8">
-        <SidebarHeader className="bg-[#171717]">
+      <Sidebar className="min-h-10">
+        <SidebarHeader className="">
           111
         </SidebarHeader>
-        <SidebarContent className="bg-[#171717]">
+        <SidebarContent className="">
           <SidebarGroup />
           <SidebarGroup />
         </SidebarContent>
-        <SidebarFooter className="bg-[#171717]"/>
+        <SidebarFooter className=""/>
       </Sidebar>
   )
 }

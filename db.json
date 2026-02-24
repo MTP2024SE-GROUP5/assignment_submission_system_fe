@@ -1,0 +1,158 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "role": "teacher",
+      "username": "prof_jones",
+      "full_name": "Dr. Alice M. Jones",
+      "email": "alice.jones@university.edu",
+      "created_at": "2026-02-24T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "role": "teacher",
+      "username": "prof_smith",
+      "full_name": "Dr. Bob Smith",
+      "email": "bob.smith@university.edu",
+      "created_at": "2026-02-24T10:05:00Z"
+    },
+    {
+      "id": 3,
+      "role": "student",
+      "username": "jdoe",
+      "full_name": "John Doe",
+      "email": "john.doe.new@student.edu",
+      "created_at": "2026-02-24T10:10:00Z"
+    },
+    {
+      "id": 4,
+      "role": "student",
+      "username": "mgarcia",
+      "full_name": "Maria Garcia",
+      "email": "mgarcia@student.edu",
+      "created_at": "2026-02-24T10:15:00Z"
+    },
+    {
+      "id": 5,
+      "role": "student",
+      "username": "tnguyen",
+      "full_name": "Trang Nguyen",
+      "email": "tnguyen@student.edu",
+      "created_at": "2026-02-24T10:20:00Z"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "course_name": "Introduction to Database Systems",
+      "course_code": "CS301",
+      "is_archived": false,
+      "created_by": 1,
+      "created_at": "2026-02-24T11:00:00Z"
+    },
+    {
+      "id": 2,
+      "course_name": "Web Development",
+      "course_code": "CS302",
+      "is_archived": true,
+      "created_by": 1,
+      "created_at": "2026-02-24T11:05:00Z"
+    },
+    {
+      "id": 3,
+      "course_name": "Data Structures",
+      "course_code": "CS201",
+      "is_archived": false,
+      "created_by": 2,
+      "created_at": "2026-02-24T11:10:00Z"
+    }
+  ],
+  "course_enrollments": [
+    { "id": 1, "course_id": 1, "user_id": 1, "role": "teacher" },
+    { "id": 2, "course_id": 1, "user_id": 3, "role": "student" },
+    { "id": 3, "course_id": 1, "user_id": 4, "role": "student" },
+    { "id": 4, "course_id": 3, "user_id": 2, "role": "teacher" },
+    { "id": 5, "course_id": 3, "user_id": 5, "role": "student" }
+  ],
+  "assignments": [
+    {
+      "id": 2,
+      "course_id": 1,
+      "created_by": 1,
+      "title": "SQL Queries Homework",
+      "description": "Write advanced SELECT, JOIN, subquery, and CTE exercises.",
+      "due_date": "2025-03-22T23:59:59Z",
+      "status": "published",
+      "allowed_file_types": ".sql,.txt",
+      "max_file_size_mb": 8.00
+    },
+    {
+      "id": 3,
+      "course_id": 1,
+      "created_by": 1,
+      "title": "Normalization Quiz",
+      "description": "Quiz on 1NF through BCNF.",
+      "due_date": "2025-04-01T23:59:59Z",
+      "status": "published",
+      "allowed_file_types": null,
+      "max_file_size_mb": null
+    },
+    {
+      "id": 4,
+      "course_id": 3,
+      "created_by": 2,
+      "title": "Binary Tree Implementation",
+      "description": "Implement a BST in Java or Python.",
+      "due_date": "2025-03-20T23:59:59Z",
+      "status": "published",
+      "allowed_file_types": ".java,.py,.zip",
+      "max_file_size_mb": 20.00
+    }
+  ],
+  "submissions": [
+    {
+      "id": 3,
+      "assignment_id": 2,
+      "student_id": 3,
+      "status": "submitted",
+      "submitted_at": "2026-02-24T15:00:00Z"
+    },
+    {
+      "id": 4,
+      "assignment_id": 4,
+      "student_id": 5,
+      "status": "submitted",
+      "submitted_at": "2026-02-24T15:30:00Z"
+    }
+  ],
+  "submission_files": [
+    {
+      "id": 3,
+      "submission_id": 3,
+      "file_name": "queries_jdoe.sql",
+      "stored_path": "/uploads/2025/03/queries_jdoe.sql",
+      "file_type": ".sql",
+      "file_size_bytes": 4096,
+      "uploaded_at": "2026-02-24T15:00:00Z"
+    },
+    {
+      "id": 4,
+      "submission_id": 4,
+      "file_name": "bst_tnguyen.zip",
+      "stored_path": "/uploads/2025/03/bst_tnguyen.zip",
+      "file_type": ".zip",
+      "file_size_bytes": 10240000,
+      "uploaded_at": "2026-02-24T15:30:00Z"
+    }
+  ],
+  "grades": [
+    {
+      "id": 3,
+      "submission_id": 4,
+      "graded_by": 2,
+      "score": 95.00,
+      "comments": "Clean implementation with excellent test coverage.",
+      "graded_at": "2026-02-24T16:00:00Z"
+    }
+  ]
+}
