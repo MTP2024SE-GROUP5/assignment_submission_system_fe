@@ -14,9 +14,9 @@ const createWindow = () => {
     height: 800,
     titleBarStyle: 'hidden',
     titleBarOverlay: {
-      color: '#1D1E20',
+      color: '#1a1c20',
       symbolColor: '#EEEEEE',
-      height: 30
+      height: 32
     },
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
