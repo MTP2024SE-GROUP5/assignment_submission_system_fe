@@ -1,97 +1,2808 @@
 {
   "users": [
-    { "id": 1, "role": "teacher", "username": "teacher1", "password_hash": "hashed_pw", "full_name": "Professor A", "email": "prof.1@uni.edu", "created_at": "2023-01-01T08:00:00Z" },
-    { "id": 2, "role": "teacher", "username": "teacher2", "password_hash": "hashed_pw", "full_name": "Professor B", "email": "prof.2@uni.edu", "created_at": "2023-01-01T08:00:00Z" },
-    { "id": 3, "role": "teacher", "username": "teacher3", "password_hash": "hashed_pw", "full_name": "Professor C", "email": "prof.3@uni.edu", "created_at": "2023-01-01T08:00:00Z" },
-    { "id": 4, "role": "student", "username": "student1", "password_hash": "hashed_pw", "full_name": "Student 1", "email": "s1@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 5, "role": "student", "username": "student2", "password_hash": "hashed_pw", "full_name": "Student 2", "email": "s2@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 6, "role": "student", "username": "student3", "password_hash": "hashed_pw", "full_name": "Student 3", "email": "s3@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 7, "role": "student", "username": "student4", "password_hash": "hashed_pw", "full_name": "Student 4", "email": "s4@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 8, "role": "student", "username": "student5", "password_hash": "hashed_pw", "full_name": "Student 5", "email": "s5@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 9, "role": "student", "username": "student6", "password_hash": "hashed_pw", "full_name": "Student 6", "email": "s6@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 10, "role": "student", "username": "student7", "password_hash": "hashed_pw", "full_name": "Student 7", "email": "s7@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 11, "role": "student", "username": "student8", "password_hash": "hashed_pw", "full_name": "Student 8", "email": "s8@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" },
-    { "id": 12, "role": "student", "username": "student9", "password_hash": "hashed_pw", "full_name": "Student 9", "email": "s9@student.uni.edu", "created_at": "2023-01-05T09:00:00Z" }
+    {
+      "id": 1,
+      "role": "teacher",
+      "username": "user_1",
+      "passwordHash": "hash_user_1",
+      "fullName": "Full Name 1",
+      "email": "user1@example.com",
+      "createdAt": "2025-11-19T00:28:17.111261",
+      "updatedAt": "2026-02-27T00:28:17.111348"
+    },
+    {
+      "id": 2,
+      "role": "teacher",
+      "username": "user_2",
+      "passwordHash": "hash_user_2",
+      "fullName": "Full Name 2",
+      "email": "user2@example.com",
+      "createdAt": "2025-11-19T00:28:17.111355",
+      "updatedAt": "2026-02-27T00:28:17.111358"
+    },
+    {
+      "id": 3,
+      "role": "teacher",
+      "username": "user_3",
+      "passwordHash": "hash_user_3",
+      "fullName": "Full Name 3",
+      "email": "user3@example.com",
+      "createdAt": "2025-11-19T00:28:17.111361",
+      "updatedAt": "2026-02-27T00:28:17.111364"
+    },
+    {
+      "id": 4,
+      "role": "teacher",
+      "username": "user_4",
+      "passwordHash": "hash_user_4",
+      "fullName": "Full Name 4",
+      "email": "user4@example.com",
+      "createdAt": "2025-11-19T00:28:17.111366",
+      "updatedAt": "2026-02-27T00:28:17.111368"
+    },
+    {
+      "id": 5,
+      "role": "teacher",
+      "username": "user_5",
+      "passwordHash": "hash_user_5",
+      "fullName": "Full Name 5",
+      "email": "user5@example.com",
+      "createdAt": "2025-11-19T00:28:17.111371",
+      "updatedAt": "2026-02-27T00:28:17.111373"
+    },
+    {
+      "id": 6,
+      "role": "teacher",
+      "username": "user_6",
+      "passwordHash": "hash_user_6",
+      "fullName": "Full Name 6",
+      "email": "user6@example.com",
+      "createdAt": "2025-11-19T00:28:17.111376",
+      "updatedAt": "2026-02-27T00:28:17.111378"
+    },
+    {
+      "id": 7,
+      "role": "teacher",
+      "username": "user_7",
+      "passwordHash": "hash_user_7",
+      "fullName": "Full Name 7",
+      "email": "user7@example.com",
+      "createdAt": "2025-11-19T00:28:17.111381",
+      "updatedAt": "2026-02-27T00:28:17.111383"
+    },
+    {
+      "id": 8,
+      "role": "teacher",
+      "username": "user_8",
+      "passwordHash": "hash_user_8",
+      "fullName": "Full Name 8",
+      "email": "user8@example.com",
+      "createdAt": "2025-11-19T00:28:17.111385",
+      "updatedAt": "2026-02-27T00:28:17.111388"
+    },
+    {
+      "id": 9,
+      "role": "teacher",
+      "username": "user_9",
+      "passwordHash": "hash_user_9",
+      "fullName": "Full Name 9",
+      "email": "user9@example.com",
+      "createdAt": "2025-11-19T00:28:17.111390",
+      "updatedAt": "2026-02-27T00:28:17.111392"
+    },
+    {
+      "id": 10,
+      "role": "teacher",
+      "username": "user_10",
+      "passwordHash": "hash_user_10",
+      "fullName": "Full Name 10",
+      "email": "user10@example.com",
+      "createdAt": "2025-11-19T00:28:17.111395",
+      "updatedAt": "2026-02-27T00:28:17.111398"
+    },
+    {
+      "id": 11,
+      "role": "student",
+      "username": "user_11",
+      "passwordHash": "hash_user_11",
+      "fullName": "Full Name 11",
+      "email": "user11@example.com",
+      "createdAt": "2025-11-19T00:28:17.111401",
+      "updatedAt": "2026-02-27T00:28:17.111403"
+    },
+    {
+      "id": 12,
+      "role": "student",
+      "username": "user_12",
+      "passwordHash": "hash_user_12",
+      "fullName": "Full Name 12",
+      "email": "user12@example.com",
+      "createdAt": "2025-11-19T00:28:17.111407",
+      "updatedAt": "2026-02-27T00:28:17.111409"
+    },
+    {
+      "id": 13,
+      "role": "student",
+      "username": "user_13",
+      "passwordHash": "hash_user_13",
+      "fullName": "Full Name 13",
+      "email": "user13@example.com",
+      "createdAt": "2025-11-19T00:28:17.111422",
+      "updatedAt": "2026-02-27T00:28:17.111425"
+    },
+    {
+      "id": 14,
+      "role": "student",
+      "username": "user_14",
+      "passwordHash": "hash_user_14",
+      "fullName": "Full Name 14",
+      "email": "user14@example.com",
+      "createdAt": "2025-11-19T00:28:17.111428",
+      "updatedAt": "2026-02-27T00:28:17.111431"
+    },
+    {
+      "id": 15,
+      "role": "student",
+      "username": "user_15",
+      "passwordHash": "hash_user_15",
+      "fullName": "Full Name 15",
+      "email": "user15@example.com",
+      "createdAt": "2025-11-19T00:28:17.111434",
+      "updatedAt": "2026-02-27T00:28:17.111436"
+    },
+    {
+      "id": 16,
+      "role": "student",
+      "username": "user_16",
+      "passwordHash": "hash_user_16",
+      "fullName": "Full Name 16",
+      "email": "user16@example.com",
+      "createdAt": "2025-11-19T00:28:17.111438",
+      "updatedAt": "2026-02-27T00:28:17.111440"
+    },
+    {
+      "id": 17,
+      "role": "student",
+      "username": "user_17",
+      "passwordHash": "hash_user_17",
+      "fullName": "Full Name 17",
+      "email": "user17@example.com",
+      "createdAt": "2025-11-19T00:28:17.111443",
+      "updatedAt": "2026-02-27T00:28:17.111445"
+    },
+    {
+      "id": 18,
+      "role": "student",
+      "username": "user_18",
+      "passwordHash": "hash_user_18",
+      "fullName": "Full Name 18",
+      "email": "user18@example.com",
+      "createdAt": "2025-11-19T00:28:17.111448",
+      "updatedAt": "2026-02-27T00:28:17.111454"
+    },
+    {
+      "id": 19,
+      "role": "student",
+      "username": "user_19",
+      "passwordHash": "hash_user_19",
+      "fullName": "Full Name 19",
+      "email": "user19@example.com",
+      "createdAt": "2025-11-19T00:28:17.111458",
+      "updatedAt": "2026-02-27T00:28:17.111461"
+    },
+    {
+      "id": 20,
+      "role": "student",
+      "username": "user_20",
+      "passwordHash": "hash_user_20",
+      "fullName": "Full Name 20",
+      "email": "user20@example.com",
+      "createdAt": "2025-11-19T00:28:17.111463",
+      "updatedAt": "2026-02-27T00:28:17.111466"
+    },
+    {
+      "id": 21,
+      "role": "student",
+      "username": "user_21",
+      "passwordHash": "hash_user_21",
+      "fullName": "Full Name 21",
+      "email": "user21@example.com",
+      "createdAt": "2025-11-19T00:28:17.111468",
+      "updatedAt": "2026-02-27T00:28:17.111471"
+    },
+    {
+      "id": 22,
+      "role": "student",
+      "username": "user_22",
+      "passwordHash": "hash_user_22",
+      "fullName": "Full Name 22",
+      "email": "user22@example.com",
+      "createdAt": "2025-11-19T00:28:17.111473",
+      "updatedAt": "2026-02-27T00:28:17.111475"
+    },
+    {
+      "id": 23,
+      "role": "student",
+      "username": "user_23",
+      "passwordHash": "hash_user_23",
+      "fullName": "Full Name 23",
+      "email": "user23@example.com",
+      "createdAt": "2025-11-19T00:28:17.111478",
+      "updatedAt": "2026-02-27T00:28:17.111480"
+    },
+    {
+      "id": 24,
+      "role": "student",
+      "username": "user_24",
+      "passwordHash": "hash_user_24",
+      "fullName": "Full Name 24",
+      "email": "user24@example.com",
+      "createdAt": "2025-11-19T00:28:17.111483",
+      "updatedAt": "2026-02-27T00:28:17.111485"
+    },
+    {
+      "id": 25,
+      "role": "student",
+      "username": "user_25",
+      "passwordHash": "hash_user_25",
+      "fullName": "Full Name 25",
+      "email": "user25@example.com",
+      "createdAt": "2025-11-19T00:28:17.111488",
+      "updatedAt": "2026-02-27T00:28:17.111490"
+    },
+    {
+      "id": 26,
+      "role": "student",
+      "username": "user_26",
+      "passwordHash": "hash_user_26",
+      "fullName": "Full Name 26",
+      "email": "user26@example.com",
+      "createdAt": "2025-11-19T00:28:17.111498",
+      "updatedAt": "2026-02-27T00:28:17.111502"
+    },
+    {
+      "id": 27,
+      "role": "student",
+      "username": "user_27",
+      "passwordHash": "hash_user_27",
+      "fullName": "Full Name 27",
+      "email": "user27@example.com",
+      "createdAt": "2025-11-19T00:28:17.111505",
+      "updatedAt": "2026-02-27T00:28:17.111507"
+    },
+    {
+      "id": 28,
+      "role": "student",
+      "username": "user_28",
+      "passwordHash": "hash_user_28",
+      "fullName": "Full Name 28",
+      "email": "user28@example.com",
+      "createdAt": "2025-11-19T00:28:17.111514",
+      "updatedAt": "2026-02-27T00:28:17.111518"
+    },
+    {
+      "id": 29,
+      "role": "student",
+      "username": "user_29",
+      "passwordHash": "hash_user_29",
+      "fullName": "Full Name 29",
+      "email": "user29@example.com",
+      "createdAt": "2025-11-19T00:28:17.111521",
+      "updatedAt": "2026-02-27T00:28:17.111523"
+    },
+    {
+      "id": 30,
+      "role": "student",
+      "username": "user_30",
+      "passwordHash": "hash_user_30",
+      "fullName": "Full Name 30",
+      "email": "user30@example.com",
+      "createdAt": "2025-11-19T00:28:17.111526",
+      "updatedAt": "2026-02-27T00:28:17.111528"
+    }
   ],
   "courses": [
-    { "id": 1, "course_name": "Database Systems", "course_code": "CS150", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
-    { "id": 2, "course_name": "Web Development", "course_code": "CS200", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
-    { "id": 3, "course_name": "Data Structures", "course_code": "CS250", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
-    { "id": 4, "course_name": "Algorithm Design", "course_code": "CS300", "is_archived": false, "created_by": 1, "created_at": "2023-02-01T10:00:00Z" },
-    { "id": 5, "course_name": "Machine Learning", "course_code": "CS350", "is_archived": false, "created_by": 2, "created_at": "2023-02-01T10:00:00Z" }
+    {
+      "id": 1,
+      "courseName": "Course Name 1",
+      "courseCode": "CS101",
+      "isArchived": false,
+      "createdBy": 5,
+      "createdAt": "2025-11-29T00:28:17.111679",
+      "updatedAt": "2026-02-27T00:28:17.111685"
+    },
+    {
+      "id": 2,
+      "courseName": "Course Name 2",
+      "courseCode": "CS102",
+      "isArchived": false,
+      "createdBy": 8,
+      "createdAt": "2025-11-29T00:28:17.111691",
+      "updatedAt": "2026-02-27T00:28:17.111694"
+    },
+    {
+      "id": 3,
+      "courseName": "Course Name 3",
+      "courseCode": "CS103",
+      "isArchived": false,
+      "createdBy": 8,
+      "createdAt": "2025-11-29T00:28:17.111699",
+      "updatedAt": "2026-02-27T00:28:17.111701"
+    },
+    {
+      "id": 4,
+      "courseName": "Course Name 4",
+      "courseCode": "CS104",
+      "isArchived": false,
+      "createdBy": 5,
+      "createdAt": "2025-11-29T00:28:17.111705",
+      "updatedAt": "2026-02-27T00:28:17.111707"
+    },
+    {
+      "id": 5,
+      "courseName": "Course Name 5",
+      "courseCode": "CS105",
+      "isArchived": false,
+      "createdBy": 4,
+      "createdAt": "2025-11-29T00:28:17.111710",
+      "updatedAt": "2026-02-27T00:28:17.111713"
+    },
+    {
+      "id": 6,
+      "courseName": "Course Name 6",
+      "courseCode": "CS106",
+      "isArchived": false,
+      "createdBy": 9,
+      "createdAt": "2025-11-29T00:28:17.111716",
+      "updatedAt": "2026-02-27T00:28:17.111718"
+    },
+    {
+      "id": 7,
+      "courseName": "Course Name 7",
+      "courseCode": "CS107",
+      "isArchived": false,
+      "createdBy": 5,
+      "createdAt": "2025-11-29T00:28:17.111721",
+      "updatedAt": "2026-02-27T00:28:17.111724"
+    },
+    {
+      "id": 8,
+      "courseName": "Course Name 8",
+      "courseCode": "CS108",
+      "isArchived": false,
+      "createdBy": 7,
+      "createdAt": "2025-11-29T00:28:17.111727",
+      "updatedAt": "2026-02-27T00:28:17.111729"
+    }
   ],
-  "course_enrollments": [
-    { "id": 1, "course_id": 1, "user_id": 1, "role": "teacher" },
-    { "id": 2, "course_id": 1, "user_id": 9, "role": "student" },
-    { "id": 3, "course_id": 1, "user_id": 4, "role": "student" },
-    { "id": 4, "course_id": 1, "user_id": 10, "role": "student" },
-    { "id": 5, "course_id": 2, "user_id": 1, "role": "teacher" },
-    { "id": 6, "course_id": 2, "user_id": 4, "role": "student" },
-    { "id": 7, "course_id": 2, "user_id": 10, "role": "student" },
-    { "id": 8, "course_id": 2, "user_id": 11, "role": "student" },
-    { "id": 9, "course_id": 2, "user_id": 8, "role": "student" },
-    { "id": 10, "course_id": 3, "user_id": 1, "role": "teacher" },
-    { "id": 11, "course_id": 3, "user_id": 9, "role": "student" },
-    { "id": 12, "course_id": 3, "user_id": 11, "role": "student" },
-    { "id": 13, "course_id": 3, "user_id": 5, "role": "student" },
-    { "id": 14, "course_id": 4, "user_id": 1, "role": "teacher" },
-    { "id": 15, "course_id": 4, "user_id": 10, "role": "student" },
-    { "id": 16, "course_id": 4, "user_id": 11, "role": "student" },
-    { "id": 17, "course_id": 4, "user_id": 7, "role": "student" },
-    { "id": 18, "course_id": 5, "user_id": 2, "role": "teacher" },
-    { "id": 19, "course_id": 5, "user_id": 7, "role": "student" },
-    { "id": 20, "course_id": 5, "user_id": 10, "role": "student" },
-    { "id": 21, "course_id": 5, "user_id": 9, "role": "student" },
-    { "id": 22, "course_id": 5, "user_id": 8, "role": "student" }
+  "courseEnrollments": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "userId": 5,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111679"
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "userId": 20,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112692"
+    },
+    {
+      "id": 3,
+      "courseId": 1,
+      "userId": 18,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112699"
+    },
+    {
+      "id": 4,
+      "courseId": 1,
+      "userId": 23,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112703"
+    },
+    {
+      "id": 5,
+      "courseId": 1,
+      "userId": 24,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112705"
+    },
+    {
+      "id": 6,
+      "courseId": 1,
+      "userId": 17,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112708"
+    },
+    {
+      "id": 7,
+      "courseId": 1,
+      "userId": 22,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112711"
+    },
+    {
+      "id": 8,
+      "courseId": 1,
+      "userId": 29,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112713"
+    },
+    {
+      "id": 9,
+      "courseId": 2,
+      "userId": 8,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111691"
+    },
+    {
+      "id": 10,
+      "courseId": 2,
+      "userId": 24,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112736"
+    },
+    {
+      "id": 11,
+      "courseId": 2,
+      "userId": 18,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112739"
+    },
+    {
+      "id": 12,
+      "courseId": 2,
+      "userId": 20,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112747"
+    },
+    {
+      "id": 13,
+      "courseId": 2,
+      "userId": 25,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112755"
+    },
+    {
+      "id": 14,
+      "courseId": 2,
+      "userId": 14,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112758"
+    },
+    {
+      "id": 15,
+      "courseId": 2,
+      "userId": 17,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112761"
+    },
+    {
+      "id": 16,
+      "courseId": 2,
+      "userId": 15,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112771"
+    },
+    {
+      "id": 17,
+      "courseId": 2,
+      "userId": 22,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112779"
+    },
+    {
+      "id": 18,
+      "courseId": 2,
+      "userId": 28,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112787"
+    },
+    {
+      "id": 19,
+      "courseId": 2,
+      "userId": 21,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112794"
+    },
+    {
+      "id": 20,
+      "courseId": 2,
+      "userId": 16,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112802"
+    },
+    {
+      "id": 21,
+      "courseId": 2,
+      "userId": 12,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112812"
+    },
+    {
+      "id": 22,
+      "courseId": 3,
+      "userId": 8,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111699"
+    },
+    {
+      "id": 23,
+      "courseId": 3,
+      "userId": 20,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112840"
+    },
+    {
+      "id": 24,
+      "courseId": 3,
+      "userId": 11,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112848"
+    },
+    {
+      "id": 25,
+      "courseId": 3,
+      "userId": 29,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112856"
+    },
+    {
+      "id": 26,
+      "courseId": 3,
+      "userId": 26,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112864"
+    },
+    {
+      "id": 27,
+      "courseId": 3,
+      "userId": 27,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112872"
+    },
+    {
+      "id": 28,
+      "courseId": 3,
+      "userId": 15,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112875"
+    },
+    {
+      "id": 29,
+      "courseId": 3,
+      "userId": 12,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112877"
+    },
+    {
+      "id": 30,
+      "courseId": 3,
+      "userId": 16,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112880"
+    },
+    {
+      "id": 31,
+      "courseId": 3,
+      "userId": 17,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112887"
+    },
+    {
+      "id": 32,
+      "courseId": 3,
+      "userId": 19,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112895"
+    },
+    {
+      "id": 33,
+      "courseId": 3,
+      "userId": 13,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112906"
+    },
+    {
+      "id": 34,
+      "courseId": 4,
+      "userId": 5,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111705"
+    },
+    {
+      "id": 35,
+      "courseId": 4,
+      "userId": 30,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112928"
+    },
+    {
+      "id": 36,
+      "courseId": 4,
+      "userId": 24,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112936"
+    },
+    {
+      "id": 37,
+      "courseId": 4,
+      "userId": 29,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112947"
+    },
+    {
+      "id": 38,
+      "courseId": 4,
+      "userId": 28,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112950"
+    },
+    {
+      "id": 39,
+      "courseId": 4,
+      "userId": 12,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112957"
+    },
+    {
+      "id": 40,
+      "courseId": 4,
+      "userId": 11,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112965"
+    },
+    {
+      "id": 41,
+      "courseId": 4,
+      "userId": 27,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112973"
+    },
+    {
+      "id": 42,
+      "courseId": 4,
+      "userId": 21,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112980"
+    },
+    {
+      "id": 43,
+      "courseId": 4,
+      "userId": 25,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.112988"
+    },
+    {
+      "id": 44,
+      "courseId": 5,
+      "userId": 4,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111710"
+    },
+    {
+      "id": 45,
+      "courseId": 5,
+      "userId": 25,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113014"
+    },
+    {
+      "id": 46,
+      "courseId": 5,
+      "userId": 14,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113019"
+    },
+    {
+      "id": 47,
+      "courseId": 5,
+      "userId": 23,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113021"
+    },
+    {
+      "id": 48,
+      "courseId": 5,
+      "userId": 24,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113024"
+    },
+    {
+      "id": 49,
+      "courseId": 5,
+      "userId": 11,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113027"
+    },
+    {
+      "id": 50,
+      "courseId": 5,
+      "userId": 22,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113029"
+    },
+    {
+      "id": 51,
+      "courseId": 5,
+      "userId": 21,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113037"
+    },
+    {
+      "id": 52,
+      "courseId": 5,
+      "userId": 29,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113040"
+    },
+    {
+      "id": 53,
+      "courseId": 6,
+      "userId": 9,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111716"
+    },
+    {
+      "id": 54,
+      "courseId": 6,
+      "userId": 29,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113059"
+    },
+    {
+      "id": 55,
+      "courseId": 6,
+      "userId": 12,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113062"
+    },
+    {
+      "id": 56,
+      "courseId": 6,
+      "userId": 11,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113065"
+    },
+    {
+      "id": 57,
+      "courseId": 6,
+      "userId": 25,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113072"
+    },
+    {
+      "id": 58,
+      "courseId": 6,
+      "userId": 20,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113075"
+    },
+    {
+      "id": 59,
+      "courseId": 6,
+      "userId": 16,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113082"
+    },
+    {
+      "id": 60,
+      "courseId": 6,
+      "userId": 14,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113085"
+    },
+    {
+      "id": 61,
+      "courseId": 6,
+      "userId": 19,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113093"
+    },
+    {
+      "id": 62,
+      "courseId": 6,
+      "userId": 24,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113096"
+    },
+    {
+      "id": 63,
+      "courseId": 7,
+      "userId": 5,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111721"
+    },
+    {
+      "id": 64,
+      "courseId": 7,
+      "userId": 21,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113115"
+    },
+    {
+      "id": 65,
+      "courseId": 7,
+      "userId": 26,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113123"
+    },
+    {
+      "id": 66,
+      "courseId": 7,
+      "userId": 18,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113127"
+    },
+    {
+      "id": 67,
+      "courseId": 7,
+      "userId": 13,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113134"
+    },
+    {
+      "id": 68,
+      "courseId": 7,
+      "userId": 19,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113137"
+    },
+    {
+      "id": 69,
+      "courseId": 7,
+      "userId": 27,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113144"
+    },
+    {
+      "id": 70,
+      "courseId": 7,
+      "userId": 22,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113147"
+    },
+    {
+      "id": 71,
+      "courseId": 7,
+      "userId": 15,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113157"
+    },
+    {
+      "id": 72,
+      "courseId": 7,
+      "userId": 16,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113165"
+    },
+    {
+      "id": 73,
+      "courseId": 7,
+      "userId": 12,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113168"
+    },
+    {
+      "id": 74,
+      "courseId": 7,
+      "userId": 28,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113176"
+    },
+    {
+      "id": 75,
+      "courseId": 8,
+      "userId": 7,
+      "role": "teacher",
+      "enrolledAt": "2025-11-29T00:28:17.111727"
+    },
+    {
+      "id": 76,
+      "courseId": 8,
+      "userId": 25,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113192"
+    },
+    {
+      "id": 77,
+      "courseId": 8,
+      "userId": 18,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113195"
+    },
+    {
+      "id": 78,
+      "courseId": 8,
+      "userId": 28,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113204"
+    },
+    {
+      "id": 79,
+      "courseId": 8,
+      "userId": 29,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113208"
+    },
+    {
+      "id": 80,
+      "courseId": 8,
+      "userId": 22,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113211"
+    },
+    {
+      "id": 81,
+      "courseId": 8,
+      "userId": 16,
+      "role": "student",
+      "enrolledAt": "2025-12-09T00:28:17.113214"
+    }
   ],
   "assignments": [
-    { "id": 1, "course_id": 1, "created_by": 1, "title": "Database Systems Assignment 1", "description": "Detailed description for Database Systems task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 2, "course_id": 1, "created_by": 1, "title": "Database Systems Assignment 2", "description": "Detailed description for Database Systems task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 3, "course_id": 2, "created_by": 1, "title": "Web Development Assignment 1", "description": "Detailed description for Web Development task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 4, "course_id": 2, "created_by": 1, "title": "Web Development Assignment 2", "description": "Detailed description for Web Development task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 5, "course_id": 3, "created_by": 1, "title": "Data Structures Assignment 1", "description": "Detailed description for Data Structures task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 6, "course_id": 3, "created_by": 1, "title": "Data Structures Assignment 2", "description": "Detailed description for Data Structures task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 7, "course_id": 4, "created_by": 1, "title": "Algorithm Design Assignment 1", "description": "Detailed description for Algorithm Design task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 8, "course_id": 4, "created_by": 1, "title": "Algorithm Design Assignment 2", "description": "Detailed description for Algorithm Design task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 9, "course_id": 5, "created_by": 2, "title": "Machine Learning Assignment 1", "description": "Detailed description for Machine Learning task 1.", "due_date": "2026-03-04T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 },
-    { "id": 10, "course_id": 5, "created_by": 2, "title": "Machine Learning Assignment 2", "description": "Detailed description for Machine Learning task 2.", "due_date": "2026-03-11T18:55:12Z", "status": "published", "allowed_file_types": ".pdf,.zip,.py", "max_file_size_mb": 10.0 }
+    {
+      "id": 1,
+      "courseId": 1,
+      "createdBy": 5,
+      "title": "Assignment 1",
+      "description": "Description for assignment 1",
+      "dueDate": "2026-03-25T00:28:17.113220",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113225",
+      "updatedAt": "2026-02-27T00:28:17.113227"
+    },
+    {
+      "id": 2,
+      "courseId": 4,
+      "createdBy": 5,
+      "title": "Assignment 2",
+      "description": "Description for assignment 2",
+      "dueDate": "2026-03-24T00:28:17.113232",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113236",
+      "updatedAt": "2026-02-27T00:28:17.113245"
+    },
+    {
+      "id": 3,
+      "courseId": 1,
+      "createdBy": 5,
+      "title": "Assignment 3",
+      "description": "Description for assignment 3",
+      "dueDate": "2026-03-24T00:28:17.113252",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113256",
+      "updatedAt": "2026-02-27T00:28:17.113259"
+    },
+    {
+      "id": 4,
+      "courseId": 6,
+      "createdBy": 9,
+      "title": "Assignment 4",
+      "description": "Description for assignment 4",
+      "dueDate": "2026-03-22T00:28:17.113263",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113267",
+      "updatedAt": "2026-02-27T00:28:17.113269"
+    },
+    {
+      "id": 5,
+      "courseId": 1,
+      "createdBy": 5,
+      "title": "Assignment 5",
+      "description": "Description for assignment 5",
+      "dueDate": "2026-03-01T00:28:17.113273",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113277",
+      "updatedAt": "2026-02-27T00:28:17.113279"
+    },
+    {
+      "id": 6,
+      "courseId": 1,
+      "createdBy": 5,
+      "title": "Assignment 6",
+      "description": "Description for assignment 6",
+      "dueDate": "2026-03-04T00:28:17.113288",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113294",
+      "updatedAt": "2026-02-27T00:28:17.113296"
+    },
+    {
+      "id": 7,
+      "courseId": 3,
+      "createdBy": 8,
+      "title": "Assignment 7",
+      "description": "Description for assignment 7",
+      "dueDate": "2026-03-05T00:28:17.113300",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113304",
+      "updatedAt": "2026-02-27T00:28:17.113313"
+    },
+    {
+      "id": 8,
+      "courseId": 4,
+      "createdBy": 5,
+      "title": "Assignment 8",
+      "description": "Description for assignment 8",
+      "dueDate": "2026-03-04T00:28:17.113318",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113323",
+      "updatedAt": "2026-02-27T00:28:17.113325"
+    },
+    {
+      "id": 9,
+      "courseId": 3,
+      "createdBy": 8,
+      "title": "Assignment 9",
+      "description": "Description for assignment 9",
+      "dueDate": "2026-03-16T00:28:17.113329",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113333",
+      "updatedAt": "2026-02-27T00:28:17.113335"
+    },
+    {
+      "id": 10,
+      "courseId": 5,
+      "createdBy": 4,
+      "title": "Assignment 10",
+      "description": "Description for assignment 10",
+      "dueDate": "2026-03-10T00:28:17.113344",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113349",
+      "updatedAt": "2026-02-27T00:28:17.113351"
+    },
+    {
+      "id": 11,
+      "courseId": 4,
+      "createdBy": 5,
+      "title": "Assignment 11",
+      "description": "Description for assignment 11",
+      "dueDate": "2026-03-17T00:28:17.113355",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113359",
+      "updatedAt": "2026-02-27T00:28:17.113361"
+    },
+    {
+      "id": 12,
+      "courseId": 6,
+      "createdBy": 9,
+      "title": "Assignment 12",
+      "description": "Description for assignment 12",
+      "dueDate": "2026-03-22T00:28:17.113365",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113369",
+      "updatedAt": "2026-02-27T00:28:17.113371"
+    },
+    {
+      "id": 13,
+      "courseId": 4,
+      "createdBy": 5,
+      "title": "Assignment 13",
+      "description": "Description for assignment 13",
+      "dueDate": "2026-03-11T00:28:17.113374",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113378",
+      "updatedAt": "2026-02-27T00:28:17.113380"
+    },
+    {
+      "id": 14,
+      "courseId": 7,
+      "createdBy": 5,
+      "title": "Assignment 14",
+      "description": "Description for assignment 14",
+      "dueDate": "2026-03-24T00:28:17.113383",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113387",
+      "updatedAt": "2026-02-27T00:28:17.113389"
+    },
+    {
+      "id": 15,
+      "courseId": 6,
+      "createdBy": 9,
+      "title": "Assignment 15",
+      "description": "Description for assignment 15",
+      "dueDate": "2026-03-26T00:28:17.113392",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113396",
+      "updatedAt": "2026-02-27T00:28:17.113404"
+    },
+    {
+      "id": 16,
+      "courseId": 3,
+      "createdBy": 8,
+      "title": "Assignment 16",
+      "description": "Description for assignment 16",
+      "dueDate": "2026-03-03T00:28:17.113411",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113416",
+      "updatedAt": "2026-02-27T00:28:17.113418"
+    },
+    {
+      "id": 17,
+      "courseId": 5,
+      "createdBy": 4,
+      "title": "Assignment 17",
+      "description": "Description for assignment 17",
+      "dueDate": "2026-03-19T00:28:17.113422",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113426",
+      "updatedAt": "2026-02-27T00:28:17.113428"
+    },
+    {
+      "id": 18,
+      "courseId": 8,
+      "createdBy": 7,
+      "title": "Assignment 18",
+      "description": "Description for assignment 18",
+      "dueDate": "2026-03-10T00:28:17.113431",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113435",
+      "updatedAt": "2026-02-27T00:28:17.113437"
+    },
+    {
+      "id": 19,
+      "courseId": 8,
+      "createdBy": 7,
+      "title": "Assignment 19",
+      "description": "Description for assignment 19",
+      "dueDate": "2026-03-20T00:28:17.113440",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113444",
+      "updatedAt": "2026-02-27T00:28:17.113446"
+    },
+    {
+      "id": 20,
+      "courseId": 5,
+      "createdBy": 4,
+      "title": "Assignment 20",
+      "description": "Description for assignment 20",
+      "dueDate": "2026-03-26T00:28:17.113449",
+      "status": "published",
+      "allowedFileTypes": ".pdf,.zip",
+      "maxFileSizeMb": 10.0,
+      "createdAt": "2026-02-07T00:28:17.113453",
+      "updatedAt": "2026-02-27T00:28:17.113455"
+    }
   ],
   "submissions": [
-    { "id": 1, "assignment_id": 1, "student_id": 10, "status": "submitted", "submitted_at": "2026-02-24T15:55:12Z" },
-    { "id": 2, "assignment_id": 1, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-25T07:55:12Z" },
-    { "id": 3, "assignment_id": 2, "student_id": 4, "status": "submitted", "submitted_at": "2026-02-24T11:55:12Z" },
-    { "id": 7, "assignment_id": 4, "student_id": 10, "status": "submitted", "submitted_at": "2026-02-25T03:55:12Z" },
-    { "id": 8, "assignment_id": 4, "student_id": 4, "status": "submitted", "submitted_at": "2026-02-24T06:55:12Z" },
-    { "id": 9, "assignment_id": 5, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-25T17:55:12Z" },
-    { "id": 10, "assignment_id": 5, "student_id": 11, "status": "submitted", "submitted_at": "2026-02-23T21:55:12Z" },
-    { "id": 11, "assignment_id": 5, "student_id": 5, "status": "submitted", "submitted_at": "2026-02-25T00:55:12Z" },
-    { "id": 12, "assignment_id": 6, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-24T12:55:12Z" },
-    { "id": 14, "assignment_id": 7, "student_id": 11, "status": "submitted", "submitted_at": "2026-02-25T15:55:12Z" },
-    { "id": 15, "assignment_id": 7, "student_id": 7, "status": "submitted", "submitted_at": "2026-02-25T16:55:12Z" },
-    { "id": 17, "assignment_id": 8, "student_id": 11, "status": "submitted", "submitted_at": "2026-02-25T11:55:12Z" },
-    { "id": 18, "assignment_id": 9, "student_id": 7, "status": "submitted", "submitted_at": "2026-02-24T12:55:12Z" },
-    { "id": 19, "assignment_id": 9, "student_id": 8, "status": "submitted", "submitted_at": "2026-02-25T16:55:12Z" },
-    { "id": 20, "assignment_id": 9, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-24T03:55:12Z" },
-    { "id": 21, "assignment_id": 10, "student_id": 9, "status": "submitted", "submitted_at": "2026-02-25T09:55:12Z" },
-    { "id": 22, "assignment_id": 10, "student_id": 7, "status": "submitted", "submitted_at": "2026-02-25T03:55:12Z" },
-    { "id": 23, "assignment_id": 10, "student_id": 10, "status": "submitted", "submitted_at": "2026-02-24T00:55:12Z" }
+    {
+      "id": 1,
+      "assignmentId": 1,
+      "studentId": 20,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.113482",
+      "createdAt": "2026-02-21T00:28:17.113487",
+      "updatedAt": "2026-02-27T00:28:17.113489"
+    },
+    {
+      "id": 2,
+      "assignmentId": 1,
+      "studentId": 18,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113552",
+      "updatedAt": "2026-02-27T00:28:17.113555"
+    },
+    {
+      "id": 3,
+      "assignmentId": 1,
+      "studentId": 24,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113559",
+      "updatedAt": "2026-02-27T00:28:17.113561"
+    },
+    {
+      "id": 4,
+      "assignmentId": 2,
+      "studentId": 21,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.113585",
+      "createdAt": "2026-02-21T00:28:17.113590",
+      "updatedAt": "2026-02-27T00:28:17.113592"
+    },
+    {
+      "id": 5,
+      "assignmentId": 2,
+      "studentId": 25,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113599",
+      "updatedAt": "2026-02-27T00:28:17.113601"
+    },
+    {
+      "id": 6,
+      "assignmentId": 3,
+      "studentId": 20,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.113621",
+      "createdAt": "2026-02-21T00:28:17.113627",
+      "updatedAt": "2026-02-27T00:28:17.113629"
+    },
+    {
+      "id": 7,
+      "assignmentId": 4,
+      "studentId": 19,
+      "status": "submitted",
+      "submittedAt": "2026-02-24T00:28:17.113666",
+      "createdAt": "2026-02-21T00:28:17.113670",
+      "updatedAt": "2026-02-27T00:28:17.113672"
+    },
+    {
+      "id": 8,
+      "assignmentId": 4,
+      "studentId": 16,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113699",
+      "updatedAt": "2026-02-27T00:28:17.113703"
+    },
+    {
+      "id": 9,
+      "assignmentId": 4,
+      "studentId": 25,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113706",
+      "updatedAt": "2026-02-27T00:28:17.113709"
+    },
+    {
+      "id": 10,
+      "assignmentId": 4,
+      "studentId": 14,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113712",
+      "updatedAt": "2026-02-27T00:28:17.113714"
+    },
+    {
+      "id": 11,
+      "assignmentId": 4,
+      "studentId": 12,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.113717",
+      "createdAt": "2026-02-21T00:28:17.113721",
+      "updatedAt": "2026-02-27T00:28:17.113724"
+    },
+    {
+      "id": 12,
+      "assignmentId": 4,
+      "studentId": 24,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113736",
+      "updatedAt": "2026-02-27T00:28:17.113738"
+    },
+    {
+      "id": 13,
+      "assignmentId": 4,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.113741",
+      "createdAt": "2026-02-21T00:28:17.113746",
+      "updatedAt": "2026-02-27T00:28:17.113748"
+    },
+    {
+      "id": 14,
+      "assignmentId": 4,
+      "studentId": 11,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113758",
+      "updatedAt": "2026-02-27T00:28:17.113760"
+    },
+    {
+      "id": 15,
+      "assignmentId": 4,
+      "studentId": 20,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113763",
+      "updatedAt": "2026-02-27T00:28:17.113765"
+    },
+    {
+      "id": 16,
+      "assignmentId": 5,
+      "studentId": 17,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.113788",
+      "createdAt": "2026-02-21T00:28:17.113792",
+      "updatedAt": "2026-02-27T00:28:17.113794"
+    },
+    {
+      "id": 17,
+      "assignmentId": 5,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.113810",
+      "createdAt": "2026-02-21T00:28:17.113816",
+      "updatedAt": "2026-02-27T00:28:17.113818"
+    },
+    {
+      "id": 18,
+      "assignmentId": 6,
+      "studentId": 18,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.113852",
+      "updatedAt": "2026-02-27T00:28:17.113855"
+    },
+    {
+      "id": 19,
+      "assignmentId": 6,
+      "studentId": 17,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.113858",
+      "createdAt": "2026-02-21T00:28:17.113863",
+      "updatedAt": "2026-02-27T00:28:17.113865"
+    },
+    {
+      "id": 20,
+      "assignmentId": 6,
+      "studentId": 22,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.113871",
+      "createdAt": "2026-02-21T00:28:17.113874",
+      "updatedAt": "2026-02-27T00:28:17.113877"
+    },
+    {
+      "id": 21,
+      "assignmentId": 6,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.113890",
+      "createdAt": "2026-02-21T00:28:17.113896",
+      "updatedAt": "2026-02-27T00:28:17.113898"
+    },
+    {
+      "id": 22,
+      "assignmentId": 6,
+      "studentId": 20,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.113910",
+      "createdAt": "2026-02-21T00:28:17.113914",
+      "updatedAt": "2026-02-27T00:28:17.113916"
+    },
+    {
+      "id": 23,
+      "assignmentId": 7,
+      "studentId": 26,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.113964",
+      "createdAt": "2026-02-21T00:28:17.113969",
+      "updatedAt": "2026-02-27T00:28:17.113971"
+    },
+    {
+      "id": 24,
+      "assignmentId": 7,
+      "studentId": 19,
+      "status": "submitted",
+      "submittedAt": "2026-02-25T00:28:17.113983",
+      "createdAt": "2026-02-21T00:28:17.113987",
+      "updatedAt": "2026-02-27T00:28:17.113989"
+    },
+    {
+      "id": 25,
+      "assignmentId": 7,
+      "studentId": 17,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.113994",
+      "createdAt": "2026-02-21T00:28:17.113998",
+      "updatedAt": "2026-02-27T00:28:17.114000"
+    },
+    {
+      "id": 26,
+      "assignmentId": 7,
+      "studentId": 11,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.114011",
+      "createdAt": "2026-02-21T00:28:17.114014",
+      "updatedAt": "2026-02-27T00:28:17.114016"
+    },
+    {
+      "id": 27,
+      "assignmentId": 7,
+      "studentId": 16,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114027",
+      "updatedAt": "2026-02-27T00:28:17.114029"
+    },
+    {
+      "id": 28,
+      "assignmentId": 7,
+      "studentId": 13,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.114040",
+      "createdAt": "2026-02-21T00:28:17.114046",
+      "updatedAt": "2026-02-27T00:28:17.114048"
+    },
+    {
+      "id": 29,
+      "assignmentId": 7,
+      "studentId": 20,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114055",
+      "updatedAt": "2026-02-27T00:28:17.114057"
+    },
+    {
+      "id": 30,
+      "assignmentId": 7,
+      "studentId": 27,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114066",
+      "updatedAt": "2026-02-27T00:28:17.114070"
+    },
+    {
+      "id": 31,
+      "assignmentId": 8,
+      "studentId": 11,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114098",
+      "updatedAt": "2026-02-27T00:28:17.114100"
+    },
+    {
+      "id": 32,
+      "assignmentId": 8,
+      "studentId": 21,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.114103",
+      "createdAt": "2026-02-21T00:28:17.114107",
+      "updatedAt": "2026-02-27T00:28:17.114109"
+    },
+    {
+      "id": 33,
+      "assignmentId": 8,
+      "studentId": 27,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.114116",
+      "createdAt": "2026-02-21T00:28:17.114120",
+      "updatedAt": "2026-02-27T00:28:17.114122"
+    },
+    {
+      "id": 34,
+      "assignmentId": 8,
+      "studentId": 24,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.114133",
+      "createdAt": "2026-02-21T00:28:17.114137",
+      "updatedAt": "2026-02-27T00:28:17.114139"
+    },
+    {
+      "id": 35,
+      "assignmentId": 8,
+      "studentId": 30,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.114158",
+      "createdAt": "2026-02-21T00:28:17.114164",
+      "updatedAt": "2026-02-27T00:28:17.114166"
+    },
+    {
+      "id": 36,
+      "assignmentId": 9,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114202",
+      "createdAt": "2026-02-21T00:28:17.114206",
+      "updatedAt": "2026-02-27T00:28:17.114208"
+    },
+    {
+      "id": 37,
+      "assignmentId": 9,
+      "studentId": 26,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114219",
+      "createdAt": "2026-02-21T00:28:17.114223",
+      "updatedAt": "2026-02-27T00:28:17.114225"
+    },
+    {
+      "id": 38,
+      "assignmentId": 9,
+      "studentId": 11,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114242",
+      "updatedAt": "2026-02-27T00:28:17.114245"
+    },
+    {
+      "id": 39,
+      "assignmentId": 9,
+      "studentId": 16,
+      "status": "submitted",
+      "submittedAt": "2026-02-25T00:28:17.114248",
+      "createdAt": "2026-02-21T00:28:17.114253",
+      "updatedAt": "2026-02-27T00:28:17.114255"
+    },
+    {
+      "id": 40,
+      "assignmentId": 9,
+      "studentId": 27,
+      "status": "submitted",
+      "submittedAt": "2026-02-25T00:28:17.114280",
+      "createdAt": "2026-02-21T00:28:17.114286",
+      "updatedAt": "2026-02-27T00:28:17.114288"
+    },
+    {
+      "id": 41,
+      "assignmentId": 10,
+      "studentId": 25,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114333",
+      "createdAt": "2026-02-21T00:28:17.114339",
+      "updatedAt": "2026-02-27T00:28:17.114341"
+    },
+    {
+      "id": 42,
+      "assignmentId": 10,
+      "studentId": 11,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114349",
+      "updatedAt": "2026-02-27T00:28:17.114352"
+    },
+    {
+      "id": 43,
+      "assignmentId": 10,
+      "studentId": 14,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114355",
+      "updatedAt": "2026-02-27T00:28:17.114358"
+    },
+    {
+      "id": 44,
+      "assignmentId": 10,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-24T00:28:17.114360",
+      "createdAt": "2026-02-21T00:28:17.114364",
+      "updatedAt": "2026-02-27T00:28:17.114366"
+    },
+    {
+      "id": 45,
+      "assignmentId": 10,
+      "studentId": 24,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114378",
+      "updatedAt": "2026-02-27T00:28:17.114380"
+    },
+    {
+      "id": 46,
+      "assignmentId": 11,
+      "studentId": 27,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114409",
+      "updatedAt": "2026-02-27T00:28:17.114411"
+    },
+    {
+      "id": 47,
+      "assignmentId": 11,
+      "studentId": 29,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114415",
+      "updatedAt": "2026-02-27T00:28:17.114417"
+    },
+    {
+      "id": 48,
+      "assignmentId": 11,
+      "studentId": 25,
+      "status": "submitted",
+      "submittedAt": "2026-02-24T00:28:17.114427",
+      "createdAt": "2026-02-21T00:28:17.114433",
+      "updatedAt": "2026-02-27T00:28:17.114435"
+    },
+    {
+      "id": 49,
+      "assignmentId": 11,
+      "studentId": 24,
+      "status": "submitted",
+      "submittedAt": "2026-02-24T00:28:17.114442",
+      "createdAt": "2026-02-21T00:28:17.114446",
+      "updatedAt": "2026-02-27T00:28:17.114448"
+    },
+    {
+      "id": 50,
+      "assignmentId": 11,
+      "studentId": 30,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114460",
+      "updatedAt": "2026-02-27T00:28:17.114462"
+    },
+    {
+      "id": 51,
+      "assignmentId": 11,
+      "studentId": 28,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.114465",
+      "createdAt": "2026-02-21T00:28:17.114469",
+      "updatedAt": "2026-02-27T00:28:17.114471"
+    },
+    {
+      "id": 52,
+      "assignmentId": 11,
+      "studentId": 11,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.114488",
+      "createdAt": "2026-02-21T00:28:17.114493",
+      "updatedAt": "2026-02-27T00:28:17.114496"
+    },
+    {
+      "id": 53,
+      "assignmentId": 11,
+      "studentId": 21,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114508",
+      "createdAt": "2026-02-21T00:28:17.114512",
+      "updatedAt": "2026-02-27T00:28:17.114514"
+    },
+    {
+      "id": 54,
+      "assignmentId": 12,
+      "studentId": 24,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114550",
+      "updatedAt": "2026-02-27T00:28:17.114554"
+    },
+    {
+      "id": 55,
+      "assignmentId": 12,
+      "studentId": 25,
+      "status": "submitted",
+      "submittedAt": "2026-02-25T00:28:17.114558",
+      "createdAt": "2026-02-21T00:28:17.114562",
+      "updatedAt": "2026-02-27T00:28:17.114564"
+    },
+    {
+      "id": 56,
+      "assignmentId": 12,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.114576",
+      "createdAt": "2026-02-21T00:28:17.114580",
+      "updatedAt": "2026-02-27T00:28:17.114582"
+    },
+    {
+      "id": 57,
+      "assignmentId": 12,
+      "studentId": 14,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.114593",
+      "createdAt": "2026-02-21T00:28:17.114597",
+      "updatedAt": "2026-02-27T00:28:17.114600"
+    },
+    {
+      "id": 58,
+      "assignmentId": 13,
+      "studentId": 28,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.114633",
+      "createdAt": "2026-02-21T00:28:17.114642",
+      "updatedAt": "2026-02-27T00:28:17.114645"
+    },
+    {
+      "id": 59,
+      "assignmentId": 13,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.114664",
+      "createdAt": "2026-02-21T00:28:17.114670",
+      "updatedAt": "2026-02-27T00:28:17.114673"
+    },
+    {
+      "id": 60,
+      "assignmentId": 13,
+      "studentId": 21,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114686",
+      "updatedAt": "2026-02-27T00:28:17.114693"
+    },
+    {
+      "id": 61,
+      "assignmentId": 13,
+      "studentId": 12,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.114698",
+      "createdAt": "2026-02-21T00:28:17.114704",
+      "updatedAt": "2026-02-27T00:28:17.114706"
+    },
+    {
+      "id": 62,
+      "assignmentId": 13,
+      "studentId": 27,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114728",
+      "updatedAt": "2026-02-27T00:28:17.114731"
+    },
+    {
+      "id": 63,
+      "assignmentId": 13,
+      "studentId": 30,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114734",
+      "updatedAt": "2026-02-27T00:28:17.114736"
+    },
+    {
+      "id": 64,
+      "assignmentId": 13,
+      "studentId": 24,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.114739",
+      "createdAt": "2026-02-21T00:28:17.114743",
+      "updatedAt": "2026-02-27T00:28:17.114745"
+    },
+    {
+      "id": 65,
+      "assignmentId": 13,
+      "studentId": 11,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114757",
+      "createdAt": "2026-02-21T00:28:17.114765",
+      "updatedAt": "2026-02-27T00:28:17.114767"
+    },
+    {
+      "id": 66,
+      "assignmentId": 14,
+      "studentId": 13,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114812",
+      "updatedAt": "2026-02-27T00:28:17.114816"
+    },
+    {
+      "id": 67,
+      "assignmentId": 14,
+      "studentId": 12,
+      "status": "submitted",
+      "submittedAt": "2026-02-25T00:28:17.114821",
+      "createdAt": "2026-02-21T00:28:17.114825",
+      "updatedAt": "2026-02-27T00:28:17.114827"
+    },
+    {
+      "id": 68,
+      "assignmentId": 14,
+      "studentId": 19,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114833",
+      "updatedAt": "2026-02-27T00:28:17.114836"
+    },
+    {
+      "id": 69,
+      "assignmentId": 14,
+      "studentId": 22,
+      "status": "submitted",
+      "submittedAt": "2026-02-25T00:28:17.114839",
+      "createdAt": "2026-02-21T00:28:17.114847",
+      "updatedAt": "2026-02-27T00:28:17.114850"
+    },
+    {
+      "id": 70,
+      "assignmentId": 14,
+      "studentId": 16,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114859",
+      "updatedAt": "2026-02-27T00:28:17.114862"
+    },
+    {
+      "id": 71,
+      "assignmentId": 15,
+      "studentId": 11,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.114887",
+      "updatedAt": "2026-02-27T00:28:17.114890"
+    },
+    {
+      "id": 72,
+      "assignmentId": 15,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114892",
+      "createdAt": "2026-02-21T00:28:17.114896",
+      "updatedAt": "2026-02-27T00:28:17.114899"
+    },
+    {
+      "id": 73,
+      "assignmentId": 15,
+      "studentId": 24,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114923",
+      "createdAt": "2026-02-21T00:28:17.114929",
+      "updatedAt": "2026-02-27T00:28:17.114932"
+    },
+    {
+      "id": 74,
+      "assignmentId": 15,
+      "studentId": 25,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.114945",
+      "createdAt": "2026-02-21T00:28:17.114949",
+      "updatedAt": "2026-02-27T00:28:17.114951"
+    },
+    {
+      "id": 75,
+      "assignmentId": 15,
+      "studentId": 16,
+      "status": "submitted",
+      "submittedAt": "2026-02-25T00:28:17.115753",
+      "createdAt": "2026-02-21T00:28:17.115762",
+      "updatedAt": "2026-02-27T00:28:17.115765"
+    },
+    {
+      "id": 76,
+      "assignmentId": 16,
+      "studentId": 16,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.115807",
+      "createdAt": "2026-02-21T00:28:17.115812",
+      "updatedAt": "2026-02-27T00:28:17.115814"
+    },
+    {
+      "id": 77,
+      "assignmentId": 16,
+      "studentId": 29,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.115821",
+      "updatedAt": "2026-02-27T00:28:17.115823"
+    },
+    {
+      "id": 78,
+      "assignmentId": 17,
+      "studentId": 11,
+      "status": "submitted",
+      "submittedAt": "2026-02-26T00:28:17.115845",
+      "createdAt": "2026-02-21T00:28:17.115849",
+      "updatedAt": "2026-02-27T00:28:17.115851"
+    },
+    {
+      "id": 79,
+      "assignmentId": 18,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-23T00:28:17.115883",
+      "createdAt": "2026-02-21T00:28:17.115889",
+      "updatedAt": "2026-02-27T00:28:17.115892"
+    },
+    {
+      "id": 80,
+      "assignmentId": 19,
+      "studentId": 18,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.115922",
+      "updatedAt": "2026-02-27T00:28:17.115925"
+    },
+    {
+      "id": 81,
+      "assignmentId": 19,
+      "studentId": 29,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.115928",
+      "createdAt": "2026-02-21T00:28:17.115932",
+      "updatedAt": "2026-02-27T00:28:17.115934"
+    },
+    {
+      "id": 82,
+      "assignmentId": 20,
+      "studentId": 21,
+      "status": "submitted",
+      "submittedAt": "2026-02-27T00:28:17.115963",
+      "createdAt": "2026-02-21T00:28:17.115966",
+      "updatedAt": "2026-02-27T00:28:17.115968"
+    },
+    {
+      "id": 83,
+      "assignmentId": 20,
+      "studentId": 11,
+      "status": "submitted",
+      "submittedAt": "2026-02-24T00:28:17.115991",
+      "createdAt": "2026-02-21T00:28:17.115996",
+      "updatedAt": "2026-02-27T00:28:17.115998"
+    },
+    {
+      "id": 84,
+      "assignmentId": 20,
+      "studentId": 24,
+      "status": "draft",
+      "submittedAt": null,
+      "createdAt": "2026-02-21T00:28:17.116016",
+      "updatedAt": "2026-02-27T00:28:17.116020"
+    },
+    {
+      "id": 85,
+      "assignmentId": 20,
+      "studentId": 23,
+      "status": "submitted",
+      "submittedAt": "2026-02-22T00:28:17.116023",
+      "createdAt": "2026-02-21T00:28:17.116028",
+      "updatedAt": "2026-02-27T00:28:17.116030"
+    }
   ],
-  "submission_files": [
-    { "id": 1, "submission_id": 1, "file_name": "submission_1_user_10.zip", "stored_path": "/uploads/assign_1/sub_1.zip", "file_type": ".zip", "file_size_bytes": 4139029, "uploaded_at": "2026-02-24T15:55:12Z" },
-    { "id": 2, "submission_id": 2, "file_name": "submission_2_user_9.zip", "stored_path": "/uploads/assign_1/sub_2.zip", "file_type": ".zip", "file_size_bytes": 3296723, "uploaded_at": "2026-02-25T07:55:12Z" },
-    { "id": 3, "submission_id": 3, "file_name": "submission_3_user_4.zip", "stored_path": "/uploads/assign_2/sub_3.zip", "file_type": ".zip", "file_size_bytes": 3295333, "uploaded_at": "2026-02-24T11:55:12Z" },
-    { "id": 4, "submission_id": 7, "file_name": "submission_7_user_10.zip", "stored_path": "/uploads/assign_4/sub_7.zip", "file_type": ".zip", "file_size_bytes": 4405825, "uploaded_at": "2026-02-25T03:55:12Z" },
-    { "id": 5, "submission_id": 8, "file_name": "submission_8_user_4.zip", "stored_path": "/uploads/assign_4/sub_8.zip", "file_type": ".zip", "file_size_bytes": 1491272, "uploaded_at": "2026-02-24T06:55:12Z" },
-    { "id": 6, "submission_id": 9, "file_name": "submission_9_user_9.zip", "stored_path": "/uploads/assign_5/sub_9.zip", "file_type": ".zip", "file_size_bytes": 3140672, "uploaded_at": "2026-02-25T17:55:12Z" },
-    { "id": 7, "submission_id": 10, "file_name": "submission_10_user_11.zip", "stored_path": "/uploads/assign_5/sub_10.zip", "file_type": ".zip", "file_size_bytes": 2309901, "uploaded_at": "2026-02-23T21:55:12Z" },
-    { "id": 8, "submission_id": 11, "file_name": "submission_11_user_5.zip", "stored_path": "/uploads/assign_5/sub_11.zip", "file_type": ".zip", "file_size_bytes": 2861700, "uploaded_at": "2026-02-25T00:55:12Z" },
-    { "id": 16, "submission_id": 21, "file_name": "submission_21_user_9.zip", "stored_path": "/uploads/assign_10/sub_21.zip", "file_type": ".zip", "file_size_bytes": 2216889, "uploaded_at": "2026-02-25T09:55:12Z" }
+  "submissionFiles": [
+    {
+      "id": 1,
+      "submissionId": 1,
+      "fileName": "work_student_20.pdf",
+      "storedPath": "/uploads/assign_1/stu_20.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 980142,
+      "uploadedAt": "2026-02-23T00:28:17.113482"
+    },
+    {
+      "id": 2,
+      "submissionId": 4,
+      "fileName": "work_student_21.pdf",
+      "storedPath": "/uploads/assign_2/stu_21.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1440676,
+      "uploadedAt": "2026-02-23T00:28:17.113585"
+    },
+    {
+      "id": 3,
+      "submissionId": 6,
+      "fileName": "work_student_20.pdf",
+      "storedPath": "/uploads/assign_3/stu_20.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 2783039,
+      "uploadedAt": "2026-02-27T00:28:17.113621"
+    },
+    {
+      "id": 4,
+      "submissionId": 7,
+      "fileName": "work_student_19.pdf",
+      "storedPath": "/uploads/assign_4/stu_19.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4711055,
+      "uploadedAt": "2026-02-24T00:28:17.113666"
+    },
+    {
+      "id": 5,
+      "submissionId": 11,
+      "fileName": "work_student_12.pdf",
+      "storedPath": "/uploads/assign_4/stu_12.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4381039,
+      "uploadedAt": "2026-02-23T00:28:17.113717"
+    },
+    {
+      "id": 6,
+      "submissionId": 13,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_4/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3324367,
+      "uploadedAt": "2026-02-26T00:28:17.113741"
+    },
+    {
+      "id": 7,
+      "submissionId": 16,
+      "fileName": "work_student_17.pdf",
+      "storedPath": "/uploads/assign_5/stu_17.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4647116,
+      "uploadedAt": "2026-02-26T00:28:17.113788"
+    },
+    {
+      "id": 8,
+      "submissionId": 17,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_5/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 2678541,
+      "uploadedAt": "2026-02-23T00:28:17.113810"
+    },
+    {
+      "id": 9,
+      "submissionId": 19,
+      "fileName": "work_student_17.pdf",
+      "storedPath": "/uploads/assign_6/stu_17.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 2772446,
+      "uploadedAt": "2026-02-22T00:28:17.113858"
+    },
+    {
+      "id": 10,
+      "submissionId": 20,
+      "fileName": "work_student_22.pdf",
+      "storedPath": "/uploads/assign_6/stu_22.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 483202,
+      "uploadedAt": "2026-02-23T00:28:17.113871"
+    },
+    {
+      "id": 11,
+      "submissionId": 21,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_6/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 945230,
+      "uploadedAt": "2026-02-27T00:28:17.113890"
+    },
+    {
+      "id": 12,
+      "submissionId": 22,
+      "fileName": "work_student_20.pdf",
+      "storedPath": "/uploads/assign_6/stu_20.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 775660,
+      "uploadedAt": "2026-02-26T00:28:17.113910"
+    },
+    {
+      "id": 13,
+      "submissionId": 23,
+      "fileName": "work_student_26.pdf",
+      "storedPath": "/uploads/assign_7/stu_26.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 358296,
+      "uploadedAt": "2026-02-26T00:28:17.113964"
+    },
+    {
+      "id": 14,
+      "submissionId": 24,
+      "fileName": "work_student_19.pdf",
+      "storedPath": "/uploads/assign_7/stu_19.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 221991,
+      "uploadedAt": "2026-02-25T00:28:17.113983"
+    },
+    {
+      "id": 15,
+      "submissionId": 25,
+      "fileName": "work_student_17.pdf",
+      "storedPath": "/uploads/assign_7/stu_17.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3597282,
+      "uploadedAt": "2026-02-23T00:28:17.113994"
+    },
+    {
+      "id": 16,
+      "submissionId": 26,
+      "fileName": "work_student_11.pdf",
+      "storedPath": "/uploads/assign_7/stu_11.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1733493,
+      "uploadedAt": "2026-02-22T00:28:17.114011"
+    },
+    {
+      "id": 17,
+      "submissionId": 28,
+      "fileName": "work_student_13.pdf",
+      "storedPath": "/uploads/assign_7/stu_13.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4209709,
+      "uploadedAt": "2026-02-22T00:28:17.114040"
+    },
+    {
+      "id": 18,
+      "submissionId": 32,
+      "fileName": "work_student_21.pdf",
+      "storedPath": "/uploads/assign_8/stu_21.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 364746,
+      "uploadedAt": "2026-02-26T00:28:17.114103"
+    },
+    {
+      "id": 19,
+      "submissionId": 33,
+      "fileName": "work_student_27.pdf",
+      "storedPath": "/uploads/assign_8/stu_27.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 840600,
+      "uploadedAt": "2026-02-26T00:28:17.114116"
+    },
+    {
+      "id": 20,
+      "submissionId": 34,
+      "fileName": "work_student_24.pdf",
+      "storedPath": "/uploads/assign_8/stu_24.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 881910,
+      "uploadedAt": "2026-02-27T00:28:17.114133"
+    },
+    {
+      "id": 21,
+      "submissionId": 35,
+      "fileName": "work_student_30.pdf",
+      "storedPath": "/uploads/assign_8/stu_30.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3399416,
+      "uploadedAt": "2026-02-22T00:28:17.114158"
+    },
+    {
+      "id": 22,
+      "submissionId": 36,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_9/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3575134,
+      "uploadedAt": "2026-02-23T00:28:17.114202"
+    },
+    {
+      "id": 23,
+      "submissionId": 37,
+      "fileName": "work_student_26.pdf",
+      "storedPath": "/uploads/assign_9/stu_26.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 2066507,
+      "uploadedAt": "2026-02-23T00:28:17.114219"
+    },
+    {
+      "id": 24,
+      "submissionId": 39,
+      "fileName": "work_student_16.pdf",
+      "storedPath": "/uploads/assign_9/stu_16.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3071656,
+      "uploadedAt": "2026-02-25T00:28:17.114248"
+    },
+    {
+      "id": 25,
+      "submissionId": 40,
+      "fileName": "work_student_27.pdf",
+      "storedPath": "/uploads/assign_9/stu_27.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1757495,
+      "uploadedAt": "2026-02-25T00:28:17.114280"
+    },
+    {
+      "id": 26,
+      "submissionId": 41,
+      "fileName": "work_student_25.pdf",
+      "storedPath": "/uploads/assign_10/stu_25.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1378255,
+      "uploadedAt": "2026-02-23T00:28:17.114333"
+    },
+    {
+      "id": 27,
+      "submissionId": 44,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_10/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 399311,
+      "uploadedAt": "2026-02-24T00:28:17.114360"
+    },
+    {
+      "id": 28,
+      "submissionId": 48,
+      "fileName": "work_student_25.pdf",
+      "storedPath": "/uploads/assign_11/stu_25.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3019800,
+      "uploadedAt": "2026-02-24T00:28:17.114427"
+    },
+    {
+      "id": 29,
+      "submissionId": 49,
+      "fileName": "work_student_24.pdf",
+      "storedPath": "/uploads/assign_11/stu_24.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3320892,
+      "uploadedAt": "2026-02-24T00:28:17.114442"
+    },
+    {
+      "id": 30,
+      "submissionId": 51,
+      "fileName": "work_student_28.pdf",
+      "storedPath": "/uploads/assign_11/stu_28.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4828358,
+      "uploadedAt": "2026-02-22T00:28:17.114465"
+    },
+    {
+      "id": 31,
+      "submissionId": 52,
+      "fileName": "work_student_11.pdf",
+      "storedPath": "/uploads/assign_11/stu_11.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1545673,
+      "uploadedAt": "2026-02-27T00:28:17.114488"
+    },
+    {
+      "id": 32,
+      "submissionId": 53,
+      "fileName": "work_student_21.pdf",
+      "storedPath": "/uploads/assign_11/stu_21.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1231129,
+      "uploadedAt": "2026-02-23T00:28:17.114508"
+    },
+    {
+      "id": 33,
+      "submissionId": 55,
+      "fileName": "work_student_25.pdf",
+      "storedPath": "/uploads/assign_12/stu_25.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 2624810,
+      "uploadedAt": "2026-02-25T00:28:17.114558"
+    },
+    {
+      "id": 34,
+      "submissionId": 56,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_12/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1970479,
+      "uploadedAt": "2026-02-27T00:28:17.114576"
+    },
+    {
+      "id": 35,
+      "submissionId": 57,
+      "fileName": "work_student_14.pdf",
+      "storedPath": "/uploads/assign_12/stu_14.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3035815,
+      "uploadedAt": "2026-02-27T00:28:17.114593"
+    },
+    {
+      "id": 36,
+      "submissionId": 58,
+      "fileName": "work_student_28.pdf",
+      "storedPath": "/uploads/assign_13/stu_28.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1920222,
+      "uploadedAt": "2026-02-22T00:28:17.114633"
+    },
+    {
+      "id": 37,
+      "submissionId": 59,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_13/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1524563,
+      "uploadedAt": "2026-02-27T00:28:17.114664"
+    },
+    {
+      "id": 38,
+      "submissionId": 61,
+      "fileName": "work_student_12.pdf",
+      "storedPath": "/uploads/assign_13/stu_12.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 314068,
+      "uploadedAt": "2026-02-22T00:28:17.114698"
+    },
+    {
+      "id": 39,
+      "submissionId": 64,
+      "fileName": "work_student_24.pdf",
+      "storedPath": "/uploads/assign_13/stu_24.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3103310,
+      "uploadedAt": "2026-02-22T00:28:17.114739"
+    },
+    {
+      "id": 40,
+      "submissionId": 65,
+      "fileName": "work_student_11.pdf",
+      "storedPath": "/uploads/assign_13/stu_11.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3247826,
+      "uploadedAt": "2026-02-23T00:28:17.114757"
+    },
+    {
+      "id": 41,
+      "submissionId": 67,
+      "fileName": "work_student_12.pdf",
+      "storedPath": "/uploads/assign_14/stu_12.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1877067,
+      "uploadedAt": "2026-02-25T00:28:17.114821"
+    },
+    {
+      "id": 42,
+      "submissionId": 69,
+      "fileName": "work_student_22.pdf",
+      "storedPath": "/uploads/assign_14/stu_22.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4928858,
+      "uploadedAt": "2026-02-25T00:28:17.114839"
+    },
+    {
+      "id": 43,
+      "submissionId": 72,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_15/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1874129,
+      "uploadedAt": "2026-02-23T00:28:17.114892"
+    },
+    {
+      "id": 44,
+      "submissionId": 73,
+      "fileName": "work_student_24.pdf",
+      "storedPath": "/uploads/assign_15/stu_24.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3695860,
+      "uploadedAt": "2026-02-23T00:28:17.114923"
+    },
+    {
+      "id": 45,
+      "submissionId": 74,
+      "fileName": "work_student_25.pdf",
+      "storedPath": "/uploads/assign_15/stu_25.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 2253116,
+      "uploadedAt": "2026-02-23T00:28:17.114945"
+    },
+    {
+      "id": 46,
+      "submissionId": 75,
+      "fileName": "work_student_16.pdf",
+      "storedPath": "/uploads/assign_15/stu_16.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4639987,
+      "uploadedAt": "2026-02-25T00:28:17.115753"
+    },
+    {
+      "id": 47,
+      "submissionId": 76,
+      "fileName": "work_student_16.pdf",
+      "storedPath": "/uploads/assign_16/stu_16.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 160736,
+      "uploadedAt": "2026-02-26T00:28:17.115807"
+    },
+    {
+      "id": 48,
+      "submissionId": 78,
+      "fileName": "work_student_11.pdf",
+      "storedPath": "/uploads/assign_17/stu_11.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3045260,
+      "uploadedAt": "2026-02-26T00:28:17.115845"
+    },
+    {
+      "id": 49,
+      "submissionId": 79,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_18/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3590324,
+      "uploadedAt": "2026-02-23T00:28:17.115883"
+    },
+    {
+      "id": 50,
+      "submissionId": 81,
+      "fileName": "work_student_29.pdf",
+      "storedPath": "/uploads/assign_19/stu_29.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 1191747,
+      "uploadedAt": "2026-02-27T00:28:17.115928"
+    },
+    {
+      "id": 51,
+      "submissionId": 82,
+      "fileName": "work_student_21.pdf",
+      "storedPath": "/uploads/assign_20/stu_21.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3666605,
+      "uploadedAt": "2026-02-27T00:28:17.115963"
+    },
+    {
+      "id": 52,
+      "submissionId": 83,
+      "fileName": "work_student_11.pdf",
+      "storedPath": "/uploads/assign_20/stu_11.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 4918333,
+      "uploadedAt": "2026-02-24T00:28:17.115991"
+    },
+    {
+      "id": 53,
+      "submissionId": 85,
+      "fileName": "work_student_23.pdf",
+      "storedPath": "/uploads/assign_20/stu_23.pdf",
+      "fileType": ".pdf",
+      "fileSizeBytes": 3065708,
+      "uploadedAt": "2026-02-22T00:28:17.116023"
+    }
   ],
   "grades": [
-    { "id": 1, "submission_id": 1, "graded_by": 1, "score": 93.45, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
-    { "id": 2, "submission_id": 2, "graded_by": 1, "score": 94.97, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
-    { "id": 3, "submission_id": 3, "graded_by": 1, "score": 80.72, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
-    { "id": 4, "submission_id": 8, "graded_by": 1, "score": 99.38, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" },
-    { "id": 13, "submission_id": 21, "graded_by": 2, "score": 91.3, "comments": "Good work, well implemented.", "graded_at": "2026-02-25T18:55:12Z" }
+    {
+      "id": 1,
+      "submissionId": 1,
+      "gradedBy": 5,
+      "score": 84.64,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.113544",
+      "updatedAt": "2026-02-27T00:28:17.113546"
+    },
+    {
+      "id": 2,
+      "submissionId": 6,
+      "gradedBy": 5,
+      "score": 90.58,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.113636",
+      "updatedAt": "2026-02-27T00:28:17.113638"
+    },
+    {
+      "id": 3,
+      "submissionId": 7,
+      "gradedBy": 9,
+      "score": 94.72,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.113687",
+      "updatedAt": "2026-02-27T00:28:17.113689"
+    },
+    {
+      "id": 4,
+      "submissionId": 11,
+      "gradedBy": 9,
+      "score": 99.86,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.113731",
+      "updatedAt": "2026-02-27T00:28:17.113733"
+    },
+    {
+      "id": 5,
+      "submissionId": 13,
+      "gradedBy": 9,
+      "score": 93.97,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.113753",
+      "updatedAt": "2026-02-27T00:28:17.113755"
+    },
+    {
+      "id": 6,
+      "submissionId": 17,
+      "gradedBy": 5,
+      "score": 96.82,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.113825",
+      "updatedAt": "2026-02-27T00:28:17.113827"
+    },
+    {
+      "id": 7,
+      "submissionId": 21,
+      "gradedBy": 5,
+      "score": 94.69,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.113905",
+      "updatedAt": "2026-02-27T00:28:17.113907"
+    },
+    {
+      "id": 8,
+      "submissionId": 22,
+      "gradedBy": 5,
+      "score": 62.44,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.113930",
+      "updatedAt": "2026-02-27T00:28:17.113932"
+    },
+    {
+      "id": 9,
+      "submissionId": 23,
+      "gradedBy": 8,
+      "score": 91.32,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.113978",
+      "updatedAt": "2026-02-27T00:28:17.113979"
+    },
+    {
+      "id": 10,
+      "submissionId": 25,
+      "gradedBy": 8,
+      "score": 72.86,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114006",
+      "updatedAt": "2026-02-27T00:28:17.114008"
+    },
+    {
+      "id": 11,
+      "submissionId": 26,
+      "gradedBy": 8,
+      "score": 85.96,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114022",
+      "updatedAt": "2026-02-27T00:28:17.114023"
+    },
+    {
+      "id": 12,
+      "submissionId": 33,
+      "gradedBy": 5,
+      "score": 81.4,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.114129",
+      "updatedAt": "2026-02-27T00:28:17.114130"
+    },
+    {
+      "id": 13,
+      "submissionId": 34,
+      "gradedBy": 5,
+      "score": 80.93,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114145",
+      "updatedAt": "2026-02-27T00:28:17.114146"
+    },
+    {
+      "id": 14,
+      "submissionId": 35,
+      "gradedBy": 5,
+      "score": 66.32,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.114174",
+      "updatedAt": "2026-02-27T00:28:17.114175"
+    },
+    {
+      "id": 15,
+      "submissionId": 36,
+      "gradedBy": 8,
+      "score": 88.3,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114215",
+      "updatedAt": "2026-02-27T00:28:17.114216"
+    },
+    {
+      "id": 16,
+      "submissionId": 37,
+      "gradedBy": 8,
+      "score": 85.2,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.114235",
+      "updatedAt": "2026-02-27T00:28:17.114237"
+    },
+    {
+      "id": 17,
+      "submissionId": 39,
+      "gradedBy": 8,
+      "score": 85.07,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114262",
+      "updatedAt": "2026-02-27T00:28:17.114270"
+    },
+    {
+      "id": 18,
+      "submissionId": 40,
+      "gradedBy": 8,
+      "score": 99.84,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114297",
+      "updatedAt": "2026-02-27T00:28:17.114298"
+    },
+    {
+      "id": 19,
+      "submissionId": 44,
+      "gradedBy": 4,
+      "score": 90.27,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114373",
+      "updatedAt": "2026-02-27T00:28:17.114375"
+    },
+    {
+      "id": 20,
+      "submissionId": 49,
+      "gradedBy": 5,
+      "score": 99.4,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114455",
+      "updatedAt": "2026-02-27T00:28:17.114456"
+    },
+    {
+      "id": 21,
+      "submissionId": 51,
+      "gradedBy": 5,
+      "score": 83.05,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.114477",
+      "updatedAt": "2026-02-27T00:28:17.114483"
+    },
+    {
+      "id": 22,
+      "submissionId": 52,
+      "gradedBy": 5,
+      "score": 70.34,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114503",
+      "updatedAt": "2026-02-27T00:28:17.114504"
+    },
+    {
+      "id": 23,
+      "submissionId": 55,
+      "gradedBy": 9,
+      "score": 93.29,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114572",
+      "updatedAt": "2026-02-27T00:28:17.114573"
+    },
+    {
+      "id": 24,
+      "submissionId": 56,
+      "gradedBy": 9,
+      "score": 69.12,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114588",
+      "updatedAt": "2026-02-27T00:28:17.114590"
+    },
+    {
+      "id": 25,
+      "submissionId": 57,
+      "gradedBy": 9,
+      "score": 90.24,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114605",
+      "updatedAt": "2026-02-27T00:28:17.114607"
+    },
+    {
+      "id": 26,
+      "submissionId": 58,
+      "gradedBy": 5,
+      "score": 65.77,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114653",
+      "updatedAt": "2026-02-27T00:28:17.114655"
+    },
+    {
+      "id": 27,
+      "submissionId": 59,
+      "gradedBy": 5,
+      "score": 85.02,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114680",
+      "updatedAt": "2026-02-27T00:28:17.114682"
+    },
+    {
+      "id": 28,
+      "submissionId": 61,
+      "gradedBy": 5,
+      "score": 69.52,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114722",
+      "updatedAt": "2026-02-27T00:28:17.114724"
+    },
+    {
+      "id": 29,
+      "submissionId": 64,
+      "gradedBy": 5,
+      "score": 83.91,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114752",
+      "updatedAt": "2026-02-27T00:28:17.114754"
+    },
+    {
+      "id": 30,
+      "submissionId": 65,
+      "gradedBy": 5,
+      "score": 74.75,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114781",
+      "updatedAt": "2026-02-27T00:28:17.114783"
+    },
+    {
+      "id": 31,
+      "submissionId": 72,
+      "gradedBy": 9,
+      "score": 95.31,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114906",
+      "updatedAt": "2026-02-27T00:28:17.114907"
+    },
+    {
+      "id": 32,
+      "submissionId": 73,
+      "gradedBy": 9,
+      "score": 85.46,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.114939",
+      "updatedAt": "2026-02-27T00:28:17.114941"
+    },
+    {
+      "id": 33,
+      "submissionId": 74,
+      "gradedBy": 9,
+      "score": 77.59,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.114957",
+      "updatedAt": "2026-02-27T00:28:17.114959"
+    },
+    {
+      "id": 34,
+      "submissionId": 75,
+      "gradedBy": 9,
+      "score": 98.18,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.115775",
+      "updatedAt": "2026-02-27T00:28:17.115777"
+    },
+    {
+      "id": 35,
+      "submissionId": 79,
+      "gradedBy": 7,
+      "score": 68.8,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.115899",
+      "updatedAt": "2026-02-27T00:28:17.115901"
+    },
+    {
+      "id": 36,
+      "submissionId": 81,
+      "gradedBy": 7,
+      "score": 97.03,
+      "comments": "Needs improvement in some areas.",
+      "gradedAt": "2026-02-27T00:28:17.115940",
+      "updatedAt": "2026-02-27T00:28:17.115942"
+    },
+    {
+      "id": 37,
+      "submissionId": 82,
+      "gradedBy": 4,
+      "score": 62.12,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.115985",
+      "updatedAt": "2026-02-27T00:28:17.115987"
+    },
+    {
+      "id": 38,
+      "submissionId": 83,
+      "gradedBy": 4,
+      "score": 82.87,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.116005",
+      "updatedAt": "2026-02-27T00:28:17.116007"
+    },
+    {
+      "id": 39,
+      "submissionId": 85,
+      "gradedBy": 4,
+      "score": 75.37,
+      "comments": "Good job!",
+      "gradedAt": "2026-02-27T00:28:17.116037",
+      "updatedAt": "2026-02-27T00:28:17.116039"
+    }
   ]
 }

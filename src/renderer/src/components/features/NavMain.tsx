@@ -12,9 +12,7 @@ import {
 } from "@/components/ui/sidebar"
 import React from "react"
 
-export function NavMain({
-                          items,
-                        }: {
+export function NavMain({items,}: {
   items: {
     title: string
     url: string

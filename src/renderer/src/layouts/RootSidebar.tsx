@@ -31,6 +31,7 @@ import {
 import {NavWorkspaces} from "@/components/features/NavWorkspaces";
 import {NavSecondary} from "@/components/features/NavSecondary";
 import {NavUser} from "@/components/features/NavUser";
+import {useSidebarData} from "@/hooks/useSidebarData";
 
 const data = {
   user: {
@@ -135,6 +136,11 @@ const data = {
 }
 
 export function RootSidebar() {
+
+  const {navWorkspaces, isLoading} = useSidebarData();
+  if (isLoading) {
+    return <span>loading</span>;
+  }
   return(
       <Sidebar className="min-h-10">
         <SidebarHeader className="mt-[24px]">
@@ -153,7 +159,7 @@ export function RootSidebar() {
         </SidebarHeader>
         <SidebarContent>
           <NavMain items={data.navMain} />
-          <NavWorkspaces items={data.documents} />
+          <NavWorkspaces items={navWorkspaces} />
           <NavSecondary items={data.navSecondary} className="mt-auto" />
         </SidebarContent>
         <SidebarFooter>

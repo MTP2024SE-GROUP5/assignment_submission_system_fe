@@ -1,13 +1,13 @@
 import apiClient from "@/utils/api/client";
 
 export interface User {
-  id: number;
+  user_id: number;
   role: 'teacher' | 'student';
   username: string;
-  full_name: string;
+  fullName: string;
   email: string;
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export const UserApi = {
