@@ -13,7 +13,7 @@ export function TitleBar(){
         <div className="h-[64px] px-[20px] w-full flex items-center">
           <div className="w-auto h-full flex items-center">
             <ButtonGroup className="hidden sm:flex">
-              <Button variant="outline" size="icon" aria-label="Go Back">
+              <Button variant="outline" size="icon-sm" aria-label="Go Back">
                 <ArrowLeftIcon />
               </Button>
             </ButtonGroup>
