@@ -3,6 +3,10 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
+import {WorkspaceList} from "@/pages/WorkspaceList";
+import {WorkspaceLayout} from "@/layouts/WorkspaceLayout";
+import {WorkspaceOverview} from "@/pages/WorkspaceDetail/Overview";
+import {TitleProvider} from "../context/TitleContext";
 
 const App = () => {
 
@@ -24,15 +28,24 @@ const App = () => {
   }
 
   return(
-      <HashRouter>
-        <Routes>
-          <Route path="/login" element={<Login/>} />
+      <TitleProvider>
+        <HashRouter>
+          <Routes>
+            <Route path="/login" element={<Login/>} />
 
-          <Route path="" element={<MainLayout/>}>
-            <Route index element={<Home/>} />
-          </Route>
-        </Routes>
-      </HashRouter>
+            <Route path="/" element={<MainLayout/>}>
+              <Route index element={<Home/>} />
+              <Route path="/workspaces" element={<WorkspaceList />} />
+              <Route path="/workspaces/:id" element={<WorkspaceLayout />}>
+                <Route index element={<WorkspaceOverview />} />
+                {/*<Route path="assignments" element={<AssignmentList />} />*/}
+                {/*<Route path="members" element={<MemberList />} />*/}
+                {/*<Route path="assignments/:assignmentId" element={<AssignmentDetail />} />*/}
+              </Route>
+            </Route>
+          </Routes>
+        </HashRouter>
+      </TitleProvider>
   )
 }
 

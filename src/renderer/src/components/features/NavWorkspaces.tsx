@@ -22,20 +22,24 @@ import {
   SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSkeleton,
   useSidebar,
 } from "@/components/ui/sidebar"
 import React from "react"
 
-export function NavWorkspaces({
-                               items,
-                             }: {
+export function NavWorkspaces({items, isLoading}: {
   items: {
     name: string
     url: string
     icon: Icon
-  }[]
+  }[],
+  isLoading?: false | true | boolean
 }) {
   const { isMobile } = useSidebar()
+
+  if (isLoading){
+    return (<SidebarMenuSkeleton />)
+  }
 
   return (
       <SidebarGroup className="group-data-[collapsible=icon]:hidden">

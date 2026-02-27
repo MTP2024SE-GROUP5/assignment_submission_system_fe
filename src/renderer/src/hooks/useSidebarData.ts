@@ -8,7 +8,7 @@ export function useSidebarData() {
 
   const navWorkspaces = (courses || []).map(course => ({
     name: course.courseName,
-    url: "#",
+    url: `/#/workspaces/${course.id}`,
     icon: IconDatabase,
   }));
 

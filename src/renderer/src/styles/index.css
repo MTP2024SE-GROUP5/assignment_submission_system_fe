@@ -11,7 +11,7 @@
 /*  margin: auto;*/
 /*}*/
 
-.titlebar{
+.drag-zone{
   -webkit-app-region: drag;
 }
 

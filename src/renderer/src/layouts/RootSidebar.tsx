@@ -46,7 +46,7 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Workspaces",
+      title: "WorkspaceDetail",
       url: "#",
       icon: IconListDetails,
     },
@@ -138,9 +138,6 @@ const data = {
 export function RootSidebar() {
 
   const {navWorkspaces, isLoading} = useSidebarData();
-  if (isLoading) {
-    return <span>loading</span>;
-  }
   return(
       <Sidebar className="min-h-10">
         <SidebarHeader className="mt-[24px]">
@@ -159,7 +156,7 @@ export function RootSidebar() {
         </SidebarHeader>
         <SidebarContent>
           <NavMain items={data.navMain} />
-          <NavWorkspaces items={navWorkspaces} />
+          <NavWorkspaces items={navWorkspaces} isLoading={isLoading} />
           <NavSecondary items={data.navSecondary} className="mt-auto" />
         </SidebarContent>
         <SidebarFooter>

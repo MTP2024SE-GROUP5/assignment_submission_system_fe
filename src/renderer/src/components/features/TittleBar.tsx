@@ -2,14 +2,25 @@ import {Label} from "@/components/ui/label";
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {ArrowLeftIcon} from "lucide-react";
+import { ButtonGroup } from "../ui/button-group";
+import {useTitle} from "../../../context/TitleContext";
 
 export function TitleBar(){
+
+  const { title } = useTitle();
   return(
-      <div className="titlebar h-[64px] px-[20px] w-full flex items-center">
-        <Button variant="outline" size="icon" aria-label="Go Back">
-          <ArrowLeftIcon />
-        </Button>
-        <Label className="ml-[16px] text-[16px]">Dashboard</Label>
+      <div>
+        <div className="h-[64px] px-[20px] w-full flex items-center">
+          <div className="w-auto h-full flex items-center">
+            <ButtonGroup className="hidden sm:flex">
+              <Button variant="outline" size="icon" aria-label="Go Back">
+                <ArrowLeftIcon />
+              </Button>
+            </ButtonGroup>
+            <Label className="ml-[16px] text-[16px]">{title}</Label>
+          </div>
+          <div className="flex-grow drag-zone h-full"></div>
+        </div>
       </div>
   )
 }

@@ -28,7 +28,11 @@ export const CourseAPI = {
         }
       }),
 
-  getDetail: (id: number)=> apiClient.get<Course>(`/courses/${id}`),
+  getDetail: (id: number)=> apiClient.get<Course>(`/courses`,{
+    params:{
+      id: id
+    }
+  }),
 
   create: (data: Partial<Course>)=> apiClient.post<Course>('/courses',data),
 
