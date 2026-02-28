@@ -14,12 +14,13 @@ const createWindow = () => {
     height: 800,
     titleBarStyle: 'hidden',
     ...(process.platform !== 'darwin' ? { titleBarOverlay: {
-        color: '#ffffff',
+        color: '#00000000',
         symbolColor: '#171717',
         height: 32
       } } : {}),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      webSecurity: false,
     },
   });
 

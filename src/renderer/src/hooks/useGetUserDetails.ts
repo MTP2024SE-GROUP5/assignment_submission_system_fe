@@ -5,6 +5,5 @@ export const useGetUserDetails = (userId: number) => {
   return useQuery({
     queryKey: ['get-user-details', userId],
     queryFn: async () => await UserApi.getDetail(userId),
-    select: (res:any) => res[0],
   })
 }

@@ -7,25 +7,26 @@ import {WorkspaceList} from "@/pages/WorkspaceList";
 import {WorkspaceLayout} from "@/layouts/WorkspaceLayout";
 import {WorkspaceOverview} from "@/pages/WorkspaceDetail/Overview";
 import {TitleProvider} from "../context/TitleContext";
+import {ProtectedRoute} from "@/routes/ProtectedRoute";
 
 const App = () => {
 
   console.log('Current Env:', import.meta.env);
 
-  if (import.meta.env.DEV) {
-    const mockUser = {
-      id: 22,
-      username: 'electron_tester',
-      role: 'student',
-      token: 'mock_bearer_token_12345'
-    };
-
-    if (!localStorage.getItem('user')) {
-      localStorage.setItem('user', JSON.stringify(mockUser));
-      localStorage.setItem('token', mockUser.token);
-      console.log('Mock user injected: ', mockUser.username);
-    }
-  }
+  // if (import.meta.env.DEV) {
+  //   const mockUser = {
+  //     id: 22,
+  //     username: 'electron_tester',
+  //     role: 'student',
+  //     token: 'mock_bearer_token_12345'
+  //   };
+  //
+  //   if (!localStorage.getItem('user')) {
+  //     localStorage.setItem('user', JSON.stringify(mockUser));
+  //     localStorage.setItem('token', mockUser.token);
+  //     console.log('Mock user injected: ', mockUser.username);
+  //   }
+  // }
 
   return(
       <TitleProvider>
@@ -33,14 +34,16 @@ const App = () => {
           <Routes>
             <Route path="/login" element={<Login/>} />
 
-            <Route path="/" element={<MainLayout/>}>
-              <Route index element={<Home/>} />
-              <Route path="/workspaces" element={<WorkspaceList />} />
-              <Route path="/workspaces/:id" element={<WorkspaceLayout />}>
-                <Route index element={<WorkspaceOverview />} />
-                {/*<Route path="assignments" element={<AssignmentList />} />*/}
-                {/*<Route path="members" element={<MemberList />} />*/}
-                {/*<Route path="assignments/:assignmentId" element={<AssignmentDetail />} />*/}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/" element={<MainLayout/>}>
+                <Route index element={<Home/>} />
+                <Route path="/workspaces" element={<WorkspaceList />} />
+                <Route path="/workspaces/:id" element={<WorkspaceLayout />}>
+                  <Route index element={<WorkspaceOverview />} />
+                  {/*<Route path="assignments" element={<AssignmentList />} />*/}
+                  {/*<Route path="members" element={<MemberList />} />*/}
+                  {/*<Route path="assignments/:assignmentId" element={<AssignmentDetail />} />*/}
+                </Route>
               </Route>
             </Route>
           </Routes>

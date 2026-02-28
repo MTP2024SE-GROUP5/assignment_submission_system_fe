@@ -21,18 +21,9 @@ export const CourseAPI = {
   list: (params?: CourseQueryParams) => apiClient.get<Course[]>('/courses', { params }),
 
   listMyEnrolled: (userId: number) =>
-      apiClient.get(`/courseEnrollments`, {
-        params: {
-          userId: userId,
-          _embed: 'course'
-        }
-      }),
+      apiClient.get(`/enrollments/user/${userId}`),
 
-  getDetail: (id: number)=> apiClient.get<Course>(`/courses`,{
-    params:{
-      id: id
-    }
-  }),
+  getDetail: (id: number)=> apiClient.get<Course>(`/courses/${id}`),
 
   create: (data: Partial<Course>)=> apiClient.post<Course>('/courses',data),
 

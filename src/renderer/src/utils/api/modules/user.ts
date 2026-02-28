@@ -1,7 +1,7 @@
 import apiClient from "@/utils/api/client";
 
 export interface User {
-  user_id: number;
+  id: number;
   role: 'teacher' | 'student';
   username: string;
   fullName: string;
@@ -11,11 +11,10 @@ export interface User {
 }
 
 export const UserApi = {
-  getDetail: (id: number) => apiClient.get<Partial<User>>(`/users`, {
-  params:{
-    id: id
-  }
-}),
-  modify: (id: number, data:Partial<User>) => apiClient.patch<User>(`/users/${id}`,{data}),
+  getDetail: (id: number) => apiClient.get<Partial<User>>(`/users/${id}`),
+  modify: (id: number, data:Partial<User>) => apiClient.patch<User>(`/users/${id}`,data),
+  register: (data: Partial<User>) => apiClient.post<Partial<User>>(`/users/register`,data),
+  login: (data: Partial<User>) => apiClient.post<Partial<User>>(`/users/login`,data)
+
 
 }

@@ -7,13 +7,13 @@ import {Button} from "@/components/ui/button";
 
 export function WorkspaceLayout() {
   const { id } = useParams()
-  const {data, isLoading} : { data: any, isLoading: boolean } = useGetCourseDetails(Number(id));
+  const {data, isLoading} : { data: any, isLoading: boolean } = useGetCourseDetails(id);
   const{setTitle} = useTitle();
 
   useEffect(()=>{
-    if (!isLoading && data && data.length > 0) {
+    if (!isLoading && data) {
       console.log(data)
-      setTitle(data[0].courseName);
+      setTitle(data.name);
     }
   }, [data, isLoading, setTitle]);
 

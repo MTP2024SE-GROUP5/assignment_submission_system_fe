@@ -10,6 +10,6 @@ export const useMyCourses = (userId: number) => {
       console.log('Api response: ', response);
       return response ?? [];
     },
-    select: (data: any[]) => data.map(e => e.course),
+    // select: (data: any[]) => data.map(e => e.course),
   })
 }

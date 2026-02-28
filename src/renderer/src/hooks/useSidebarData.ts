@@ -8,9 +8,11 @@ export function useSidebarData() {
   const{ data: courses, isLoading : coursesLoading} = useMyCourses(user?.id);
   const{ data: userDetail, isLoading : userDetailLoading} = useGetUserDetails(user?.id);
 
-  const navWorkspaces = (courses || []).map(course => ({
+  // @ts-ignore
+  const navWorkspaces = (courses || []).map((course: { courseName: any; courseId: any; }) => ({
+
     name: course.courseName,
-    url: `/#/workspaces/${course.id}`,
+    url: `/#/workspaces/${course.courseId}`,
     icon: IconDatabase,
   }));
 
