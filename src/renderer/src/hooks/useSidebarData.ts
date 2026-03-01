@@ -3,6 +3,7 @@ import {useMyCourses} from "@/hooks/useMyCourses";
 import {IconDatabase} from "@tabler/icons-react";
 import {useGetUserDetails} from "@/hooks/useGetUserDetails";
 import {useUserStore} from "@/store";
+import {useGetCoursesCreated} from "@/hooks/useGetCoursesCreated";
 
 export function useSidebarData() {
   const {user} = useAuth();
@@ -19,8 +20,17 @@ export function useSidebarData() {
   const navUser = {
     name: (userDetail as any)?.fullName,
     email: (userDetail as any)?.email,
-    avatar: "https://pbs.twimg.com/profile_images/1934604096973271040/LyHoR0xg_400x400.jpg",
+    avatar: "https://i.scdn.co/image/ab67616d0000b273b652c92353719de32c85480e",
   }
 
-  return{navWorkspaces, navUser, isLoading: coursesLoading};
+  const{ data: coursesCreated, isLoading : coursesCreatedLoading} = useGetCoursesCreated(user?.id);
+  // @ts-ignore
+  const navWorkspacesCreated = (coursesCreated || []).map((course: { name: any; id: any; }) => ({
+
+    name: course.name,
+    url: `/#/workspaces/${course.id}`,
+    icon: IconDatabase,
+  }));
+
+  return{navWorkspaces, navWorkspacesCreated, navUser, isLoading: coursesLoading || coursesCreatedLoading};
 }

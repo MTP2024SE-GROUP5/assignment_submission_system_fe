@@ -32,6 +32,9 @@ import {NavWorkspaces} from "@/components/features/NavWorkspaces";
 import {NavSecondary} from "@/components/features/NavSecondary";
 import {NavUser} from "@/components/features/NavUser";
 import {useSidebarData} from "@/hooks/useSidebarData";
+import {Badge} from "@/components/ui/badge";
+import {useAuth} from "@/hooks/useAuth";
+import {useUserStore} from "@/store";
 
 const data = {
   user: {
@@ -46,8 +49,8 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "WorkspaceDetail",
-      url: "#",
+      title: "Workspaces",
+      url: "/#/workspaces",
       icon: IconListDetails,
     },
     {
@@ -120,7 +123,10 @@ const data = {
 
 export function RootSidebar() {
 
-  const {navWorkspaces, navUser, isLoading} = useSidebarData();
+  const {navWorkspaces, navWorkspacesCreated, navUser, isLoading} = useSidebarData();
+  const {user} = useAuth();
+  const userDetail = useUserStore(state => state.user)
+
   return(
       <Sidebar className="min-h-10">
         <SidebarHeader className="mt-[24px]">
@@ -134,12 +140,16 @@ export function RootSidebar() {
                   <span className="text-base font-semibold">SEP1 Project</span>
                 </a>
               </SidebarMenuButton>
+              <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300">
+                {userDetail?.role === "STUDENT"?"Student":"Teacher"}
+              </Badge>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarHeader>
         <SidebarContent>
           <NavMain items={data.navMain} />
           <NavWorkspaces items={navWorkspaces} isLoading={isLoading} />
+          {userDetail?.role === "TEACHER"?<NavWorkspaces items={navWorkspacesCreated} isLoading={isLoading} createdByMyself={true}/>:""}
           <NavSecondary items={data.navSecondary} className="mt-auto" />
         </SidebarContent>
         <SidebarFooter>

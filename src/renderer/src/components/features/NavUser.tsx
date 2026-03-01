@@ -29,6 +29,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import React from "react"
+import {useUserStore} from "@/store";
+import {useNavigate} from "react-router-dom";
 
 export function NavUser({user,isLoading}: {
   user: {
@@ -38,9 +40,16 @@ export function NavUser({user,isLoading}: {
   },isLoading?: false | true | boolean
 }) {
   const { isMobile } = useSidebar()
+  const { clearUserProfile } = useUserStore();
+  const navigate = useNavigate()
 
   if (isLoading){
     return (<SidebarMenuSkeleton />)
+  }
+
+  const handleUserLogout = () =>{
+    clearUserProfile()
+    navigate("/login")
   }
 
 
@@ -87,14 +96,14 @@ export function NavUser({user,isLoading}: {
                 </div>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuGroup>
-                <DropdownMenuItem>
-                  <IconUserCircle />
-                  Account
-                </DropdownMenuItem>
-              </DropdownMenuGroup>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
+              {/*<DropdownMenuGroup>*/}
+              {/*  <DropdownMenuItem>*/}
+              {/*    <IconUserCircle />*/}
+              {/*    Account*/}
+              {/*  </DropdownMenuItem>*/}
+              {/*</DropdownMenuGroup>*/}
+              {/*<DropdownMenuSeparator />*/}
+              <DropdownMenuItem onClick={()=> handleUserLogout()}>
                 <IconLogout />
                 Log out
               </DropdownMenuItem>

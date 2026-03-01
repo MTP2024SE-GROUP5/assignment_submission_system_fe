@@ -14,6 +14,7 @@ import {useNavigate, useRoutes} from "react-router-dom";
 import {useUserLogin} from "@/hooks/useUserLogin";
 import {toast} from "sonner";
 
+
 export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
 
   const navigator = useNavigate();
@@ -70,7 +71,7 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
           <Field>
             <FieldDescription className="text-center">
               Don&apos;t have an account?{" "}
-              <a href="#" className="underline underline-offset-4">
+              <a href="/#/login/signup" className="underline underline-offset-4">
                 Sign up
               </a>
             </FieldDescription>

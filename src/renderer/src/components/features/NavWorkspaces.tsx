@@ -26,14 +26,16 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import React from "react"
+import {Link} from "react-router-dom";
 
-export function NavWorkspaces({items, isLoading}: {
+export function NavWorkspaces({items, isLoading, createdByMyself}: {
   items: {
     name: string
     url: string
     icon: Icon
   }[],
-  isLoading?: false | true | boolean
+  isLoading?: false | true | boolean,
+  createdByMyself?: boolean,
 }) {
   const { isMobile } = useSidebar()
 
@@ -42,56 +44,60 @@ export function NavWorkspaces({items, isLoading}: {
   }
 
   return (
-      <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-        <SidebarGroupLabel>Workspaces</SidebarGroupLabel>
-        <SidebarMenu>
-          {items.map((item) => (
-              <SidebarMenuItem key={item.name}>
-                <SidebarMenuButton asChild>
-                  <a href={item.url}>
-                    <item.icon />
-                    <span>{item.name}</span>
-                  </a>
-                </SidebarMenuButton>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <SidebarMenuAction
-                        showOnHover
-                        className="data-[state=open]:bg-accent rounded-sm"
+      <div>
+        <SidebarGroup className="group-data-[collapsible=icon]:hidden">
+          <SidebarGroupLabel>{createdByMyself ? "Created by me" : "Workspaces"}</SidebarGroupLabel>
+          <SidebarMenu>
+            {items.map((item) => (
+                <SidebarMenuItem key={item.name}>
+                  <SidebarMenuButton asChild>
+                    <a href={item.url}>
+                      <item.icon />
+                      <span>{item.name}</span>
+                    </a>
+                  </SidebarMenuButton>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <SidebarMenuAction
+                          showOnHover
+                          className="data-[state=open]:bg-accent rounded-sm"
+                      >
+                        <IconDots />
+                        <span className="sr-only">More</span>
+                      </SidebarMenuAction>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent
+                        className="w-24 rounded-lg"
+                        side={isMobile ? "bottom" : "right"}
+                        align={isMobile ? "end" : "start"}
                     >
-                      <IconDots />
-                      <span className="sr-only">More</span>
-                    </SidebarMenuAction>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                      className="w-24 rounded-lg"
-                      side={isMobile ? "bottom" : "right"}
-                      align={isMobile ? "end" : "start"}
-                  >
-                    <DropdownMenuItem>
-                      <IconFolder />
-                      <span>Open</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <IconShare3 />
-                      <span>Share</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem variant="destructive">
-                      <IconTrash />
-                      <span>Delete</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </SidebarMenuItem>
-          ))}
-          <SidebarMenuItem>
-            <SidebarMenuButton className="text-sidebar-foreground/70">
-              <IconDots className="text-sidebar-foreground/70" />
-              <span>More</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarGroup>
+                      <DropdownMenuItem>
+                        <IconFolder />
+                        <span>Open</span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <IconShare3 />
+                        <span>Share</span>
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem variant="destructive">
+                        <IconTrash />
+                        <span>Delete</span>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </SidebarMenuItem>
+            ))}
+            <SidebarMenuItem>
+              <Link to={createdByMyself ?"/workspaces?type=created" : "/workspaces"}>
+              <SidebarMenuButton className="text-sidebar-foreground/70">
+                <IconDots className="text-sidebar-foreground/70" />
+                <span>More</span>
+              </SidebarMenuButton>
+              </Link>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarGroup>
+      </div>
   )
 }

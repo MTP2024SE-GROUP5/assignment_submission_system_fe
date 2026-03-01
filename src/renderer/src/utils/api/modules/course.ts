@@ -31,4 +31,6 @@ export const CourseAPI = {
   modify: (id: string, data:Partial<Course>) => apiClient.patch<Course>(`/courses/${id}`,data),
 
   getAssignments: (id: string) => apiClient.get<Assignment>(`/assignments?courseId=${id}`),
+
+  listMyCreated: (teacherId: string)=> apiClient.get<Course[]>(`/courses?teacherId=${teacherId}`)
 }

@@ -12,6 +12,8 @@ import {useAuth} from "@/hooks/useAuth";
 import {useGetUserDetails} from "@/hooks/useGetUserDetails";
 import {AssignmentList} from "@/pages/WorkspaceDetail/Assignments/AssignmentList";
 import {AssignmentDetail} from "@/pages/WorkspaceDetail/Assignments/AssignmentDetail";
+import {LoginForm} from "@/components/features/LoginForm";
+import {SignupForm} from "@/components/features/SignupForm";
 
 const App = () => {
 
@@ -34,7 +36,11 @@ const App = () => {
   return(
     <HashRouter>
       <Routes>
-        <Route path="/login" element={<Login/>} />
+        {/*<Route path="/login" element={<Login/>} />*/}
+        <Route path="/login" element={<Login/>}>
+          <Route index element={<LoginForm/>}/>
+          <Route path="signup" element={<SignupForm/>}/>
+        </Route>
 
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<MainLayout/>}>
