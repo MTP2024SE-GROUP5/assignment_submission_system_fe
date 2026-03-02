@@ -65,8 +65,6 @@ export function TeacherAssignmentList({assignments, isLoading, refetch}:{assignm
     }
   };
 
-  if (isLoading) return <div className="p-4 text-center text-muted-foreground">Loading...</div>;
-
   return (
       <div className="mt-4">
         <Table>

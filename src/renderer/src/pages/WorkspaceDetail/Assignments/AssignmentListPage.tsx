@@ -16,8 +16,8 @@ export function AssignmentListPage() {
 
   const userDetail = useUserStore(state => state.user)
 
-  if (isLoading){
-    return <div>Loading</div>
+  if (isLoading && !assignments) {
+    return <div className="p-10 text-center">Initial Loading...</div>;
   }
 
   if(userDetail.role === "TEACHER"){

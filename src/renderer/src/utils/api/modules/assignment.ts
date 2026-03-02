@@ -16,7 +16,7 @@ export interface Assignment {
 }
 
 export const AssignmentsApi = {
-  getDetail: (id: string) => apiClient.get<Partial<Assignment>>(`/assignments/{id}`),
+  getDetail: (id: string) => apiClient.get<Partial<Assignment>>(`/assignments/${id}`),
   modify: (id: string, data:Partial<Assignment>) => apiClient.put<Partial<Assignment>>(`/assignments/${id}`,data),
   create: (data:Partial<Assignment>)=> apiClient.post<Partial<Assignment>>('assignments',data),
   publish: (id: string) => apiClient.put(`/assignments/${id}/publish`),
