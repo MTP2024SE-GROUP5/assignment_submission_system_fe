@@ -10,7 +10,7 @@ import {
 import { Input } from "@/components/ui/input"
 import React from "react"
 import {useForm} from "react-hook-form";
-import {useNavigate, useRoutes} from "react-router-dom";
+import {Link, useNavigate, useRoutes} from "react-router-dom";
 import {useUserLogin} from "@/hooks/useUserLogin";
 import {toast} from "sonner";
 
@@ -71,9 +71,9 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
           <Field>
             <FieldDescription className="text-center">
               Don&apos;t have an account?{" "}
-              <a href="/#/login/signup" className="underline underline-offset-4">
+              <Link to="/login/signup" className="underline underline-offset-4">
                 Sign up
-              </a>
+              </Link>
             </FieldDescription>
           </Field>
         </FieldGroup>

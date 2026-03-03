@@ -17,7 +17,7 @@ import {
   ComboboxItem,
   ComboboxList
 } from "@/components/ui/combobox";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useUserSignup} from "@/hooks/useUserSignup";
 import {Controller, useForm} from "react-hook-form";
 import {toast} from "sonner";
@@ -117,7 +117,7 @@ export function SignupForm({className, ...props}: React.ComponentProps<"form">) 
           </Field>
           <Field>
             <FieldDescription className="px-6 text-center">
-              Already have an account? <a href="/#/login">Sign in</a>
+              Already have an account? <Link to="/login">Sign in</Link>
             </FieldDescription>
           </Field>
         </FieldGroup>
