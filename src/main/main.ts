@@ -35,8 +35,15 @@ const createWindow = () => {
     );
   }
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // Ensure users see a clean UI on startup.
+  mainWindow.webContents.once('did-finish-load', () => {
+    if (mainWindow.webContents.isDevToolsOpened()) {
+      mainWindow.webContents.closeDevTools();
+    }
+  });
+
+  // Keep startup UI clean by not opening DevTools automatically.
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
