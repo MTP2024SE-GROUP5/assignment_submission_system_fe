@@ -1,10 +1,14 @@
 import React from "react"
-import {Chromium} from "lucide-react";
+import {Chromium, Languages} from "lucide-react";
 import {LoginForm} from "@/components/features/LoginForm";
 import {getImage} from "@/utils/service/getImage";
 import {Outlet} from "react-router-dom";
 import {Toaster} from "sonner";
 import logoUrl from '@/assets/images/login-page-background-wallpaper.jpg'
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {supportedLanguages} from "../../../locales";
+import {LanguageSwitcher} from "@/components/features/LanguageSwitcher";
 
 const Login = () => {
   return (
@@ -34,6 +38,9 @@ const Login = () => {
                 alt="Image"
                 className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />
+            <div className="absolute bottom-4 right-4">
+              <LanguageSwitcher/>
+            </div>
           </div>
         </div>
       </div>

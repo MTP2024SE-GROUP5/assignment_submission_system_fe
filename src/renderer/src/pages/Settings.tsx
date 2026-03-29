@@ -3,8 +3,10 @@ import { useTitleStore } from "@/store";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { Moon, Sun, Settings as SettingsIcon } from "lucide-react";
+import {Moon, Sun, Settings as SettingsIcon, Languages, SlidersHorizontal} from "lucide-react";
 import {useTheme} from "@/components/features/ThemeProvider";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
 
 const Settings = () => {
   const setTitle = useTitleStore((state) => state.setTitle);
@@ -49,6 +51,36 @@ const Settings = () => {
                   checked={theme === "dark"}
                   onCheckedChange={(checked:any) => setTheme(checked ? "dark" : "light")}
               />
+            </div>
+          </CardContent>
+          <CardContent className="space-y-6">
+            <div className="flex items-center justify-between space-x-4">
+              <div className="flex items-center space-x-4">
+                <div className="p-2 bg-muted rounded-full">
+                  <Languages className="h-[1.2rem] w-[1.2rem]" />
+                </div>
+                <div className="space-y-0.5">
+                  <Label className="text-base">Language</Label>
+                  <p className="text-sm text-muted-foreground">
+                    Change the language displayed.
+                  </p>
+                </div>
+              </div>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="icon">
+                    <SlidersHorizontal className="h-[1.2rem] w-[1.2rem]" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem >
+                    中文
+                  </DropdownMenuItem>
+                  <DropdownMenuItem >
+                    English
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </CardContent>
         </Card>

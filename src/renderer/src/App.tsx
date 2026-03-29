@@ -19,6 +19,7 @@ import Calendar from "@/pages/Calendar";
 import About from "@/pages/About";
 import Settings from "@/pages/Settings";
 import { ThemeProvider } from "./components/features/ThemeProvider";
+import '/src/i18n';
 
 const App = () => {
 

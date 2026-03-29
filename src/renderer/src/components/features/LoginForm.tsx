@@ -13,10 +13,12 @@ import {useForm} from "react-hook-form";
 import {Link, useNavigate, useRoutes} from "react-router-dom";
 import {useUserLogin} from "@/hooks/useUserLogin";
 import {toast} from "sonner";
+import { useTranslation } from 'react-i18next';
 
 
 export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
 
+  const { t } = useTranslation('auth');
   const navigator = useNavigate();
   const {mutate, isPending} = useUserLogin();
 
@@ -31,11 +33,11 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
     console.log("Login submit",formData)
     mutate(formData, {
       onSuccess: ()=> {
-        toast.success("Login success, redirecting");
+        toast.success(t('login.form.notification.login_success'));
         navigator("/");
       },
       onError:(err:any) => {
-        toast.error(err.message || "Login failed");
+        toast.error(t('login.form.notification.login_failed'));
       }
     })
   }
@@ -44,35 +46,35 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
       <form onSubmit={handleSubmit(onSubmit)} className={cn("flex flex-col gap-6", className)} {...props}>
         <FieldGroup>
           <div className="flex flex-col items-center gap-1 text-center">
-            <h1 className="text-2xl font-bold">Login to your account</h1>
+            <h1 className="text-2xl font-bold">{t('login.header.title')}</h1>
             <p className="text-muted-foreground text-sm text-balance">
-              Enter your username below to login to your account
+              {t('login.header.subtitle')}
             </p>
           </div>
           <Field>
-            <FieldLabel htmlFor="email">Username</FieldLabel>
+            <FieldLabel htmlFor="email">{t('login.form.username.label')}</FieldLabel>
             <Input id="username" type="text" required {...register("username")} />
           </Field>
           <Field>
             <div className="flex items-center">
-              <FieldLabel htmlFor="password">Password</FieldLabel>
+              <FieldLabel htmlFor="password">{t('login.form.password.label')}</FieldLabel>
               <a
                   href="#"
                   className="ml-auto text-sm underline-offset-4 hover:underline"
               >
-                Forgot your password?
+                {t('login.form.password.forget_password')}
               </a>
             </div>
             <Input id="password" type="password" required {...register("password")}/>
           </Field>
           <Field>
-            <Button type="submit">Login</Button>
+            <Button type="submit">{t('login.form.submit_btn.text')}</Button>
           </Field>
           <Field>
             <FieldDescription className="text-center">
-              Don&apos;t have an account?{" "}
+              {t('login.form.prompt_signup.text')}{" "}
               <Link to="/login/signup" className="underline underline-offset-4">
-                Sign up
+                {t('login.form.prompt_signup.link_holder')}
               </Link>
             </FieldDescription>
           </Field>
