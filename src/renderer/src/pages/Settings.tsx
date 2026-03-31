@@ -7,6 +7,7 @@ import {Moon, Sun, Settings as SettingsIcon, Languages, SlidersHorizontal} from 
 import {useTheme} from "@/components/features/ThemeProvider";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
+import {LanguageSwitcher} from "@/components/features/LanguageSwitcher";
 
 const Settings = () => {
   const setTitle = useTitleStore((state) => state.setTitle);
@@ -66,21 +67,7 @@ const Settings = () => {
                   </p>
                 </div>
               </div>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="icon">
-                    <SlidersHorizontal className="h-[1.2rem] w-[1.2rem]" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem >
-                    中文
-                  </DropdownMenuItem>
-                  <DropdownMenuItem >
-                    English
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <LanguageSwitcher style="slidersHorizontal"/>
             </div>
           </CardContent>
         </Card>

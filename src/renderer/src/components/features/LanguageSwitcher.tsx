@@ -6,16 +6,35 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Languages } from "lucide-react";
+import {Languages, SlidersHorizontal} from "lucide-react";
 import React from "react";
 import {supportedLanguages} from "../../../../locales";
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({style}:{style?:string}) {
   const { i18n } = useTranslation();
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
   };
+
+  if(style == "slidersHorizontal"){
+    return (
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" size="icon">
+              <SlidersHorizontal className="h-[1.2rem] w-[1.2rem]" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {supportedLanguages.map((lang) =>
+                <DropdownMenuItem key={lang.value} onClick={() => changeLanguage(lang.value)}>
+                  {lang.label}
+                </DropdownMenuItem>
+            )}
+          </DropdownMenuContent>
+        </DropdownMenu>
+    )
+  }
 
   return (
       <DropdownMenu>
