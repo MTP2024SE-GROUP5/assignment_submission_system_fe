@@ -1,0 +1,16 @@
+{
+  "title": "Settings",
+  "system_settings": "System Settings",
+  "appearance": {
+    "title": "Appearance",
+    "description": "Customize how the application looks on your device.",
+    "dark_mode": "Dark Mode",
+    "dark_mode_desc": "Switch between light and dark themes.",
+    "language": "Language",
+    "language_desc": "Change the language displayed."
+  },
+  "footer": {
+    "developed_by": "Project developed by Group 5",
+    "version": "Version 1.0.0-alpha"
+  }
+}

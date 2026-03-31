@@ -1,7 +1,38 @@
 {
-  "login": {
-    "header": {
-      "title": ""
-    }
+  "project": {
+    "title": "Assignment Submission System"
+  },
+  "nav": {
+    "about": "About",
+    "calendar": "Calendar",
+    "dashboard": "Dashboard",
+    "workspaces": "Workspaces",
+    "settings": "Settings"
+  },
+  "status": {
+    "syncing": "Syncing data...",
+    "loading_user": "Loading user data...",
+    "loading_courses": "Loading courses...",
+    "loading": "Loading...",
+    "loading_details": "Loading details...",
+    "initial_loading": "Initializing..."
+  },
+  "actions": {
+    "view_all": "View All",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "processing": "Processing...",
+    "save_changes": "Save Changes",
+    "more": "More"
+  },
+  "roles": {
+    "student": "Student",
+    "teacher": "Teacher"
+  },
+  "auth": {
+    "logout": "Logout"
+  },
+  "general": {
+    "na": "N/A"
   }
 }

@@ -32,6 +32,8 @@ import React from "react"
 import {useUserStore} from "@/store";
 import {useNavigate} from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+
 export function NavUser({user,isLoading}: {
   user: {
     name: string
@@ -42,6 +44,7 @@ export function NavUser({user,isLoading}: {
   const { isMobile } = useSidebar()
   const { clearUserProfile } = useUserStore();
   const navigate = useNavigate()
+  const { t } = useTranslation('common')
 
   if (isLoading){
     return (<SidebarMenuSkeleton />)
@@ -105,7 +108,7 @@ export function NavUser({user,isLoading}: {
               {/*<DropdownMenuSeparator />*/}
               <DropdownMenuItem onClick={()=> handleUserLogout()}>
                 <IconLogout />
-                Log out
+                {t('auth.logout')}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

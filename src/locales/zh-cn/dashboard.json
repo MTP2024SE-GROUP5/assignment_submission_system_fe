@@ -1,0 +1,173 @@
+{
+  "about": {
+    "subtitle": "为学术管理简化的平台，由第5组设计开发。",
+    "team_title": "团队介绍",
+    "team_description": "本项目是第5组的集体心血。我们的使命是通过一个整洁、高效、易用的数字工作区，拉近师生之间的距离。",
+    "tags": {
+      "frontend": "前端工程",
+      "backend": "后端架构",
+      "uiux": "UI/UX 设计",
+      "database": "数据库管理"
+    },
+    "tech_stack_title": "技术栈",
+    "tech_areas": {
+      "frontend": "前端",
+      "backend": "后端",
+      "database": "数据库"
+    },
+    "goals_title": "项目目标",
+    "goals_description": "作业提交系统旨在简化学术工作流程。主要功能包括：",
+    "goals_list": {
+      "0": "安全的学生作业提交管理。",
+      "1": "以教师为中心的带有反馈功能的评分工具。",
+      "2": "用于跟踪截止日期的实时学术日历。",
+      "3": "为不同用户角色提供的个性化控制台。"
+    },
+    "footer": "© 2026 第5组. 用专注与好奇心构建。"
+  },
+  "calendar": {
+    "select_date": "选择日期",
+    "schedule_for": "日程：",
+    "deadlines": "{{count}} 个截止期限",
+    "due": "截止:",
+    "no_assignments": "这一天没有到期的作业",
+    "back_to_today": "回到今天"
+  },
+  "welcome": "欢迎回来, {{name}}!",
+  "teaching_overview": "这是您的教学概览。",
+  "learning_overview": "这是您的学习概览。",
+  "teacher_greeting": "祝您教学愉快, {{name}} 教授。",
+  "teacher_desc": "您可以在工作区中管理所有课程、创建新作业并给学生作业打分。",
+  "go_to_workspaces": "前往我的工作区",
+  "my_courses": "我的课程",
+  "no_enrolled_courses": "您当前未注册任何课程。",
+  "urgent_deadlines": "紧急截止期限",
+  "no_urgent_assignments": "没有紧急的作业！🎉",
+  "assignment_detail": {
+    "loading": "正在加载作业详情...",
+    "toast": {
+      "fetch_submissions_failed": "获取提交失败",
+      "load_details_failed": "加载提交详情失败",
+      "valid_score": "请输入有效分数",
+      "grade_updated": "成绩更新成功",
+      "grade_submitted": "成绩提交成功",
+      "grade_save_failed": "保存成绩失败",
+      "draft_created": "草稿创建成功",
+      "draft_saved": "草稿已保存",
+      "draft_save_failed": "保存草稿失败",
+      "submitted_success": "作业提交成功！",
+      "submitted_failed": "提交失败"
+    },
+    "teacher": {
+      "submissions": "提交情况",
+      "subtitle": "在此处审阅并对学生作业进行评分。"
+    },
+    "table": {
+      "student": "学生",
+      "status": "状态",
+      "submitted_at": "提交时间",
+      "actions": "操作",
+      "not_submitted": "未提交",
+      "view_grade": "查看与评分",
+      "no_submissions": "未找到提交。"
+    },
+    "grading": {
+      "title": "正在评分: {{student}}",
+      "student_desc": "学生描述",
+      "no_desc": "学生未提供描述。",
+      "evaluation": "评估",
+      "score": "分数",
+      "score_placeholder": "例如 9.5",
+      "comments": "评语",
+      "comments_placeholder": "写下给学生的反馈...",
+      "update": "更新分数",
+      "submit": "提交分数"
+    },
+    "student": {
+      "untitled": "无标题作业",
+      "due_date": "截止日期:",
+      "grade_feedback": "成绩与反馈",
+      "instructor_comments": "教师评语:",
+      "submission_content": "提交内容",
+      "description_placeholder": "在此处输入您的作业描述...",
+      "save_draft": "保存草稿",
+      "update_resubmit": "更新并重新提交",
+      "submit": "提交作业"
+    }
+  },
+  "status": {
+    "submitted": "已提交",
+    "draft": "草稿",
+    "not_started": "未开始",
+    "published": "已发布",
+    "completed": "已完成"
+  },
+  "workspace": {
+    "management": {
+      "toast": {
+        "update_success": "课程详细信息已成功更新。",
+        "update_failed": "更新课程失败。",
+        "unarchive_success": "课程取消归档成功。",
+        "unarchive_failed": "课程取消归档失败。",
+        "archive_success": "课程归档成功。",
+        "archive_failed": "课程归档失败。",
+        "enroll_success": "用户录入成功。",
+        "enroll_failed": "用户录入失败。",
+        "remove_success": "学生移除成功。",
+        "remove_failed": "移除学生失败。"
+      },
+      "confirm_archive": "确定要归档此课程吗？",
+      "confirm_remove_student": "将该学生从课程中移除？",
+      "loading": "正在加载管理面板...",
+      "course_info": "课程信息",
+      "course_info_desc": "更新课程的名称和代码。",
+      "course_name": "课程名称",
+      "course_code": "课程代码",
+      "danger_zone": "危险区域",
+      "danger_zone_desc": "更改此课程的可见性和活跃状态。",
+      "archive_warning": "归档课程会将其从活跃列表中隐藏，但会保留数据。取消归档可恢复完全访问权限。",
+      "unarchive_course": "取消归档",
+      "archive_course": "归档课程",
+      "student_management": "学生管理",
+      "student_management_desc": "手动管理已注册的学生。",
+      "enroll_via_id": "通过用户ID录入",
+      "enter_user_id": "输入用户ID...",
+      "enroll": "录入",
+      "table": {
+        "user_id": "用户ID",
+        "username": "用户名",
+        "role": "角色",
+        "actions": "操作",
+        "no_students": "暂无已注册学生。",
+        "remove": "移除"
+      }
+    },
+    "overview": {
+      "archived": "已归档",
+      "active": "已激活",
+      "course_id": "课程ID",
+      "status": "状态",
+      "created_by": "创建者"
+    }
+  },
+  "tabs": {
+    "management": "管理",
+    "overview": "概览",
+    "assignments": "作业列表"
+  },
+  "assignment_list": {
+    "name": "作业名称",
+    "due_date": "截止日期",
+    "status": "状态",
+    "score": "分数",
+    "actions": "操作",
+    "no_due_date": "无截止日期"
+  },
+  "workspace_list": {
+    "enter_course": "进入课程",
+    "no_courses": "暂未创建课程",
+    "get_started": "从创建您的第一个课程开始。",
+    "created_by": "由 {{name}} 创建",
+    "manage_course": "管理课程"
+  }
+}

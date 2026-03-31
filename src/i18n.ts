@@ -19,7 +19,7 @@ i18n
 
       defaultNS: 'common',
 
-      ns: ['common', 'auth'],
+      ns: ['common', 'auth', 'settings', 'dashboard'],
 
       debug: process.env.NODE_ENV === 'development',
 

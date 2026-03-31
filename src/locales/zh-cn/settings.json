@@ -1,0 +1,16 @@
+{
+  "title": "设置",
+  "system_settings": "系统设置",
+  "appearance": {
+    "title": "外观",
+    "description": "自定义应用程序在您设备上的显示方式。",
+    "dark_mode": "深色模式",
+    "dark_mode_desc": "在浅色和深色主题之间切换。",
+    "language": "语言",
+    "language_desc": "更改显示的语言。"
+  },
+  "footer": {
+    "developed_by": "由第五组开发的项目",
+    "version": "版本 1.0.0-alpha"
+  }
+}

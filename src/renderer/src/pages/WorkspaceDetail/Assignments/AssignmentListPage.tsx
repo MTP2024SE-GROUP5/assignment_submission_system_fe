@@ -8,16 +8,18 @@ import {useUserStore} from "@/store";
 import {AssignmentList} from "@/components/features/AssignmentList";
 import {TeacherAssignmentList} from "@/components/features/TeacherAssignmentList";
 import {CreateAssignmentDialog} from "@/components/features/CreateAssignmentDialog";
+import { useTranslation } from "react-i18next";
 
 export function AssignmentListPage() {
 
   const { courseId } = useParams()
+  const { t } = useTranslation('common');
   const {data:assignments, isLoading, refetch} = useGetAssignmentsInCourse(courseId);
 
   const userDetail = useUserStore(state => state.user)
 
   if (isLoading && !assignments) {
-    return <div className="p-10 text-center">Initial Loading...</div>;
+    return <div className="p-10 text-center">{t('status.initial_loading', {defaultValue: 'Initial Loading...'})}</div>;
   }
 
   if(userDetail.role === "TEACHER"){

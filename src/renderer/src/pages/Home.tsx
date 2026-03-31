@@ -9,17 +9,19 @@ import { Badge } from "@/components/ui/badge";
 // Hooks
 import { useMyCourses } from "@/hooks/useMyCourses";
 import { useGetUrgentAssignments } from "@/hooks/useGetUrgentAssignments";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation(['dashboard', 'common']);
   const setTitle = useTitleStore((state) => state.setTitle);
   const user: any = useUserStore((state) => state.user);
 
   useEffect(() => {
-    setTitle("Dashboard");
-  }, [setTitle]);
+    setTitle(t('common:nav.dashboard', {defaultValue: 'Dashboard'}));
+  }, [setTitle, t]);
 
   if (!user) {
-    return <div className="p-8">Loading user data...</div>;
+    return <div className="p-8">{t('common:status.loading_user', {defaultValue: 'Loading user data...'})}</div>;
   }
 
   return (
@@ -31,12 +33,12 @@ const Home = () => {
           </div>
           <div>
             <h1 className="text-3xl font-bold tracking-tight">
-              Welcome back, {user.full_name || user.username}!
+              {t('dashboard:welcome', { name: user.full_name || user.username, defaultValue: `Welcome back, ${user.full_name || user.username}!` })}
             </h1>
             <p className="text-muted-foreground">
               {user.role === "TEACHER"
-                  ? "Here is your teaching overview."
-                  : "Here is your learning overview."}
+                  ? t('dashboard:teaching_overview', {defaultValue: 'Here is your teaching overview.'})
+                  : t('dashboard:learning_overview', {defaultValue: 'Here is your learning overview.'})}
             </p>
           </div>
         </div>
@@ -56,6 +58,7 @@ const Home = () => {
 // ---------------------------------------------------------------------------
 function TeacherDashboard({ user }: { user: any }) {
   const navigate = useNavigate();
+  const { t } = useTranslation(['dashboard', 'common']);
 
   return (
       <Card className="border-none shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800">
@@ -63,14 +66,14 @@ function TeacherDashboard({ user }: { user: any }) {
           <GraduationCap className="w-16 h-16 mx-auto text-blue-500 opacity-80" />
           <div className="space-y-2">
             <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-100">
-              Have a great day of teaching, Professor {user.full_name || user.username}.
+              {t('dashboard:teacher_greeting', { name: user.full_name || user.username, defaultValue: `Have a great day of teaching, Professor ${user.full_name || user.username}.` })}
             </h2>
             <p className="text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
-              You can manage all your classes, create new assignments, and grade student submissions in your workspaces.
+              {t('dashboard:teacher_desc', {defaultValue: 'You can manage all your classes, create new assignments, and grade student submissions in your workspaces.'})}
             </p>
           </div>
           <Button size="lg" onClick={() => navigate("/workspaces")} className="mt-4">
-            Go to My Workspaces <ChevronRight className="ml-2 w-4 h-4" />
+            {t('dashboard:go_to_workspaces', {defaultValue: 'Go to My Workspaces'})} <ChevronRight className="ml-2 w-4 h-4" />
           </Button>
         </CardContent>
       </Card>
@@ -82,6 +85,7 @@ function TeacherDashboard({ user }: { user: any }) {
 // ---------------------------------------------------------------------------
 function StudentDashboard({ userId }: { userId: number }) {
   const navigate = useNavigate();
+  const { t } = useTranslation(['dashboard', 'common']);
 
   // Fetch real data using hooks
   const { data: coursesRes, isLoading: coursesLoading } = useMyCourses(userId);
@@ -98,16 +102,16 @@ function StudentDashboard({ userId }: { userId: number }) {
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold flex items-center">
               <BookOpen className="w-5 h-5 mr-2 text-blue-500" />
-              My Courses
+              {t('dashboard:my_courses', {defaultValue: 'My Courses'})}
             </h2>
             <Button variant="ghost" size="sm" onClick={() => navigate("/workspaces")}>
-              View All
+              {t('common:actions.view_all', {defaultValue: 'View All'})}
             </Button>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {coursesLoading ? (
-                <div className="col-span-2 p-8 text-center text-muted-foreground">Loading courses...</div>
+                <div className="col-span-2 p-8 text-center text-muted-foreground">{t('common:status.loading_courses', {defaultValue: 'Loading courses...'})}</div>
             ) : courses.length > 0 ? (
                 courses.slice(0, 4).map((item: any) => {
                   // Extraction logic depends on whether API returns pure Course list or Enrollment list
@@ -132,7 +136,7 @@ function StudentDashboard({ userId }: { userId: number }) {
                 })
             ) : (
                 <div className="col-span-2 p-8 border border-dashed rounded-lg text-center text-muted-foreground">
-                  You are not currently enrolled in any courses.
+                  {t('dashboard:no_enrolled_courses', {defaultValue: 'You are not currently enrolled in any courses.'})}
                 </div>
             )}
           </div>
@@ -142,13 +146,13 @@ function StudentDashboard({ userId }: { userId: number }) {
         <div className="space-y-6">
           <h2 className="text-xl font-semibold flex items-center">
             <Clock className="w-5 h-5 mr-2 text-orange-500" />
-            Urgent Deadlines
+            {t('dashboard:urgent_deadlines', {defaultValue: 'Urgent Deadlines'})}
           </h2>
 
           <Card>
             <CardContent className="p-0 divide-y">
               {assignmentsLoading ? (
-                  <div className="p-6 text-center text-sm text-muted-foreground">Loading...</div>
+                  <div className="p-6 text-center text-sm text-muted-foreground">{t('common:status.loading', {defaultValue: 'Loading...'})}</div>
               ) : assignments.length > 0 ? (
                   assignments.map((assignment: any) => (
                       <div
@@ -174,7 +178,7 @@ function StudentDashboard({ userId }: { userId: number }) {
                   ))
               ) : (
                   <div className="p-8 text-center text-sm text-muted-foreground">
-                    No urgent assignments! 🎉
+                    {t('dashboard:no_urgent_assignments', {defaultValue: 'No urgent assignments! 🎉'})}
                   </div>
               )}
             </CardContent>

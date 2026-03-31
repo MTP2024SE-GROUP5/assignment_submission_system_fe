@@ -4,6 +4,7 @@ import {useGetCourseDetails} from "@/hooks/useGetCourseDetails";
 import {ButtonGroup} from "@/components/ui/button-group";
 import {Button} from "@/components/ui/button";
 import {useTitleStore, useUserStore} from "@/store";
+import { useTranslation } from "react-i18next";
 
 export function WorkspaceLayout() {
   const { courseId } = useParams()
@@ -12,6 +13,7 @@ export function WorkspaceLayout() {
   const setTitle = useTitleStore((state)=>state.setTitle)
   const navigate = useNavigate()
   const userDetail = useUserStore((state) => state.user);
+  const { t } = useTranslation('dashboard');
 
   const isOverview = location.pathname.endsWith(`${courseId}`);
   const isAssignments = location.pathname.includes("/assignments");
@@ -32,20 +34,20 @@ export function WorkspaceLayout() {
                 variant={isOverview ? "default" : "outline"}
                 onClick={() => navigate(`/workspaces/${courseId}`)}
             >
-              Overview
+              {t('tabs.overview')}
             </Button>
             <Button
                 variant={isAssignments ? "default" : "outline"}
                 onClick={() => navigate(`/workspaces/${courseId}/assignments`)}
             >
-              Assignments
+              {t('tabs.assignments')}
             </Button>
             {userDetail?.role === "TEACHER" && (
                 <Button
                     variant={isManagement ? "default" : "outline"}
                     onClick={() => navigate(`/workspaces/${courseId}/management`)}
                 >
-                  Management
+                  {t('tabs.management')}
                 </Button>
             )}
           </ButtonGroup>

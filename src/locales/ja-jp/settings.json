@@ -1,0 +1,16 @@
+{
+  "title": "設定",
+  "system_settings": "システム設定",
+  "appearance": {
+    "title": "外観",
+    "description": "デバイスでのアプリケーションの表示方法をカスタマイズします。",
+    "dark_mode": "ダークモード",
+    "dark_mode_desc": "ライトテーマとダークテーマを切り替えます。",
+    "language": "言語",
+    "language_desc": "表示される言語を変更します。"
+  },
+  "footer": {
+    "developed_by": "グループ5により開発",
+    "version": "バージョン 1.0.0-alpha"
+  }
+}

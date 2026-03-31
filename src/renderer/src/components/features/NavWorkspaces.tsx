@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/sidebar"
 import React from "react"
 import {Link} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function NavWorkspaces({items, isLoading, createdByMyself}: {
   items: {
@@ -38,6 +39,7 @@ export function NavWorkspaces({items, isLoading, createdByMyself}: {
   createdByMyself?: boolean,
 }) {
   const { isMobile } = useSidebar()
+  const { t } = useTranslation('common');
 
   if (isLoading){
     return (<SidebarMenuSkeleton />)
@@ -46,7 +48,7 @@ export function NavWorkspaces({items, isLoading, createdByMyself}: {
   return (
       <div>
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-          <SidebarGroupLabel>{createdByMyself ? "Created by me" : "Workspaces"}</SidebarGroupLabel>
+          <SidebarGroupLabel>{createdByMyself ? t('nav.created_by_me') : t('nav.workspaces')}</SidebarGroupLabel>
           <SidebarMenu>
             {items.map((item) => (
                 <SidebarMenuItem key={item.name}>
@@ -92,7 +94,7 @@ export function NavWorkspaces({items, isLoading, createdByMyself}: {
               <Link to={createdByMyself ?"/workspaces?type=created" : "/workspaces"}>
               <SidebarMenuButton className="text-sidebar-foreground/70">
                 <IconDots className="text-sidebar-foreground/70" />
-                <span>More</span>
+                <span>{t('actions.more')}</span>
               </SidebarMenuButton>
               </Link>
             </SidebarMenuItem>

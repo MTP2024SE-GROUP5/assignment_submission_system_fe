@@ -11,6 +11,7 @@ import {useGetCoursesCreated} from "@/hooks/useGetCoursesCreated";
 import {CreateCourseDialog} from "@/components/features/CreateCourseDialog";
 import {useCreateCourse} from "@/hooks/useCreateCourse";
 import {toast} from "sonner";
+import { useTranslation } from "react-i18next";
 
 export function WorkspaceList() {
 
@@ -20,9 +21,10 @@ export function WorkspaceList() {
   const {user} = useAuth();
 
   const setTitle = useTitleStore((state) => state.setTitle);
+  const { t } = useTranslation(['common', 'dashboard']);
   useEffect(() => {
-    setTitle("Workspaces");
-  }, [setTitle]);
+    setTitle(t('common:nav.workspaces', {defaultValue: 'Workspaces'}));
+  }, [setTitle, t]);
 
   const userDetail = useUserStore(state => state.user)
   const{ data: courses, isLoading : coursesLoading} = useMyCourses(user?.id);
@@ -33,10 +35,10 @@ export function WorkspaceList() {
     console.log("Signup submit", formdata)
     mutate(formdata, {
       onSuccess: () => {
-        toast.success("Success create new course");
+        toast.success(t('dashboard:toast.create_course_success', {defaultValue: 'Success create new course'}));
       },
       onError: (err: any) => {
-        toast.error(err.message || "Create new course failed")
+        toast.error(err.message || t('dashboard:toast.create_course_failed', {defaultValue: 'Create new course failed'}));
       }
     })
   };

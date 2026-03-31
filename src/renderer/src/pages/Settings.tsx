@@ -8,27 +8,29 @@ import {useTheme} from "@/components/features/ThemeProvider";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {LanguageSwitcher} from "@/components/features/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const Settings = () => {
+  const { t } = useTranslation('settings');
   const setTitle = useTitleStore((state) => state.setTitle);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setTitle("Settings");
-  }, [setTitle]);
+    setTitle(t('title', {defaultValue: 'Settings'}));
+  }, [setTitle, t]);
 
   return (
       <div className="max-w-2xl mx-auto p-6 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
         <div className="flex items-center space-x-2 px-1">
           <SettingsIcon className="w-5 h-5 text-primary" />
-          <h2 className="text-xl font-bold tracking-tight">System Settings</h2>
+          <h2 className="text-xl font-bold tracking-tight">{t('system_settings', {defaultValue: 'System Settings'})}</h2>
         </div>
 
         <Card className="shadow-sm border-primary/10">
           <CardHeader>
-            <CardTitle>Appearance</CardTitle>
+            <CardTitle>{t('appearance.title', {defaultValue: 'Appearance'})}</CardTitle>
             <CardDescription>
-              Customize how the application looks on your device.
+              {t('appearance.description', {defaultValue: 'Customize how the application looks on your device.'})}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -42,9 +44,9 @@ const Settings = () => {
                   )}
                 </div>
                 <div className="space-y-0.5">
-                  <Label className="text-base">Dark Mode</Label>
+                  <Label className="text-base">{t('appearance.dark_mode', {defaultValue: 'Dark Mode'})}</Label>
                   <p className="text-sm text-muted-foreground">
-                    Switch between light and dark themes.
+                    {t('appearance.dark_mode_desc', {defaultValue: 'Switch between light and dark themes.'})}
                   </p>
                 </div>
               </div>
@@ -61,9 +63,9 @@ const Settings = () => {
                   <Languages className="h-[1.2rem] w-[1.2rem]" />
                 </div>
                 <div className="space-y-0.5">
-                  <Label className="text-base">Language</Label>
+                  <Label className="text-base">{t('appearance.language', {defaultValue: 'Language'})}</Label>
                   <p className="text-sm text-muted-foreground">
-                    Change the language displayed.
+                    {t('appearance.language_desc', {defaultValue: 'Change the language displayed.'})}
                   </p>
                 </div>
               </div>
@@ -75,10 +77,10 @@ const Settings = () => {
         <Card className="bg-muted/30 border-none">
           <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
             <p className="text-xs text-muted-foreground">
-              Project developed by Group 5
+              {t('footer.developed_by', {defaultValue: 'Project developed by Group 5'})}
             </p>
             <p className="text-[10px] text-muted-foreground/60 uppercase tracking-widest">
-              Version 1.0.0-alpha
+              {t('footer.version', {defaultValue: 'Version 1.0.0-alpha'})}
             </p>
           </CardContent>
         </Card>

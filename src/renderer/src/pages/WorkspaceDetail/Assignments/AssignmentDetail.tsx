@@ -21,25 +21,27 @@ import { useTeacherGetSubmission } from "@/hooks/useTeacherGetSubmission";
 import { useGetSingleSubmission } from "@/hooks/useGetSingleSubmission";
 import { useGradeSubmission } from "@/hooks/useGradeSubmission";
 import { useUpdateGrade } from "@/hooks/useUpdateGrade";
+import { useTranslation } from "react-i18next";
 
 export function AssignmentDetail() {
+  const { t } = useTranslation(['dashboard', 'common']);
   const { assignmentId } = useParams<{ assignmentId: string }>();
   const user = useUserStore((state) => state.user);
   const { data: assignment, isLoading: isLoadingAssignment } = useGetAssignmentDetail(assignmentId!);
 
-  if (isLoadingAssignment) return <div className="p-8">Loading assignment details...</div>;
+  if (isLoadingAssignment) return <div className="p-8">{t('dashboard:assignment_detail.loading', {defaultValue: 'Loading assignment details...'})}</div>;
 
   if (user?.role === "TEACHER") {
-    return <TeacherAssignmentView assignmentId={assignmentId!} assignment={assignment} />;
+    return <TeacherAssignmentView assignmentId={assignmentId!} assignment={assignment} t={t} />;
   }
 
-  return <StudentAssignmentView assignmentId={assignmentId!} assignment={assignment} />;
+  return <StudentAssignmentView assignmentId={assignmentId!} assignment={assignment} t={t} />;
 }
 
 // ---------------------------------------------------------------------------
 // TEACHER VIEW COMPONENT
 // ---------------------------------------------------------------------------
-function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: string; assignment: any }) {
+function TeacherAssignmentView({ assignmentId, assignment, t }: { assignmentId: string; assignment: any; t: any }) {
   const { mutateAsync: getSubmissionsMutate } = useTeacherGetSubmission();
   const [submissions, setSubmissions] = useState<any[]>([]);
   const [selectedSubmissionId, setSelectedSubmissionId] = useState<string | null>(null);
@@ -52,7 +54,7 @@ function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: str
       const res: any = await getSubmissionsMutate(assignmentId);
       setSubmissions(res?.data || res || []);
     } catch (error) {
-      toast.error("Failed to fetch submissions");
+      toast.error(t('dashboard:assignment_detail.toast.fetch_submissions_failed', {defaultValue: 'Failed to fetch submissions'}));
     } finally {
       setIsLoading(false);
     }
@@ -77,23 +79,23 @@ function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: str
       <div className="max-w-6xl mx-auto p-6 space-y-6">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">{assignment?.title} - Submissions</CardTitle>
-            <p className="text-sm text-muted-foreground">Review and grade student submissions here.</p>
+            <CardTitle className="text-2xl">{assignment?.title} - {t('dashboard:assignment_detail.teacher.submissions', {defaultValue: 'Submissions'})}</CardTitle>
+            <p className="text-sm text-muted-foreground">{t('dashboard:assignment_detail.teacher.subtitle', {defaultValue: 'Review and grade student submissions here.'})}</p>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Student</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Submitted At</TableHead>
-                  <TableHead className="text-right">Actions</TableHead>
+                  <TableHead>{t('dashboard:assignment_detail.table.student', {defaultValue: 'Student'})}</TableHead>
+                  <TableHead>{t('dashboard:assignment_detail.table.status', {defaultValue: 'Status'})}</TableHead>
+                  <TableHead>{t('dashboard:assignment_detail.table.submitted_at', {defaultValue: 'Submitted At'})}</TableHead>
+                  <TableHead className="text-right">{t('dashboard:assignment_detail.table.actions', {defaultValue: 'Actions'})}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {isLoading ? (
                     <TableRow>
-                      <TableCell colSpan={4} className="text-center py-8">Loading...</TableCell>
+                      <TableCell colSpan={4} className="text-center py-8">{t('common:status.loading', {defaultValue: 'Loading...'})}</TableCell>
                     </TableRow>
                 ) : submissions.map((sub: any) => (
                     <TableRow key={sub.id}>
@@ -104,7 +106,7 @@ function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: str
                         </Badge>
                       </TableCell>
                       <TableCell>
-                        {sub.submittedAt ? new Date(sub.submittedAt).toLocaleString() : "Not submitted"}
+                        {sub.submittedAt ? new Date(sub.submittedAt).toLocaleString() : t('dashboard:assignment_detail.table.not_submitted', {defaultValue: 'Not submitted'})}
                       </TableCell>
                       <TableCell className="text-right">
                         <Button
@@ -112,7 +114,7 @@ function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: str
                             size="sm"
                             onClick={() => handleOpenGrading(sub.id.toString())}
                         >
-                          View & Grade
+                          {t('dashboard:assignment_detail.table.view_grade', {defaultValue: 'View & Grade'})}
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -120,7 +122,7 @@ function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: str
                 {!isLoading && submissions.length === 0 && (
                     <TableRow>
                       <TableCell colSpan={4} className="text-center text-muted-foreground py-8">
-                        No submissions found.
+                        {t('dashboard:assignment_detail.table.no_submissions', {defaultValue: 'No submissions found.'})}
                       </TableCell>
                     </TableRow>
                 )}
@@ -133,6 +135,7 @@ function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: str
             <GradingDialog
                 submissionId={selectedSubmissionId}
                 onClose={handleCloseGrading}
+                t={t}
             />
         )}
       </div>
@@ -142,7 +145,7 @@ function TeacherAssignmentView({ assignmentId, assignment }: { assignmentId: str
 // ---------------------------------------------------------------------------
 // GRADING DIALOG COMPONENT
 // ---------------------------------------------------------------------------
-function GradingDialog({ submissionId, onClose }: { submissionId: string; onClose: () => void }) {
+function GradingDialog({ submissionId, onClose, t }: { submissionId: string; onClose: () => void; t: any }) {
   const { mutateAsync: getSingleSubmission } = useGetSingleSubmission();
   const { mutateAsync: getStudentGrade } = useStudentGetGrade();
   const { mutateAsync: gradeSubmission } = useGradeSubmission();
@@ -180,7 +183,7 @@ function GradingDialog({ submissionId, onClose }: { submissionId: string; onClos
         console.log("No grade exists yet for this submission.");
       }
     } catch (error) {
-      toast.error("Failed to load submission details");
+      toast.error(t('dashboard:assignment_detail.toast.load_details_failed', {defaultValue: 'Failed to load submission details'}));
     } finally {
       setIsLoading(false);
     }
@@ -188,7 +191,7 @@ function GradingDialog({ submissionId, onClose }: { submissionId: string; onClos
 
   const handleSaveGrade = async () => {
     if (score === "") {
-      toast.error("Please enter a valid score");
+      toast.error(t('dashboard:assignment_detail.toast.valid_score', {defaultValue: 'Please enter a valid score'}));
       return;
     }
 
@@ -204,18 +207,18 @@ function GradingDialog({ submissionId, onClose }: { submissionId: string; onClos
           submissionId: gradeInfo.gradeId.toString(),
           data: payloadData
         });
-        toast.success("Grade updated successfully");
+        toast.success(t('dashboard:assignment_detail.toast.grade_updated', {defaultValue: 'Grade updated successfully'}));
       } else {
         // Create new grade
         await gradeSubmission({
           submissionId,
           data: payloadData
         });
-        toast.success("Grade submitted successfully");
+        toast.success(t('dashboard:assignment_detail.toast.grade_submitted', {defaultValue: 'Grade submitted successfully'}));
       }
       onClose();
     } catch (error) {
-      toast.error("Failed to save grade");
+      toast.error(t('dashboard:assignment_detail.toast.grade_save_failed', {defaultValue: 'Failed to save grade'}));
     } finally {
       setIsSubmitting(false);
     }
@@ -225,27 +228,27 @@ function GradingDialog({ submissionId, onClose }: { submissionId: string; onClos
       <Dialog open={true} onOpenChange={onClose}>
         <DialogContent className="max-w-3xl max-h-[80vh] flex flex-col">
           <DialogHeader>
-            <DialogTitle>Grading Submission: {submission?.studentUsername || "Loading..."}</DialogTitle>
+            <DialogTitle>{t('dashboard:assignment_detail.grading.title', {student: submission?.studentUsername || t('common:status.loading_details', {defaultValue: 'Loading details...'}), defaultValue: `Grading Submission: ${submission?.studentUsername || 'Loading details...'}`})}</DialogTitle>
           </DialogHeader>
 
           <div className="flex-1 overflow-y-auto space-y-6 py-4">
             {isLoading ? (
-                <p className="text-muted-foreground text-center">Loading details...</p>
+                <p className="text-muted-foreground text-center">{t('common:status.loading_details', {defaultValue: 'Loading details...'})}</p>
             ) : (
                 <>
                   {/* Student's Work */}
                   <div className="space-y-2">
-                    <Label className="text-base font-semibold">Student Description</Label>
+                    <Label className="text-base font-semibold">{t('dashboard:assignment_detail.grading.student_desc', {defaultValue: 'Student Description'})}</Label>
                     <div className="p-4 bg-muted/30 rounded-lg min-h-[150px] whitespace-pre-wrap text-sm">
-                      {submission?.description || "No description provided by student."}
+                      {submission?.description || t('dashboard:assignment_detail.grading.no_desc', {defaultValue: 'No description provided by student.'})}
                     </div>
                   </div>
 
                   {/* Grading Form */}
                   <div className="space-y-4 pt-4 border-t">
-                    <Label className="text-base font-semibold">Evaluation</Label>
+                    <Label className="text-base font-semibold">{t('dashboard:assignment_detail.grading.evaluation', {defaultValue: 'Evaluation'})}</Label>
                     <div className="grid grid-cols-4 gap-4 items-center">
-                      <Label htmlFor="score" className="text-right">Score</Label>
+                      <Label htmlFor="score" className="text-right">{t('dashboard:assignment_detail.grading.score', {defaultValue: 'Score'})}</Label>
                       <Input
                           id="score"
                           type="number"
@@ -254,17 +257,17 @@ function GradingDialog({ submissionId, onClose }: { submissionId: string; onClos
                           className="col-span-3"
                           value={score}
                           onChange={(e) => setScore(e.target.value ? Number(e.target.value) : "")}
-                          placeholder="e.g. 9.5"
+                          placeholder={t('dashboard:assignment_detail.grading.score_placeholder', {defaultValue: 'e.g. 9.5'})}
                       />
                     </div>
                     <div className="grid grid-cols-4 gap-4 items-start">
-                      <Label htmlFor="comments" className="text-right pt-2">Comments</Label>
+                      <Label htmlFor="comments" className="text-right pt-2">{t('dashboard:assignment_detail.grading.comments', {defaultValue: 'Comments'})}</Label>
                       <Textarea
                           id="comments"
                           className="col-span-3 min-h-[100px]"
                           value={comments}
                           onChange={(e) => setComments(e.target.value)}
-                          placeholder="Leave feedback for the student..."
+                          placeholder={t('dashboard:assignment_detail.grading.comments_placeholder', {defaultValue: 'Leave feedback for the student...'})}
                       />
                     </div>
                   </div>
@@ -273,9 +276,9 @@ function GradingDialog({ submissionId, onClose }: { submissionId: string; onClos
           </div>
 
           <DialogFooter>
-            <Button variant="outline" onClick={onClose} disabled={isSubmitting}>Cancel</Button>
+            <Button variant="outline" onClick={onClose} disabled={isSubmitting}>{t('common:actions.cancel', {defaultValue: 'Cancel'})}</Button>
             <Button onClick={handleSaveGrade} disabled={isSubmitting || isLoading}>
-              {isSubmitting ? "Saving..." : gradeInfo?.gradeId ? "Update Grade" : "Submit Grade"}
+              {isSubmitting ? t('common:actions.saving', {defaultValue: 'Saving...'}) : gradeInfo?.gradeId ? t('dashboard:assignment_detail.grading.update', {defaultValue: 'Update Grade'}) : t('dashboard:assignment_detail.grading.submit', {defaultValue: 'Submit Grade'})}
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -286,7 +289,7 @@ function GradingDialog({ submissionId, onClose }: { submissionId: string; onClos
 // ---------------------------------------------------------------------------
 // STUDENT VIEW COMPONENT
 // ---------------------------------------------------------------------------
-function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: string; assignment: any }) {
+function StudentAssignmentView({ assignmentId, assignment, t }: { assignmentId: string; assignment: any; t: any }) {
   const { mutateAsync: getSubmission } = useStudentGetSubmission();
   const { mutateAsync: createDraft } = useCreateSubmissionDraft();
   const { mutateAsync: updateDescription } = useUpdateSubmission();
@@ -339,13 +342,13 @@ function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: str
         const data = res?.data || res;
         setSubmissionId(data.id.toString());
         setStatus("DRAFT");
-        toast.success("Draft created successfully");
+        toast.success(t('dashboard:assignment_detail.toast.draft_created', {defaultValue: 'Draft created successfully'}));
       } else {
         await updateDescription({ submissionId, discription: description });
-        toast.success("Changes saved to draft");
+        toast.success(t('dashboard:assignment_detail.toast.draft_saved', {defaultValue: 'Changes saved to draft'}));
       }
     } catch (error) {
-      toast.error("Failed to save draft");
+      toast.error(t('dashboard:assignment_detail.toast.draft_save_failed', {defaultValue: 'Failed to save draft'}));
     } finally {
       setIsProcessing(false);
     }
@@ -364,10 +367,10 @@ function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: str
 
       await submitDraft(submissionId);
       setStatus("SUBMITTED");
-      toast.success("Assignment submitted successfully!");
+      toast.success(t('dashboard:assignment_detail.toast.submitted_success', {defaultValue: 'Assignment submitted successfully!'}));
       loadSubmissionData();
     } catch (error) {
-      toast.error("Submission failed");
+      toast.error(t('dashboard:assignment_detail.toast.submitted_failed', {defaultValue: 'Submission failed'}));
     } finally {
       setIsProcessing(false);
     }
@@ -379,11 +382,11 @@ function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: str
           <CardHeader className="pb-4">
             <div className="flex justify-between items-start">
               <div className="space-y-1">
-                <CardTitle className="text-3xl">{assignment?.title || "Untitled Assignment"}</CardTitle>
-                <p className="text-sm text-muted-foreground">Due Date: {assignment?.dueDate || "N/A"}</p>
+                <CardTitle className="text-3xl">{assignment?.title || t('dashboard:assignment_detail.student.untitled', {defaultValue: 'Untitled Assignment'})}</CardTitle>
+                <p className="text-sm text-muted-foreground">{t('dashboard:assignment_detail.student.due_date', {defaultValue: 'Due Date:'})} {assignment?.dueDate || t('common:general.na', {defaultValue: 'N/A'})}</p>
               </div>
               <Badge variant={status === "SUBMITTED" ? "default" : "secondary"}>
-                {status === "SUBMITTED" ? "Submitted" : status === "DRAFT" ? "Draft" : "Not Started"}
+                {status === "SUBMITTED" ? t('dashboard:status.submitted', {defaultValue: 'Submitted'}) : status === "DRAFT" ? t('dashboard:status.draft', {defaultValue: 'Draft'}) : t('dashboard:status.not_started', {defaultValue: 'Not Started'})}
               </Badge>
             </div>
           </CardHeader>
@@ -397,7 +400,7 @@ function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: str
         {gradeInfo && (
             <Card className="border-green-200 bg-green-50/30">
               <CardHeader className="py-3">
-                <CardTitle className="text-lg flex items-center text-green-700">Grade & Feedback</CardTitle>
+                <CardTitle className="text-lg flex items-center text-green-700">{t('dashboard:assignment_detail.student.grade_feedback', {defaultValue: 'Grade & Feedback'})}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="flex items-baseline space-x-2">
@@ -405,7 +408,7 @@ function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: str
                 </div>
                 {gradeInfo.comments && (
                     <div className="text-sm bg-white/50 p-3 rounded border border-green-100">
-                      <span className="font-semibold">Instructor Comments:</span> {gradeInfo.comments}
+                      <span className="font-semibold">{t('dashboard:assignment_detail.student.instructor_comments', {defaultValue: 'Instructor Comments:'})}</span> {gradeInfo.comments}
                     </div>
                 )}
               </CardContent>
@@ -414,21 +417,21 @@ function StudentAssignmentView({ assignmentId, assignment }: { assignmentId: str
 
         <Card>
           <CardHeader>
-            <CardTitle>Submission Content</CardTitle>
+            <CardTitle>{t('dashboard:assignment_detail.student.submission_content', {defaultValue: 'Submission Content'})}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <Textarea
-                placeholder="Enter your assignment description here..."
+                placeholder={t('dashboard:assignment_detail.student.description_placeholder', {defaultValue: 'Enter your assignment description here...'})}
                 className="min-h-[250px] text-base"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
             />
             <div className="flex justify-end items-center space-x-4">
               <Button variant="outline" onClick={handleSave} disabled={isProcessing}>
-                {isProcessing ? "Processing..." : "Save Draft"}
+                {isProcessing ? t('common:actions.processing', {defaultValue: 'Processing...'}) : t('dashboard:assignment_detail.student.save_draft', {defaultValue: 'Save Draft'})}
               </Button>
               <Button onClick={handleSubmit} disabled={isProcessing || !description.trim()}>
-                {isProcessing ? "Processing..." : status === "SUBMITTED" ? "Update & Resubmit" : "Submit Assignment"}
+                {isProcessing ? t('common:actions.processing', {defaultValue: 'Processing...'}) : status === "SUBMITTED" ? t('dashboard:assignment_detail.student.update_resubmit', {defaultValue: 'Update & Resubmit'}) : t('dashboard:assignment_detail.student.submit', {defaultValue: 'Submit Assignment'})}
               </Button>
             </div>
           </CardContent>

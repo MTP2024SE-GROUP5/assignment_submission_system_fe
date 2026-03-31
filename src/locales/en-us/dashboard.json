@@ -1,0 +1,173 @@
+{
+  "about": {
+    "subtitle": "A streamlined platform for academic management, designed and developed by Group 5.",
+    "team_title": "The Team",
+    "team_description": "This project is the collective effort of Group 5. Our mission was to bridge the gap between students and teachers through a clean, efficient, and user-friendly digital workspace.",
+    "tags": {
+      "frontend": "Frontend Engineering",
+      "backend": "Backend Architecture",
+      "uiux": "UI/UX Design",
+      "database": "Database Management"
+    },
+    "tech_stack_title": "Technology Stack",
+    "tech_areas": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database"
+    },
+    "goals_title": "Project Goals",
+    "goals_description": "The Assignment Submission System was built to simplify the academic workflow. Key features include:",
+    "goals_list": {
+      "0": "Secure student submission management for assignments.",
+      "1": "Teacher-focused grading tools with feedback capabilities.",
+      "2": "Real-time academic calendars to track upcoming deadlines.",
+      "3": "Personalized dashboards for different user roles."
+    },
+    "footer": "© 2026 Group 5 Project. Built with dedication and curiosity."
+  },
+  "calendar": {
+    "select_date": "Select Date",
+    "schedule_for": "Schedule for",
+    "deadlines": "{{count}} deadline(s)",
+    "due": "Due:",
+    "no_assignments": "No assignments due on this date",
+    "back_to_today": "Back to Today"
+  },
+  "welcome": "Welcome back, {{name}}!",
+  "teaching_overview": "Here is your teaching overview.",
+  "learning_overview": "Here is your learning overview.",
+  "teacher_greeting": "Have a great day of teaching, Professor {{name}}.",
+  "teacher_desc": "You can manage all your classes, create new assignments, and grade student submissions in your workspaces.",
+  "go_to_workspaces": "Go to My Workspaces",
+  "my_courses": "My Courses",
+  "no_enrolled_courses": "You are not currently enrolled in any courses.",
+  "urgent_deadlines": "Urgent Deadlines",
+  "no_urgent_assignments": "No urgent assignments! 🎉",
+  "assignment_detail": {
+    "loading": "Loading assignment details...",
+    "toast": {
+      "fetch_submissions_failed": "Failed to fetch submissions",
+      "load_details_failed": "Failed to load submission details",
+      "valid_score": "Please enter a valid score",
+      "grade_updated": "Grade updated successfully",
+      "grade_submitted": "Grade submitted successfully",
+      "grade_save_failed": "Failed to save grade",
+      "draft_created": "Draft created successfully",
+      "draft_saved": "Changes saved to draft",
+      "draft_save_failed": "Failed to save draft",
+      "submitted_success": "Assignment submitted successfully!",
+      "submitted_failed": "Submission failed"
+    },
+    "teacher": {
+      "submissions": "Submissions",
+      "subtitle": "Review and grade student submissions here."
+    },
+    "table": {
+      "student": "Student",
+      "status": "Status",
+      "submitted_at": "Submitted At",
+      "actions": "Actions",
+      "not_submitted": "Not submitted",
+      "view_grade": "View & Grade",
+      "no_submissions": "No submissions found."
+    },
+    "grading": {
+      "title": "Grading Submission: {{student}}",
+      "student_desc": "Student Description",
+      "no_desc": "No description provided by student.",
+      "evaluation": "Evaluation",
+      "score": "Score",
+      "score_placeholder": "e.g. 9.5",
+      "comments": "Comments",
+      "comments_placeholder": "Leave feedback for the student...",
+      "update": "Update Grade",
+      "submit": "Submit Grade"
+    },
+    "student": {
+      "untitled": "Untitled Assignment",
+      "due_date": "Due Date:",
+      "grade_feedback": "Grade & Feedback",
+      "instructor_comments": "Instructor Comments:",
+      "submission_content": "Submission Content",
+      "description_placeholder": "Enter your assignment description here...",
+      "save_draft": "Save Draft",
+      "update_resubmit": "Update & Resubmit",
+      "submit": "Submit Assignment"
+    }
+  },
+  "status": {
+    "submitted": "Submitted",
+    "draft": "Draft",
+    "not_started": "Not Started",
+    "published": "Published",
+    "completed": "Completed"
+  },
+  "workspace": {
+    "management": {
+      "toast": {
+        "update_success": "Course details updated successfully.",
+        "update_failed": "Failed to update course.",
+        "unarchive_success": "Course unarchived successfully.",
+        "unarchive_failed": "Failed to unarchive course.",
+        "archive_success": "Course archived successfully.",
+        "archive_failed": "Failed to archive course.",
+        "enroll_success": "User enrolled successfully.",
+        "enroll_failed": "Failed to enroll user.",
+        "remove_success": "Student removed successfully.",
+        "remove_failed": "Failed to remove student."
+      },
+      "confirm_archive": "Are you sure you want to archive this course?",
+      "confirm_remove_student": "Remove this student from the course?",
+      "loading": "Loading management dashboard...",
+      "course_info": "Course Information",
+      "course_info_desc": "Update the name and code of the course.",
+      "course_name": "Course Name",
+      "course_code": "Course Code",
+      "danger_zone": "Danger Zone",
+      "danger_zone_desc": "Change the visibility and active status of this course.",
+      "archive_warning": "Archiving a course hides it from active lists but preserves data. Unarchiving restores full access.",
+      "unarchive_course": "Unarchive Course",
+      "archive_course": "Archive Course",
+      "student_management": "Student Management",
+      "student_management_desc": "Manage enrolled students manually.",
+      "enroll_via_id": "Enroll via User ID",
+      "enter_user_id": "Enter User ID...",
+      "enroll": "Enroll",
+      "table": {
+        "user_id": "User ID",
+        "username": "Username",
+        "role": "Role",
+        "actions": "Actions",
+        "no_students": "No students enrolled yet.",
+        "remove": "Remove"
+      }
+    },
+    "overview": {
+      "archived": "Archived",
+      "active": "Active",
+      "course_id": "Course ID",
+      "status": "Status",
+      "created_by": "Created By"
+    }
+  },
+  "tabs": {
+    "management": "Management",
+    "overview": "Overview",
+    "assignments": "Assignments"
+  },
+  "assignment_list": {
+    "name": "Assignment Name",
+    "due_date": "Due Date",
+    "status": "Status",
+    "score": "Score",
+    "actions": "Actions",
+    "no_due_date": "No due date"
+  },
+  "workspace_list": {
+    "enter_course": "Enter Course",
+    "no_courses": "No courses created yet",
+    "get_started": "Get started by creating your first course.",
+    "created_by": "Created by {{name}}",
+    "manage_course": "Manage Course"
+  }
+}

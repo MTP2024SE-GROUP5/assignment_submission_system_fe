@@ -1,7 +1,38 @@
 {
-  "login": {
-    "header": {
-      "title": ""
-    }
+  "project": {
+    "title": "作业提交系统"
+  },
+  "nav": {
+    "about": "关于项目",
+    "calendar": "日历日程",
+    "dashboard": "控制台",
+    "workspaces": "工作区",
+    "settings": "设置"
+  },
+  "status": {
+    "syncing": "同步数据中...",
+    "loading_user": "加载用户数据...",
+    "loading_courses": "加载课程...",
+    "loading": "加载中",
+    "loading_details": "加载详情...",
+    "initial_loading": "初始化加载中..."
+  },
+  "actions": {
+    "view_all": "查看全部",
+    "cancel": "取消",
+    "saving": "保存中...",
+    "processing": "处理中...",
+    "save_changes": "保存更改",
+    "more": "更多"
+  },
+  "roles": {
+    "student": "学生",
+    "teacher": "教师"
+  },
+  "auth": {
+    "logout": "退出登录"
+  },
+  "general": {
+    "na": "暂无"
   }
 }

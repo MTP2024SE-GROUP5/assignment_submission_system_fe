@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface Enrollment {
   enrollmentId: number;
@@ -15,6 +16,7 @@ interface Enrollment {
 }
 
 export function CourseList({ enrollments }: { enrollments: any }) {
+  const { t } = useTranslation('dashboard')
   return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
         {enrollments.map((course: any) => (
@@ -42,7 +44,7 @@ export function CourseList({ enrollments }: { enrollments: any }) {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link to={`/workspaces/${course.courseId}`}>
-                    Enter Course
+                    {t('workspace_list.enter_course', {defaultValue: 'Enter Course'})}
                   </Link>
                 </Button>
               </CardFooter>

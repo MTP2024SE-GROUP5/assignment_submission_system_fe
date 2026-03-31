@@ -9,8 +9,10 @@ import { BookOpen, Clock, CalendarDays } from "lucide-react";
 
 // Hook to fetch all assignments
 import { useGetAllAssignments } from "@/hooks/useGetAllAssignments";
+import { useTranslation } from "react-i18next";
 
 const Calendar = () => {
+  const { t } = useTranslation(['dashboard', 'common']);
   const setTitle = useTitleStore((state) => state.setTitle);
   const navigate = useNavigate();
 
@@ -18,8 +20,8 @@ const Calendar = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
 
   useEffect(() => {
-    setTitle("Calendar Schedule");
-  }, [setTitle]);
+    setTitle(t('common:nav.calendar', {defaultValue: 'Calendar Schedule'}));
+  }, [setTitle, t]);
 
   // Fetch real data
   const { data: assignmentsRes, isLoading } = useGetAllAssignments();
@@ -64,7 +66,7 @@ const Calendar = () => {
             <CardHeader>
               <CardTitle className="text-lg flex items-center">
                 <CalendarDays className="mr-2 h-5 w-5 text-primary" />
-                Select Date
+                {t('dashboard:calendar.select_date', {defaultValue: 'Select Date'})}
               </CardTitle>
             </CardHeader>
             <CardContent className="flex justify-center p-3">
@@ -83,16 +85,16 @@ const Calendar = () => {
           <div className="md:col-span-7 lg:col-span-8 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">
-                Schedule for {date?.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}
+                {t('dashboard:calendar.schedule_for', {defaultValue: 'Schedule for'})} {date?.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}
               </h2>
               <Badge variant="outline">
-                {selectedAssignments.length} deadline(s)
+                {t('dashboard:calendar.deadlines', {count: selectedAssignments.length, defaultValue: `${selectedAssignments.length} deadline(s)`})}
               </Badge>
             </div>
 
             <div className="grid gap-4">
               {isLoading ? (
-                  <p className="text-muted-foreground animate-pulse">Syncing data...</p>
+                  <p className="text-muted-foreground animate-pulse">{t('common:status.syncing', {defaultValue: 'Syncing data...'})}</p>
               ) : selectedAssignments.length > 0 ? (
                   selectedAssignments.map((assignment: any) => (
                       <Card
@@ -120,7 +122,7 @@ const Calendar = () => {
                               </div>
                               <div className="flex items-center text-orange-600 font-medium">
                                 <Clock className="mr-2 h-4 w-4" />
-                                Due: {new Date(assignment.dueDate).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
+                                {t('dashboard:calendar.due', {defaultValue: 'Due:'})} {new Date(assignment.dueDate).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
                               </div>
                             </div>
 
@@ -139,9 +141,9 @@ const Calendar = () => {
                       <div className="bg-muted rounded-full p-4 mb-4">
                         <CalendarDays className="h-8 w-8 opacity-20" />
                       </div>
-                      <p>No assignments due on this date</p>
+                      <p>{t('dashboard:calendar.no_assignments', {defaultValue: 'No assignments due on this date'})}</p>
                       <Button variant="link" onClick={() => setDate(new Date())} className="mt-2">
-                        Back to Today
+                        {t('dashboard:calendar.back_to_today', {defaultValue: 'Back to Today'})}
                       </Button>
                     </CardContent>
                   </Card>

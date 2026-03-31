@@ -12,6 +12,7 @@ import {useCreateCourse} from "@/hooks/useCreateCourse";
 import {useEditAssignment} from "@/hooks/useEditAssignment";
 import {usePublishAssignment} from "@/hooks/usePublishAssignment";
 import {useDeleteAssignment} from "@/hooks/useDeleteAssignment"; // 或你封装的 api 客户端
+import { useTranslation } from "react-i18next";
 
 export function TeacherAssignmentList({assignments, isLoading, refetch}:{assignments:any, isLoading:boolean, refetch:any}) {
   const { courseId } = useParams();
@@ -20,15 +21,16 @@ export function TeacherAssignmentList({assignments, isLoading, refetch}:{assignm
   const { mutate: deleteMutate } = useDeleteAssignment();
   const { mutate: editMutate } = useEditAssignment();
   const navigate = useNavigate()
+  const { t } = useTranslation('dashboard')
 
   const handleUpdate = async (id: string, formdata: any) => {
     console.log("Edit course submit", formdata)
     editMutate({ id, formData: formdata }, {
       onSuccess: () => {
-        toast.success("Success edit new course");
+        toast.success(t('workspace.management.toast.update_success', {defaultValue: "Success edit new course"}));
       },
       onError: (err: any) => {
-        toast.error(err.message || "Edit new course failed")
+        toast.error(err.message || t('workspace.management.toast.update_failed', {defaultValue: "Edit new course failed"}))
       }
     })
   };
@@ -39,11 +41,11 @@ export function TeacherAssignmentList({assignments, isLoading, refetch}:{assignm
 
     publishMutate(assignmentId, {
       onSuccess: () => {
-        toast.success("Assignment published successfully!");
+        toast.success(t('assignment_detail.toast.grade_submitted', {defaultValue: "Assignment published successfully!"}));
         refetch(); // 刷新列表获取最新状态
       },
       onError: (err: any) => {
-        toast.error(err.message || "Failed to publish assignment");
+        toast.error(err.message || t('assignment_detail.toast.submitted_failed', {defaultValue: "Failed to publish assignment"}));
       }
     });
   };
@@ -52,7 +54,7 @@ export function TeacherAssignmentList({assignments, isLoading, refetch}:{assignm
   const handleDelete = (e: React.MouseEvent, assignmentId: number) => {
     e.stopPropagation(); // 阻止触发 TableRow 的跳转
 
-    if (window.confirm("Are you sure you want to delete this assignment?")) {
+    if (window.confirm(t('workspace.management.confirm_archive', {defaultValue: "Are you sure you want to delete this assignment?"}))) {
       deleteMutate(assignmentId, {
         onSuccess: () => {
           toast.success("Assignment deleted!");
@@ -70,10 +72,10 @@ export function TeacherAssignmentList({assignments, isLoading, refetch}:{assignm
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[300px]">Assignment Name</TableHead>
-              <TableHead>Due Date</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
+              <TableHead className="w-[300px]">{t('assignment_list.name', {defaultValue: 'Assignment Name'})}</TableHead>
+              <TableHead>{t('assignment_list.due_date', {defaultValue: 'Due Date'})}</TableHead>
+              <TableHead>{t('assignment_list.status', {defaultValue: 'Status'})}</TableHead>
+              <TableHead className="text-right">{t('assignment_list.actions', {defaultValue: 'Actions'})}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -88,11 +90,11 @@ export function TeacherAssignmentList({assignments, isLoading, refetch}:{assignm
                       onClick={() => navigate(`/workspaces/${courseId}/assignments/${assignment.id}`)}
                   >
                     <TableCell className="font-medium">{assignment.title}</TableCell>
-                    <TableCell>{assignment.dueDate || "No due date"}</TableCell>
+                    <TableCell>{assignment.dueDate || t('assignment_list.no_due_date', {defaultValue: "No due date"})}</TableCell>
                     <TableCell>
                       {/* 修正点 1：使用 assignment.status 进行判断 */}
                       <Badge variant={isPublished ? "default" : "secondary"}>
-                        {isPublished ? "Published" : "Draft"}
+                        {isPublished ? t('status.published', {defaultValue: 'Published'}) : t('status.draft', {defaultValue: 'Draft'})}
                       </Badge>
                     </TableCell>
                     <TableCell className="text-right">

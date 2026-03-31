@@ -1,0 +1,173 @@
+{
+  "about": {
+    "subtitle": "グループ5によって設計・開発された、学術管理のための合理化されたプラットフォーム。",
+    "team_title": "チームについて",
+    "team_description": "このプロジェクトはグループ5の共同作業によるものです。クリーンで効率的、そして使いやすいデジタルワークスペースを通じて、生徒と教師の間のギャップを埋めることが私たちの使命です。",
+    "tags": {
+      "frontend": "フロントエンド・エンジニアリング",
+      "backend": "バックエンド・アーキテクチャ",
+      "uiux": "UI/UX デザイン",
+      "database": "データベース管理"
+    },
+    "tech_stack_title": "テクノロジースタック",
+    "tech_areas": {
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "database": "データベース"
+    },
+    "goals_title": "プロジェクト目標",
+    "goals_description": "課題提出システムは、学術的なワークフローを簡素化するために構築されました。主な機能は以下の通りです：",
+    "goals_list": {
+      "0": "安全な学生向け課題提出管理。",
+      "1": "フィードバック機能を備えた教師向けの採点ツール。",
+      "2": "今後の締め切りを追跡するリアルタイムの学術カレンダー。",
+      "3": "ユーザーの役割ごとにパーソナライズされたダッシュボード。"
+    },
+    "footer": "© 2026 第5グループプロジェクト。献身と探求心により構築。"
+  },
+  "calendar": {
+    "select_date": "日付を選択",
+    "schedule_for": "スケジュール：",
+    "deadlines": "{{count}} 件の締め切り",
+    "due": "期限:",
+    "no_assignments": "この日に期限となる課題はありません",
+    "back_to_today": "今日に戻る"
+  },
+  "welcome": "お帰りなさい、{{name}}！",
+  "teaching_overview": "あなたの教育の概要です。",
+  "learning_overview": "あなたの学習の概要です。",
+  "teacher_greeting": "今日も良い授業を、{{name}}先生。",
+  "teacher_desc": "ワークスペースですべてのクラスを管理し、新しい課題を作成して、学生の提出物を評価できます。",
+  "go_to_workspaces": "マイワークスペースへ",
+  "my_courses": "マイコース",
+  "no_enrolled_courses": "現在登録されているコースはありません。",
+  "urgent_deadlines": "緊急の締め切り",
+  "no_urgent_assignments": "緊急の課題はありません！ 🎉",
+  "assignment_detail": {
+    "loading": "課題の詳細を読み込み中...",
+    "toast": {
+      "fetch_submissions_failed": "提出物の取得に失敗しました",
+      "load_details_failed": "提出物詳細の読み込みに失敗しました",
+      "valid_score": "有効な点数を入力してください",
+      "grade_updated": "成績が正常に更新されました",
+      "grade_submitted": "成績が正常に送信されました",
+      "grade_save_failed": "成績の保存に失敗しました",
+      "draft_created": "下書きが正常に作成されました",
+      "draft_saved": "変更が下書きに保存されました",
+      "draft_save_failed": "下書きの保存に失敗しました",
+      "submitted_success": "課題が正常に提出されました！",
+      "submitted_failed": "提出に失敗しました"
+    },
+    "teacher": {
+      "submissions": "提出状況",
+      "subtitle": "ここで学生の提出物を確認し、採点します。"
+    },
+    "table": {
+      "student": "学生",
+      "status": "ステータス",
+      "submitted_at": "提出日時",
+      "actions": "アクション",
+      "not_submitted": "未提出",
+      "view_grade": "表示して採点",
+      "no_submissions": "提出物が見つかりません。"
+    },
+    "grading": {
+      "title": "採点: {{student}}",
+      "student_desc": "学生の説明",
+      "no_desc": "学生からの説明はありません。",
+      "evaluation": "評価",
+      "score": "点数",
+      "score_placeholder": "例: 9.5",
+      "comments": "コメント",
+      "comments_placeholder": "学生へフィードバックを残す...",
+      "update": "成績を更新",
+      "submit": "成績を送信"
+    },
+    "student": {
+      "untitled": "無題の課題",
+      "due_date": "期限:",
+      "grade_feedback": "成績とフィードバック",
+      "instructor_comments": "講師のコメント:",
+      "submission_content": "提出内容",
+      "description_placeholder": "ここに課題の説明を入力してください...",
+      "save_draft": "下書きを保存",
+      "update_resubmit": "更新して再提出",
+      "submit": "課題を提出"
+    }
+  },
+  "status": {
+    "submitted": "提出済み",
+    "draft": "下書き",
+    "not_started": "未開始",
+    "published": "公開済み",
+    "completed": "完了"
+  },
+  "workspace": {
+    "management": {
+      "toast": {
+        "update_success": "コース詳細が正常に更新されました。",
+        "update_failed": "コースの更新に失敗しました。",
+        "unarchive_success": "コースのアーカイブ化解除が成功しました。",
+        "unarchive_failed": "コースのアーカイブ化解除に失敗しました。",
+        "archive_success": "コースが正常にアーカイブされました。",
+        "archive_failed": "コースのアーカイブ化に失敗しました。",
+        "enroll_success": "ユーザーが正常に登録されました。",
+        "enroll_failed": "ユーザーの登録に失敗しました。",
+        "remove_success": "学生が正常に削除されました。",
+        "remove_failed": "学生の削除に失敗しました。"
+      },
+      "confirm_archive": "このコースをアーカイブしてもよろしいですか？",
+      "confirm_remove_student": "この学生をコースから削除しますか？",
+      "loading": "管理ダッシュボードを読み込み中...",
+      "course_info": "コース情報",
+      "course_info_desc": "コースの名前とコードを更新します。",
+      "course_name": "コース名",
+      "course_code": "コースコード",
+      "danger_zone": "危険領域",
+      "danger_zone_desc": "このコースの可視性とアクティブ状態を変更します。",
+      "archive_warning": "コースをアーカイブすると、リストから隠されますがデータは保持されます。解除すると元の状態に戻ります。",
+      "unarchive_course": "アーカイブ解除",
+      "archive_course": "コースをアーカイブ",
+      "student_management": "学生管理",
+      "student_management_desc": "登録された学生を手動で管理します。",
+      "enroll_via_id": "ユーザーIDで登録",
+      "enter_user_id": "ユーザーIDを入力...",
+      "enroll": "登録",
+      "table": {
+        "user_id": "ユーザーID",
+        "username": "ユーザー名",
+        "role": "ロール",
+        "actions": "アクション",
+        "no_students": "登録されている学生はまだいません。",
+        "remove": "削除"
+      }
+    },
+    "overview": {
+      "archived": "アーカイブ済み",
+      "active": "アクティブ",
+      "course_id": "コースID",
+      "status": "ステータス",
+      "created_by": "作成者"
+    }
+  },
+  "tabs": {
+    "management": "管理",
+    "overview": "概要",
+    "assignments": "課題リスト"
+  },
+  "assignment_list": {
+    "name": "課題名",
+    "due_date": "期限",
+    "status": "ステータス",
+    "score": "点数",
+    "actions": "アクション",
+    "no_due_date": "期限なし"
+  },
+  "workspace_list": {
+    "enter_course": "コースに入る",
+    "no_courses": "まだコースが作成されていません",
+    "get_started": "最初のコースを作成して始めましょう。",
+    "created_by": "{{name}} によって作成されました",
+    "manage_course": "コースを管理"
+  }
+}
