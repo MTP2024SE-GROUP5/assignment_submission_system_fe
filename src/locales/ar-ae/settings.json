@@ -1,0 +1,16 @@
+{
+  "title": "الإعدادات",
+  "system_settings": "إعدادات النظام",
+  "appearance": {
+    "title": "المظهر",
+    "description": "تخصيص كيف يبدو التطبيق على جهازك.",
+    "dark_mode": "الوضع الداكن",
+    "dark_mode_desc": "التبديل بين المظهر الفاتح والداكن.",
+    "language": "اللغة",
+    "language_desc": "تغيير لغة العرض."
+  },
+  "footer": {
+    "developed_by": "تم تطوير المشروع بواسطة المجموعة 5",
+    "version": "الإصدار 1.0.0-alpha"
+  }
+}

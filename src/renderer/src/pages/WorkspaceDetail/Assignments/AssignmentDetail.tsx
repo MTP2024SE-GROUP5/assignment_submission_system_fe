@@ -365,6 +365,7 @@ function StudentAssignmentView({ assignmentId, assignment, t }: { assignmentId: 
         await updateDescription({ submissionId, discription: description });
       }
 
+      // @ts-ignore
       await submitDraft(submissionId);
       setStatus("SUBMITTED");
       toast.success(t('dashboard:assignment_detail.toast.submitted_success', {defaultValue: 'Assignment submitted successfully!'}));

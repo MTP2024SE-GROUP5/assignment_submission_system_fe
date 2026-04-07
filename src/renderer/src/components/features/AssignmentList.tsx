@@ -16,7 +16,7 @@ export function AssignmentList({assignments}:{assignments:any}) {
               <TableHead className="w-[300px]">{t('assignment_list.name', {defaultValue: 'Assignment Name'})}</TableHead>
               <TableHead>{t('assignment_list.due_date', {defaultValue: 'Due Date'})}</TableHead>
               <TableHead>{t('assignment_list.status', {defaultValue: 'Status'})}</TableHead>
-              <TableHead className="text-right">{t('assignment_list.score', {defaultValue: 'Score'})}</TableHead>
+              <TableHead className="text-end">{t('assignment_list.score', {defaultValue: 'Score'})}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

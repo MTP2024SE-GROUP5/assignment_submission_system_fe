@@ -25,6 +25,7 @@ export function CourseManagementPage() {
   const { t } = useTranslation(['dashboard', 'common']);
 
   // Queries
+  // @ts-ignore
   const { data: course, refetch: refetchCourse, isLoading: isCourseLoading }:{data:any, refetch:any, isLoading:any} = useGetCourseDetails(courseId);
   const { data: enrolledStudents, refetch: refetchStudents }:{data:any, refetch:any} = useGetAllEnrolled(courseId as string);
 

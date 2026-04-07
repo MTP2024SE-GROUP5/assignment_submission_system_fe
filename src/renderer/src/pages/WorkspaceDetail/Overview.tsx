@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 export function WorkspaceOverview (){
   const { t } = useTranslation(['dashboard', 'common']);
   const { courseId } = useParams()
+  // @ts-ignore
   const {data, isLoading} : { data: any, isLoading: boolean } = useGetCourseDetails(courseId);
 
   if (isLoading){

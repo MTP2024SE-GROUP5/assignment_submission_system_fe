@@ -16,6 +16,11 @@ import jaJPAuth from './ja-jp/auth.json';
 import jaJPSettings from './ja-jp/settings.json';
 import jaJPDashboard from './ja-jp/dashboard.json';
 
+import arAECommon from './ar-ae/common.json';
+import arAEAuth from './ar-ae/auth.json';
+import arAESettings from './ar-ae/settings.json';
+import arAEDashboard from './ar-ae/dashboard.json';
+
 export const resources = {
   'zh-CN': {
     common: zhCNCommon,
@@ -34,6 +39,12 @@ export const resources = {
     auth: jaJPAuth,
     settings: jaJPSettings,
     dashboard: jaJPDashboard,
+  },
+  'ar-AE':{
+    common: arAECommon,
+    auth: arAEAuth,
+    settings: arAESettings,
+    dashboard: arAEDashboard,
   }
 } as const;
 
@@ -41,4 +52,5 @@ export const supportedLanguages = [
   { label: '简体中文', value: 'zh-CN' },
   { label: 'English', value: 'en-US' },
   { label: '日本語', value: 'ja-JP' },
+  { label: 'عربي', value: 'ar-AE' },
 ];

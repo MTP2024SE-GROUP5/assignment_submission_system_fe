@@ -1,0 +1,38 @@
+{
+  "project": {
+    "title": "نظام تسليم المهام"
+  },
+  "nav": {
+    "about": "حول",
+    "calendar": "التقويم",
+    "dashboard": "لوحة التحكم",
+    "workspaces": "مساحات العمل",
+    "settings": "الإعدادات"
+  },
+  "status": {
+    "syncing": "جاري مزامنة البيانات...",
+    "loading_user": "جاري تحميل بيانات المستخدم...",
+    "loading_courses": "جاري تحميل الدورات...",
+    "loading": "جاري التحميل...",
+    "loading_details": "جاري تحميل التفاصيل...",
+    "initial_loading": "جاري التهيئة..."
+  },
+  "actions": {
+    "view_all": "عرض الكل",
+    "cancel": "إلغاء",
+    "saving": "جاري الحفظ...",
+    "processing": "جاري المعالجة...",
+    "save_changes": "حفظ التغييرات",
+    "more": "المزيد"
+  },
+  "roles": {
+    "student": "طالب",
+    "teacher": "معلم"
+  },
+  "auth": {
+    "logout": "تسجيل الخروج"
+  },
+  "general": {
+    "na": "غير متوفر"
+  }
+}

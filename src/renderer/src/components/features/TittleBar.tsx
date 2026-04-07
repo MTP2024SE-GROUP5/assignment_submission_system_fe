@@ -24,7 +24,7 @@ export function TitleBar() {
                 <ArrowLeftIcon />
               </Button>
             </ButtonGroup>
-            <Label className="ml-[16px] text-[16px]">{title}</Label>
+            <Label className="ms-[16px] text-[16px]">{title}</Label>
           </div>
           <div className="flex-grow drag-zone h-full"></div>
         </div>

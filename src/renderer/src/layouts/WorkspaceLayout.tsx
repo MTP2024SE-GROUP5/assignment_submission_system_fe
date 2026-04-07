@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 
 export function WorkspaceLayout() {
   const { courseId } = useParams()
+  // @ts-ignore
   const {data, isLoading} : { data: any, isLoading: boolean } = useGetCourseDetails(courseId);
   // const{setTitle} = useTitle();
   const setTitle = useTitleStore((state)=>state.setTitle)

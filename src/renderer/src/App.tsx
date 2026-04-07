@@ -19,7 +19,9 @@ import Calendar from "@/pages/Calendar";
 import About from "@/pages/About";
 import Settings from "@/pages/Settings";
 import { ThemeProvider } from "./components/features/ThemeProvider";
-import '/src/i18n';
+// @ts-ignore
+import "/src/i18n";
+import {useTranslation} from "react-i18next";
 
 const App = () => {
 
@@ -30,6 +32,15 @@ const App = () => {
   const {data: serverUser, isLoading, isError} = useGetUserDetails(savedUserId, {
     enabled: !!savedUserId
   });
+
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const dir = i18n.dir(i18n.language);
+    document.documentElement.dir = dir;
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   useEffect(() => {
     if (serverUser) {
       setUser(serverUser);

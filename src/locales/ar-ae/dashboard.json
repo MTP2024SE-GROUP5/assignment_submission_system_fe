@@ -1,0 +1,173 @@
+{
+  "about": {
+    "subtitle": "منصة مبسطة للإدارة الأكاديمية، تم تصميمها وتطويرها بواسطة المجموعة 5.",
+    "team_title": "الفريق",
+    "team_description": "هذا المشروع هو جهد جماعي للمجموعة 5. مهمتنا هي سد الفجوة بين الطلاب والمعلمين من خلال مساحة عمل رقمية نظيفة وفعالة وسهلة الاستخدام.",
+    "tags": {
+      "frontend": "هندسة الواجهة الأمامية",
+      "backend": "بنية الواجهة الخلفية",
+      "uiux": "تصميم واجهة وتجربة المستخدم (UI/UX)",
+      "database": "إدارة قواعد البيانات"
+    },
+    "tech_stack_title": "مجموعة التكنولوجيا",
+    "tech_areas": {
+      "frontend": "الواجهة الأمامية",
+      "backend": "الواجهة الخلفية",
+      "database": "قاعدة البيانات"
+    },
+    "goals_title": "أهداف المشروع",
+    "goals_description": "تم بناء نظام تسليم المهام لتبسيط سير العمل الأكاديمي. تشمل الميزات الرئيسية:",
+    "goals_list": {
+      "0": "إدارة آمنة لتسليم مهام الطلاب.",
+      "1": "أدوات تقييم مخصصة للمعلمين مع إمكانيات تقديم الملاحظات.",
+      "2": "تقويمات أكاديمية في الوقت الفعلي لتتبع المواعيد النهائية القادمة.",
+      "3": "لوحات تحكم مخصصة لأدوار المستخدمين المختلفة."
+    },
+    "footer": "© 2026 مشروع المجموعة 5. صُنع بتفانٍ وفضول."
+  },
+  "calendar": {
+    "select_date": "حدد التاريخ",
+    "schedule_for": "الجدول الزمني لـ",
+    "deadlines": "{{count}} موعد/مواعيد نهائية",
+    "due": "مستحق:",
+    "no_assignments": "لا توجد مهام مستحقة في هذا التاريخ",
+    "back_to_today": "العودة إلى اليوم"
+  },
+  "welcome": "مرحبًا بعودتك، {{name}}!",
+  "teaching_overview": "إليك نظرة عامة على التدريس الخاص بك.",
+  "learning_overview": "إليك نظرة عامة على التعلم الخاص بك.",
+  "teacher_greeting": "أتمنى لك يومًا دراسيًا رائعًا، أستاذ {{name}}.",
+  "teacher_desc": "يمكنك إدارة جميع فصولك، وإنشاء مهام جديدة، وتقييم تسليمات الطلاب في مساحات العمل الخاصة بك.",
+  "go_to_workspaces": "الذهاب إلى مساحات العمل الخاصة بي",
+  "my_courses": "دوراتي",
+  "no_enrolled_courses": "أنت غير مسجل حاليًا في أي دورات.",
+  "urgent_deadlines": "مواعيد نهائية عاجلة",
+  "no_urgent_assignments": "لا توجد مهام عاجلة! 🎉",
+  "assignment_detail": {
+    "loading": "جاري تحميل تفاصيل المهمة...",
+    "toast": {
+      "fetch_submissions_failed": "فشل جلب التسليمات",
+      "load_details_failed": "فشل تحميل تفاصيل التسليم",
+      "valid_score": "يرجى إدخال درجة صحيحة",
+      "grade_updated": "تم تحديث الدرجة بنجاح",
+      "grade_submitted": "تم إرسال الدرجة بنجاح",
+      "grade_save_failed": "فشل حفظ الدرجة",
+      "draft_created": "تم إنشاء المسودة بنجاح",
+      "draft_saved": "تم حفظ التغييرات في المسودة",
+      "draft_save_failed": "فشل حفظ المسودة",
+      "submitted_success": "تم تسليم المهمة بنجاح!",
+      "submitted_failed": "فشل التسليم"
+    },
+    "teacher": {
+      "submissions": "التسليمات",
+      "subtitle": "قم بمراجعة وتقييم تسليمات الطلاب هنا."
+    },
+    "table": {
+      "student": "الطالب",
+      "status": "الحالة",
+      "submitted_at": "تاريخ التسليم",
+      "actions": "الإجراءات",
+      "not_submitted": "لم يتم التسليم",
+      "view_grade": "عرض وتقييم",
+      "no_submissions": "لم يتم العثور على تسليمات."
+    },
+    "grading": {
+      "title": "تقييم التسليم: {{student}}",
+      "student_desc": "وصف الطالب",
+      "no_desc": "لم يقدم الطالب أي وصف.",
+      "evaluation": "التقييم",
+      "score": "الدرجة",
+      "score_placeholder": "مثال 9.5",
+      "comments": "التعليقات",
+      "comments_placeholder": "اترك ملاحظات للطالب...",
+      "update": "تحديث الدرجة",
+      "submit": "إرسال الدرجة"
+    },
+    "student": {
+      "untitled": "مهمة بدون عنوان",
+      "due_date": "تاريخ الاستحقاق:",
+      "grade_feedback": "الدرجة والملاحظات",
+      "instructor_comments": "تعليقات المعلم:",
+      "submission_content": "محتوى التسليم",
+      "description_placeholder": "أدخل وصف مهمتك هنا...",
+      "save_draft": "حفظ كمسودة",
+      "update_resubmit": "تحديث وإعادة تسليم",
+      "submit": "تسليم المهمة"
+    }
+  },
+  "status": {
+    "submitted": "تم التسليم",
+    "draft": "مسودة",
+    "not_started": "لم يبدأ",
+    "published": "منشور",
+    "completed": "مكتمل"
+  },
+  "workspace": {
+    "management": {
+      "toast": {
+        "update_success": "تم تحديث تفاصيل الدورة بنجاح.",
+        "update_failed": "فشل تحديث الدورة.",
+        "unarchive_success": "تم إلغاء أرشفة الدورة بنجاح.",
+        "unarchive_failed": "فشل إلغاء أرشفة الدورة.",
+        "archive_success": "تم أرشفة الدورة بنجاح.",
+        "archive_failed": "فشل أرشفة الدورة.",
+        "enroll_success": "تم تسجيل المستخدم بنجاح.",
+        "enroll_failed": "فشل تسجيل المستخدم.",
+        "remove_success": "تمت إزالة الطالب بنجاح.",
+        "remove_failed": "فشل إزالة الطالب."
+      },
+      "confirm_archive": "هل أنت متأكد أنك تريد أرشفة هذه الدورة؟",
+      "confirm_remove_student": "هل تريد إزالة هذا الطالب من الدورة؟",
+      "loading": "جاري تحميل لوحة تحكم الإدارة...",
+      "course_info": "معلومات الدورة",
+      "course_info_desc": "قم بتحديث اسم ورمز الدورة.",
+      "course_name": "اسم الدورة",
+      "course_code": "رمز الدورة",
+      "danger_zone": "منطقة الخطر",
+      "danger_zone_desc": "تغيير إمكانية الرؤية وحالة النشاط لهذه الدورة.",
+      "archive_warning": "تؤدي أرشفة الدورة إلى إخفائها من القوائم النشطة مع الاحتفاظ بالبيانات. إلغاء الأرشفة يعيد الوصول الكامل.",
+      "unarchive_course": "إلغاء أرشفة الدورة",
+      "archive_course": "أرشفة الدورة",
+      "student_management": "إدارة الطلاب",
+      "student_management_desc": "إدارة الطلاب المسجلين يدويًا.",
+      "enroll_via_id": "التسجيل عبر معرف المستخدم",
+      "enter_user_id": "أدخل معرف المستخدم...",
+      "enroll": "تسجيل",
+      "table": {
+        "user_id": "معرف المستخدم",
+        "username": "اسم المستخدم",
+        "role": "الدور",
+        "actions": "الإجراءات",
+        "no_students": "لم يتم تسجيل أي طلاب بعد.",
+        "remove": "إزالة"
+      }
+    },
+    "overview": {
+      "archived": "مؤرشف",
+      "active": "نشط",
+      "course_id": "معرف الدورة",
+      "status": "الحالة",
+      "created_by": "تم الإنشاء بواسطة"
+    }
+  },
+  "tabs": {
+    "management": "الإدارة",
+    "overview": "نظرة عامة",
+    "assignments": "المهام"
+  },
+  "assignment_list": {
+    "name": "اسم المهمة",
+    "due_date": "تاريخ الاستحقاق",
+    "status": "الحالة",
+    "score": "الدرجة",
+    "actions": "الإجراءات",
+    "no_due_date": "لا يوجد تاريخ استحقاق"
+  },
+  "workspace_list": {
+    "enter_course": "دخول الدورة",
+    "no_courses": "لم يتم إنشاء أي دورات بعد",
+    "get_started": "ابدأ بإنشاء دورتك الأولى.",
+    "created_by": "تم الإنشاء بواسطة {{name}}",
+    "manage_course": "إدارة الدورة"
+  }
+}

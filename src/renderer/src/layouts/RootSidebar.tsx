@@ -45,6 +45,9 @@ export function RootSidebar() {
   const userDetail = useUserStore(state => state.user)
   const { t } = useTranslation('common');
 
+  const { i18n } = useTranslation();
+  const side = i18n.dir() === 'rtl' ? 'right' : 'left';
+
   const data = {
     user: {
       name: "shadcn",
@@ -83,7 +86,7 @@ export function RootSidebar() {
   }
 
   return(
-      <Sidebar className="min-h-10">
+      <Sidebar className="min-h-10" side={side}>
         <SidebarHeader className="mt-[24px]">
           <SidebarMenu>
             <SidebarMenuItem>

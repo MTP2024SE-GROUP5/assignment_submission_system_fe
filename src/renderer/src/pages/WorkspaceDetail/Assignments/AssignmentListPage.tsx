@@ -14,6 +14,7 @@ export function AssignmentListPage() {
 
   const { courseId } = useParams()
   const { t } = useTranslation('common');
+  // @ts-ignore
   const {data:assignments, isLoading, refetch} = useGetAssignmentsInCourse(courseId);
 
   const userDetail = useUserStore(state => state.user)
@@ -22,6 +23,7 @@ export function AssignmentListPage() {
     return <div className="p-10 text-center">{t('status.initial_loading', {defaultValue: 'Initial Loading...'})}</div>;
   }
 
+  // @ts-ignore
   if(userDetail.role === "TEACHER"){
     return (
         <div>

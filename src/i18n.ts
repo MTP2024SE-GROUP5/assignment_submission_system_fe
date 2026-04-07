@@ -14,6 +14,8 @@ i18n
       fallbackLng: {
         'zh': ['zh-CN'],
         'en': ['en-US'],
+        'jp': ['jp-JA'],
+        'ar': ['ar-AE'],
         'default': ['en-US']
       },
 
