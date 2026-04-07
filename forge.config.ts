@@ -13,13 +13,12 @@ const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
     osxSign: {},
-    executableName: "assignment-system",
     icon: '/src/renderer/src/assets/images/logo.png'
   },
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
-      name: "assignment-system"
+      name: "assignment_system"
     }),
     new MakerZIP({}, ['darwin', 'linux']),
     new MakerDMG({
@@ -27,7 +26,8 @@ const config: ForgeConfig = {
     }),
     new MakerDeb({
       options: {
-        maintainer: 'Your Name',
+        name: "assignment-system",
+        maintainer: 'MTP2024SE-GROUP5',
         homepage: 'https://github.com/MTP2024SE-GROUP5/assignment_submission_system_fe.git'
       }
     }),
