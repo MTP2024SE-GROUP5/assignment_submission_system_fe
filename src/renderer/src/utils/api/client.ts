@@ -1,14 +1,23 @@
 import axios from "axios";
 import {resume} from "react-dom/server";
 
+export const SERVER_CONFIGS = {
+  production: import.meta.env.VITE_API_PRODUCTION_URL || "http://164.92.241.92:8080/api",
+  local: import.meta.env.VITE_API_LOCAL_URL || "http://localhost:8081/api"
+};
+
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8081/api',
+  baseURL: localStorage.getItem('base_url') || SERVER_CONFIGS.production,
   timeout: 10000,
   headers: {'Content-Type': 'application/json'}
 });
 
 apiClient.interceptors.request.use(
     (config) => {
+
+      const currentUrl = localStorage.getItem('base_url');
+      if (currentUrl) config.baseURL = currentUrl;
+
       const token = localStorage.getItem('token');
       if(token) {
         config.headers.Authorization = `Bearer ${token}`;

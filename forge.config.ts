@@ -6,17 +6,42 @@ import { MakerRpm } from '@electron-forge/maker-rpm';
 import { VitePlugin } from '@electron-forge/plugin-vite';
 import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
+import MakerDMG from "@electron-forge/maker-dmg";
+import PublisherGithub from "@electron-forge/publisher-github";
 
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    osxSign: {},
+    executableName: "assignment-system",
+    icon: '/src/renderer/src/assets/images/logo.png'
   },
   rebuildConfig: {},
   makers: [
-    new MakerSquirrel({}),
-    new MakerZIP({}, ['darwin']),
+    new MakerSquirrel({
+      name: "assignment_system"
+    }),
+    new MakerZIP({}, ['darwin', 'linux']),
+    new MakerDMG({
+      format: 'ULFO'
+    }),
+    new MakerDeb({
+      options: {
+        maintainer: 'Your Name',
+        homepage: 'https://github.com/MTP2024SE-GROUP5/assignment_submission_system_fe.git'
+      }
+    }),
     new MakerRpm({}),
-    new MakerDeb({}),
+  ],
+  publishers: [
+    new PublisherGithub({
+      repository: {
+        owner: 'MTP2024SE-GROUP5',
+        name: 'assignment_submission_system_fe'
+      },
+      prerelease: false,
+      draft: true
+    })
   ],
   plugins: [
     new VitePlugin({

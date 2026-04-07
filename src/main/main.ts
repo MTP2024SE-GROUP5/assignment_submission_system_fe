@@ -21,6 +21,7 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       webSecurity: false,
+      devTools: !!MAIN_WINDOW_VITE_DEV_SERVER_URL,
     },
   });
 
@@ -29,21 +30,13 @@ const createWindow = () => {
   // and load the index.html of the app.
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
+    mainWindow.webContents.openDevTools();
   } else {
     mainWindow.loadFile(
       path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
     );
   }
 
-  // Ensure users see a clean UI on startup.
-  mainWindow.webContents.once('did-finish-load', () => {
-    if (mainWindow.webContents.isDevToolsOpened()) {
-      mainWindow.webContents.closeDevTools();
-    }
-  });
-
-  // Keep startup UI clean by not opening DevTools automatically.
-  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
