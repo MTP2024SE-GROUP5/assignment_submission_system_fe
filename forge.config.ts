@@ -19,7 +19,7 @@ const config: ForgeConfig = {
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
-      name: "assignment_system"
+      name: "assignment-system"
     }),
     new MakerZIP({}, ['darwin', 'linux']),
     new MakerDMG({

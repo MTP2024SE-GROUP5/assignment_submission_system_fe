@@ -1,6 +1,6 @@
 {
-  "name": "sprint3_fe",
-  "productName": "sprint3_fe",
+  "name": "sprint3-fe",
+  "productName": "sprint3-fe",
   "version": "1.0.1",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
