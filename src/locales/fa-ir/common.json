@@ -1,0 +1,38 @@
+{
+  "project": {
+    "title": "سیستم ارسال تکالیف"
+  },
+  "nav": {
+    "about": "درباره ما",
+    "calendar": "تقویم",
+    "dashboard": "داشبورد",
+    "workspaces": "فضاهای کاری",
+    "settings": "تنظیمات"
+  },
+  "status": {
+    "syncing": "در حال همگام‌سازی داده‌ها...",
+    "loading_user": "در حال بارگذاری داده‌های کاربر...",
+    "loading_courses": "در حال بارگذاری دوره‌ها...",
+    "loading": "در حال بارگذاری...",
+    "loading_details": "در حال بارگذاری جزئیات...",
+    "initial_loading": "در حال راه‌اندازی..."
+  },
+  "actions": {
+    "view_all": "مشاهده همه",
+    "cancel": "لغو",
+    "saving": "در حال ذخیره...",
+    "processing": "در حال پردازش...",
+    "save_changes": "ذخیره تغییرات",
+    "more": "بیشتر"
+  },
+  "roles": {
+    "student": "دانشجو",
+    "teacher": "استاد"
+  },
+  "auth": {
+    "logout": "خروج از حساب"
+  },
+  "general": {
+    "na": "نامشخص"
+  }
+}

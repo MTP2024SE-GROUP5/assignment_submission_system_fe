@@ -80,7 +80,7 @@ const Settings = () => {
               {t('footer.developed_by', {defaultValue: 'Project developed by Group 5'})}
             </p>
             <p className="text-[10px] text-muted-foreground/60 uppercase tracking-widest">
-              {t('footer.version', {defaultValue: 'Version 1.0.0-alpha'})}
+              {t('footer.version', {defaultValue: 'Version'})} {__APP_VERSION__}
             </p>
           </CardContent>
         </Card>

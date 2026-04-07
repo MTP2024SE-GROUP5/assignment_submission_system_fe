@@ -21,6 +21,10 @@ import arAEAuth from './ar-ae/auth.json';
 import arAESettings from './ar-ae/settings.json';
 import arAEDashboard from './ar-ae/dashboard.json';
 
+import faIRCommon from './fa-ir/common.json';
+import faIRAuth from './fa-ir/auth.json';
+import faIRSettings from './fa-ir/settings.json';
+import faIRDashboard from './fa-ir/dashboard.json';
 export const resources = {
   'zh-CN': {
     common: zhCNCommon,
@@ -45,6 +49,12 @@ export const resources = {
     auth: arAEAuth,
     settings: arAESettings,
     dashboard: arAEDashboard,
+  },
+  'fa-IR':{
+    common: faIRCommon,
+    auth: faIRAuth,
+    settings: faIRSettings,
+    dashboard: faIRDashboard,
   }
 } as const;
 
@@ -53,4 +63,5 @@ export const supportedLanguages = [
   { label: 'English', value: 'en-US' },
   { label: '日本語', value: 'ja-JP' },
   { label: 'عربي', value: 'ar-AE' },
+  { label: 'فارسی', value: 'fa-IR' },
 ];
