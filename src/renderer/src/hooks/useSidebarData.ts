@@ -20,7 +20,7 @@ export function useSidebarData() {
   const navUser = {
     name: (userDetail as any)?.fullName,
     email: (userDetail as any)?.email,
-    avatar: "https://i.scdn.co/image/ab67616d0000b273b652c92353719de32c85480e",
+    avatar: "src/renderer/src/assets/images/logo.svg",
   }
 
   const{ data: coursesCreated, isLoading : coursesCreatedLoading} : {data: any, isLoading: boolean} = useGetCoursesCreated(user?.id);

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+      html, body {
+          margin: 0;
+          padding: 0;
+          background: transparent !important;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          user-select: none;
+      }
+
+      .splash-container {
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          height: calc(100% - 20px);
+          background-color: #020817;
+          color: white;
+          font-family: sans-serif;
+          border-radius: 25px;
+
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-sizing: border-box;
+      }
+
+      .logo {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 24px;
+          animation: pulse 2s infinite ease-in-out;
+      }
+
+      @keyframes pulse {
+          0% { transform: scale(0.95); opacity: 0.8; }
+          50% { transform: scale(1.05); opacity: 1; }
+          100% { transform: scale(0.95); opacity: 0.8; }
+      }
+
+      .loader {
+          width: 120px; /* 加长一点更美观 */
+          height: 4px;
+          background: #1e293b;
+          border-radius: 2px;
+          position: relative;
+          overflow: hidden;
+      }
+
+      .loader::after {
+          content: '';
+          position: absolute;
+          left: -50%;
+          height: 100%;
+          width: 50%;
+          background: #3b82f6;
+          animation: loading 1.5s infinite;
+      }
+
+      @keyframes loading {
+          0% { left: -50%; }
+          100% { left: 100%; }
+      }
+
+      .text {
+          margin-top: 15px;
+          font-size: 14px;
+          color: #94a3b8;
+          letter-spacing: 1px;
+      }
+  </style>
+</head>
+<body>
+
+<div class="splash-container">
+
+  <img class="logo" src="src/renderer/src/assets/images/logo.svg" alt="logo">
+
+  <div class="loader"></div>
+</div>
+
+</body>
+</html>
