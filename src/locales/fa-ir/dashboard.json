@@ -150,6 +150,40 @@
       "created_by": "ایجاد شده توسط"
     }
   },
+  "create_assignment": {
+    "toast": {
+      "success": "تکلیف ایجاد شد!",
+      "failed": "ایجاد ناموفق بود"
+    },
+    "button_new": "تکلیف جدید",
+    "title": "ایجاد تکلیف",
+    "labels": {
+      "title": "عنوان",
+      "description": "توضیحات",
+      "due_date": "تاریخ سررسید",
+      "file_types": "انواع فایل",
+      "max_size": "حداکثر اندازه (مگابایت)"
+    },
+    "placeholders": {
+      "file_types": ".pdf,.zip"
+    },
+    "buttons": {
+      "creating": "در حال ایجاد...",
+      "save": "ثبت"
+    }
+  },
+  "create_course": {
+    "button_new": "ایجاد درس جدید",
+    "title": "درس جدید",
+    "labels": {
+      "name": "نام درس",
+      "code": "کد درس"
+    },
+    "buttons": {
+      "saving": "در حال ثبت...",
+      "save": "ثبت"
+    }
+  },
   "tabs": {
     "management": "مدیریت",
     "overview": "نمای کلی",

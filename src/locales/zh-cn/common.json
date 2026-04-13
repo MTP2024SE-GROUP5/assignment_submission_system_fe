@@ -7,7 +7,8 @@
     "calendar": "日历日程",
     "dashboard": "控制台",
     "workspaces": "工作区",
-    "settings": "设置"
+    "settings": "设置",
+    "created_by_me": "由我创建"
   },
   "status": {
     "syncing": "同步数据中...",

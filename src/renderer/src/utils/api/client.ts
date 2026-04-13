@@ -1,5 +1,6 @@
 import axios from "axios";
 import {resume} from "react-dom/server";
+import i18n from "i18next";
 
 export const SERVER_CONFIGS = {
   production: import.meta.env.VITE_API_PRODUCTION_URL || "http://164.92.241.92:8080/api",
@@ -22,6 +23,14 @@ apiClient.interceptors.request.use(
       if(token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
+
+      const currentLanguage = i18n.language || 'en';
+      const lang = currentLanguage.split('-')[0];
+      config.params = {
+        locale: lang,
+        ...config.params,
+      };
+
       return config;
     },
     (error) => Promise.reject(error)

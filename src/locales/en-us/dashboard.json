@@ -150,6 +150,40 @@
       "created_by": "Created By"
     }
   },
+  "create_assignment": {
+    "toast": {
+      "success": "Assignment created!",
+      "failed": "Failed to create"
+    },
+    "button_new": "New Assignment",
+    "title": "Create Assignment",
+    "labels": {
+      "title": "Title",
+      "description": "Description",
+      "due_date": "Due Date",
+      "file_types": "File Types",
+      "max_size": "Max Size (MB)"
+    },
+    "placeholders": {
+      "file_types": ".pdf,.zip"
+    },
+    "buttons": {
+      "creating": "Creating...",
+      "save": "Save"
+    }
+  },
+  "create_course": {
+    "button_new": "Create New Course",
+    "title": "New Course",
+    "labels": {
+      "name": "Course Name",
+      "code": "Course Code"
+    },
+    "buttons": {
+      "saving": "Saving...",
+      "save": "Save"
+    }
+  },
   "tabs": {
     "management": "Management",
     "overview": "Overview",

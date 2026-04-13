@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { toast } from "sonner";
 import { useCreateAssignment } from "@/hooks/useCreateAssignment"; // 引入你的 Hook
+import { useTranslation } from "react-i18next";
 
 import {
   Dialog,
@@ -19,6 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
 import React from "react";
 
 export function CreateAssignmentDialog({ courseId, refetch }: { courseId: string | number, refetch: () => void }) {
+  const { t } = useTranslation("dashboard");
   const [open, setOpen] = useState(false);
   const { mutateAsync } = useCreateAssignment(); // 使用你封装的 Hook
 
@@ -44,12 +46,12 @@ export function CreateAssignmentDialog({ courseId, refetch }: { courseId: string
 
     try {
       await mutateAsync(payload); // 执行提交
-      toast.success("Assignment created!");
+      toast.success(t("dashboard:create_assignment.toast.success"));
       setOpen(false);
       reset();
       refetch(); // 刷新列表数据
     } catch (error: any) {
-      toast.error(error.response?.data?.message || "Failed to create");
+      toast.error(error.response?.data?.message || t("dashboard:create_assignment.toast.failed"));
     }
   };
 
@@ -58,38 +60,38 @@ export function CreateAssignmentDialog({ courseId, refetch }: { courseId: string
         <DialogTrigger asChild>
           <Button size="sm">
             <Plus className="mr-2 h-4 w-4" />
-            New Assignment
+            {t("dashboard:create_assignment.button_new")}
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[500px]">
           <form onSubmit={handleSubmit(onSubmit)}>
             <DialogHeader>
-              <DialogTitle>Create Assignment</DialogTitle>
+              <DialogTitle>{t("dashboard:create_assignment.title")}</DialogTitle>
             </DialogHeader>
 
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
-                <Label>Title</Label>
+                <Label>{t("dashboard:create_assignment.labels.title")}</Label>
                 <Input {...register("title", { required: true })} />
               </div>
 
               <div className="grid gap-2">
-                <Label>Description</Label>
+                <Label>{t("dashboard:create_assignment.labels.description")}</Label>
                 <Textarea {...register("description")} />
               </div>
 
               <div className="grid gap-2">
-                <Label>Due Date</Label>
+                <Label>{t("dashboard:create_assignment.labels.due_date")}</Label>
                 <Input type="datetime-local" {...register("dueDate", { required: true })} />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="grid gap-2">
-                  <Label>File Types</Label>
-                  <Input placeholder=".pdf,.zip" {...register("allowedFileTypes")} />
+                  <Label>{t("dashboard:create_assignment.labels.file_types")}</Label>
+                  <Input placeholder={t("dashboard:create_assignment.placeholders.file_types")} {...register("allowedFileTypes")} />
                 </div>
                 <div className="grid gap-2">
-                  <Label>Max Size (MB)</Label>
+                  <Label>{t("dashboard:create_assignment.labels.max_size")}</Label>
                   <Input type="number" step="0.1" {...register("maxFileSizeMB")} />
                 </div>
               </div>
@@ -97,7 +99,7 @@ export function CreateAssignmentDialog({ courseId, refetch }: { courseId: string
 
             <DialogFooter>
               <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Creating..." : "Save"}
+                {isSubmitting ? t("dashboard:create_assignment.buttons.creating") : t("dashboard:create_assignment.buttons.save")}
               </Button>
             </DialogFooter>
           </form>

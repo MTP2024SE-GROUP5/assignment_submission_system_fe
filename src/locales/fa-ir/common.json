@@ -7,7 +7,8 @@
     "calendar": "تقویم",
     "dashboard": "داشبورد",
     "workspaces": "فضاهای کاری",
-    "settings": "تنظیمات"
+    "settings": "تنظیمات",
+    "created_by_me": "ساختهٔ من"
   },
   "status": {
     "syncing": "در حال همگام‌سازی داده‌ها...",

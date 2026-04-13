@@ -150,6 +150,40 @@
       "created_by": "تم الإنشاء بواسطة"
     }
   },
+  "create_assignment": {
+    "toast": {
+      "success": "تم إنشاء الواجب!",
+      "failed": "فشل الإنشاء"
+    },
+    "button_new": "واجب جديد",
+    "title": "إنشاء واجب",
+    "labels": {
+      "title": "العنوان",
+      "description": "الوصف",
+      "due_date": "تاريخ الاستحقاق",
+      "file_types": "أنواع الملفات",
+      "max_size": "الحد الأقصى للحجم (ميجابايت)"
+    },
+    "placeholders": {
+      "file_types": ".pdf,.zip"
+    },
+    "buttons": {
+      "creating": "جاري الإنشاء...",
+      "save": "حفظ"
+    }
+  },
+  "create_course": {
+    "button_new": "إنشاء دورة جديدة",
+    "title": "دورة جديدة",
+    "labels": {
+      "name": "اسم الدورة",
+      "code": "رمز الدورة"
+    },
+    "buttons": {
+      "saving": "جاري الحفظ...",
+      "save": "حفظ"
+    }
+  },
   "tabs": {
     "management": "الإدارة",
     "overview": "نظرة عامة",

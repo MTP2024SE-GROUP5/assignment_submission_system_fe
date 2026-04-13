@@ -150,6 +150,40 @@
       "created_by": "创建者"
     }
   },
+  "create_assignment": {
+    "toast": {
+      "success": "作业创建成功！",
+      "failed": "创建失败"
+    },
+    "button_new": "新建作业",
+    "title": "创建作业",
+    "labels": {
+      "title": "标题",
+      "description": "描述",
+      "due_date": "截止日期",
+      "file_types": "文件类型",
+      "max_size": "最大大小 (MB)"
+    },
+    "placeholders": {
+      "file_types": ".pdf,.zip"
+    },
+    "buttons": {
+      "creating": "创建中...",
+      "save": "保存"
+    }
+  },
+  "create_course": {
+    "button_new": "创建新课程",
+    "title": "新课程",
+    "labels": {
+      "name": "课程名称",
+      "code": "课程代码"
+    },
+    "buttons": {
+      "saving": "保存中...",
+      "save": "保存"
+    }
+  },
   "tabs": {
     "management": "管理",
     "overview": "概览",
