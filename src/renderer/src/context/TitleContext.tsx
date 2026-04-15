@@ -1,7 +1,11 @@
-import React from 'react';
-import {createContext, useContext, useState} from "react";
+import React, {createContext, useContext, useState} from 'react';
 
-const TitleContext = createContext(null);
+interface TitleContextType {
+  title: string;
+  setTitle: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const TitleContext = createContext<TitleContextType | null>(null);
 
 export const TitleProvider = ({children}: any) => {
   const [title, setTitle] = useState('Title');

@@ -3,8 +3,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, Dialog
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
+
 import { useTranslation } from "react-i18next";
 
 export function CreateCourseDialog({ onCreate }: { onCreate: (data: any) => Promise<void> }) {
@@ -21,26 +21,26 @@ export function CreateCourseDialog({ onCreate }: { onCreate: (data: any) => Prom
   return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="default">{t("dashboard:create_course.button_new")}</Button>
+          <Button variant="default">{t("create_course.button_new")}</Button>
         </DialogTrigger>
         <DialogContent>
           <form onSubmit={handleSubmit(onSubmit)}>
             <DialogHeader>
-              <DialogTitle>{t("dashboard:create_course.title")}</DialogTitle>
+              <DialogTitle>{t("create_course.title")}</DialogTitle>
             </DialogHeader>
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
-                <Label htmlFor="name">{t("dashboard:create_course.labels.name")}</Label>
+                <Label htmlFor="name">{t("create_course.labels.name")}</Label>
                 <Input id="name" {...register("name", { required: true })} />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="code">{t("dashboard:create_course.labels.code")}</Label>
+                <Label htmlFor="code">{t("create_course.labels.code")}</Label>
                 <Input id="code" {...register("code", { required: true })} />
               </div>
             </div>
             <DialogFooter>
               <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? t("dashboard:create_course.buttons.saving") : t("dashboard:create_course.buttons.save")}
+                {isSubmitting ? t("create_course.buttons.saving") : t("create_course.buttons.save")}
               </Button>
             </DialogFooter>
           </form>
