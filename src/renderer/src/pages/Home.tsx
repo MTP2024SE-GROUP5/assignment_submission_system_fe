@@ -155,7 +155,7 @@ function StudentDashboard({ userId }: { userId: number }) {
                   <div className="p-6 text-center text-sm text-muted-foreground">{t('common:status.loading', {defaultValue: 'Loading...'})}</div>
               ) : assignments.length > 0 ? (
                   assignments.map((assignment: any) => (
-                      <div
+                      <button
                           key={assignment.id}
                           className="p-4 hover:bg-muted/50 transition-colors cursor-pointer flex flex-col gap-2"
                           onClick={() => navigate(`/workspaces/${assignment.courseId}/assignments/${assignment.id}`)}
@@ -174,7 +174,7 @@ function StudentDashboard({ userId }: { userId: number }) {
                       {new Date(assignment.dueDate).toLocaleDateString()}
                     </span>
                         </div>
-                      </div>
+                      </button>
                   ))
               ) : (
                   <div className="p-8 text-center text-sm text-muted-foreground">

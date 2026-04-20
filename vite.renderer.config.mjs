@@ -13,9 +13,23 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src/renderer/src"),
+      '@root': path.resolve(__dirname, 'src'),
     },
   },
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
   },
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/renderer/src/setupTests.ts'],
+    globals: true,
+    coverage: {
+      provider: 'v8',
+      all: true,
+      include: ['src/renderer/src/**/*.{ts,tsx}'],
+      exclude: ['**/*.test.{ts,tsx}', '**/*.d.ts', 'src/renderer/src/main.tsx', 'src/renderer/src/App.tsx', 'src/renderer/src/components/ui/**'],
+      reporter: ['text', 'lcov', 'json'],
+      reportsDirectory: './coverage'
+    }
+  }
 });

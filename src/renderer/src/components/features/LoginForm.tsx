@@ -58,8 +58,7 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
           <Field>
             <div className="flex items-center">
               <FieldLabel htmlFor="password">{t('login.form.password.label')}</FieldLabel>
-              <a
-                  href="#"
+              <button
                   className="ml-auto text-sm underline-offset-4 hover:underline"
                   onClick={(e) => {
                     e.preventDefault();
@@ -67,7 +66,7 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
                   }}
               >
                 {t('login.form.password.forget_password')}
-              </a>
+              </button>
             </div>
             <Input id="password" type="password" required {...register("password")}/>
           </Field>

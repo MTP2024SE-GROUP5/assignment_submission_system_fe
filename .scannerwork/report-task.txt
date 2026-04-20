@@ -2,5 +2,5 @@ projectKey=assignment_submission_system_fe
 serverUrl=http://localhost:9000
 serverVersion=26.3.0.120487
 dashboardUrl=http://localhost:9000/dashboard?id=assignment_submission_system_fe
-ceTaskId=3e754376-bd15-431b-8d94-ac96169da752
-ceTaskUrl=http://localhost:9000/api/ce/task?id=3e754376-bd15-431b-8d94-ac96169da752
+ceTaskId=171af7e8-933e-4a36-996c-e5982cd38de8
+ceTaskUrl=http://localhost:9000/api/ce/task?id=171af7e8-933e-4a36-996c-e5982cd38de8

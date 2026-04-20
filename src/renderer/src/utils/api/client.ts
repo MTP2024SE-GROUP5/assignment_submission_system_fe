@@ -3,7 +3,7 @@ import {resume} from "react-dom/server";
 import i18n from "i18next";
 
 export const SERVER_CONFIGS = {
-  production: import.meta.env.VITE_API_PRODUCTION_URL || "http://164.92.241.92:8080/api",
+  production: import.meta.env.VITE_API_PRODUCTION_URL || "https://164.92.241.92:8080/api",
   local: import.meta.env.VITE_API_LOCAL_URL || "http://localhost:8081/api"
 };
 

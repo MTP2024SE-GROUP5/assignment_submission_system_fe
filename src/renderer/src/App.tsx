@@ -20,7 +20,7 @@ import About from "@/pages/About";
 import Settings from "@/pages/Settings";
 import { ThemeProvider } from "./components/features/ThemeProvider";
 // @ts-ignore
-import "/src/i18n";
+import "@root/i18n";
 import {useTranslation} from "react-i18next";
 
 const App = () => {
