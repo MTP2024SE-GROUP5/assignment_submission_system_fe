@@ -60,6 +60,7 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
               <FieldLabel htmlFor="password">{t('login.form.password.label')}</FieldLabel>
               <button
                   className="ml-auto text-sm underline-offset-4 hover:underline"
+                  type="button"
                   onClick={(e) => {
                     e.preventDefault();
                     (window as any).electronAPI.openInBrowser("https://support.google.com/accounts/answer/7682439?hl=en");
