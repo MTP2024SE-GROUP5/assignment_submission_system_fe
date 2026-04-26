@@ -62,7 +62,7 @@ export function LoginForm({className, ...props}: React.ComponentProps<"form">) {
                   className="ml-auto text-sm underline-offset-4 hover:underline"
                   onClick={(e) => {
                     e.preventDefault();
-                    (window as any).electronAPI.openInBrowser("https://www.youtube.com/watch?v=F0Gkr4MBEO0");
+                    (window as any).electronAPI.openInBrowser("https://support.google.com/accounts/answer/7682439?hl=en");
                   }}
               >
                 {t('login.form.password.forget_password')}
