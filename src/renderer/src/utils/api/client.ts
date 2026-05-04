@@ -4,11 +4,17 @@ import i18n from "i18next";
 
 export const SERVER_CONFIGS = {
   production: import.meta.env.VITE_API_PRODUCTION_URL || "https://164.92.241.92:8080/api",
-  local: import.meta.env.VITE_API_LOCAL_URL || "http://localhost:8081/api"
+  local: import.meta.env.VITE_API_LOCAL_URL || "https://localhost:8081/api"
 };
 
+let cachedUrl = localStorage.getItem('base_url');
+if (cachedUrl && cachedUrl.startsWith('http://')) {
+  cachedUrl = cachedUrl.replace('http://', 'https://');
+  localStorage.setItem('base_url', cachedUrl);
+}
+
 const apiClient = axios.create({
-  baseURL: localStorage.getItem('base_url') || SERVER_CONFIGS.production,
+  baseURL: cachedUrl || SERVER_CONFIGS.production,
   timeout: 10000,
   headers: {'Content-Type': 'application/json'}
 });

@@ -16,8 +16,12 @@ import { Server, Globe, Laptop, Check, CircleHelp, SlidersHorizontal } from "luc
 import { SERVER_CONFIGS } from "@/utils/api/client";
 
 export function ServerSwitcher({ style }: { style?: string }) {
+  let cachedUrl = localStorage.getItem('base_url');
+  if (cachedUrl && cachedUrl.startsWith('http://')) {
+    cachedUrl = cachedUrl.replace('http://', 'https://');
+  }
   const [currentUrl, setCurrentUrl] = useState(
-      localStorage.getItem('base_url') || SERVER_CONFIGS.production
+      cachedUrl || SERVER_CONFIGS.production
   );
 
   const changeServer = (url: string) => {

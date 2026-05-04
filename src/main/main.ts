@@ -7,6 +7,8 @@ if (started) {
   app.quit();
 }
 
+app.commandLine.appendSwitch('ignore-certificate-errors');
+
 let mainWindow: BrowserWindow;
 let splashWindow: BrowserWindow;
 
